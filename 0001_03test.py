@@ -6,9 +6,8 @@ class Solution:
     def twoSum(self, nums, target):
         mydict = {}
         for i in range(len(nums)):
-            a = target - nums[i]
-            if a in mydict:
-                return mydict[a], i
+            if target - nums[i] in mydict:
+                return mydict[target-nums[i]], i
             else:
                 mydict[nums[i]] = i
 
