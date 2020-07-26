@@ -1,3 +1,12 @@
+'''
+@Author: your name
+@Date: 2020-07-24 10:42:02
+@LastEditTime: 2020-07-24 20:10:05
+@LastEditors: Please set LastEditors
+@Description: In User Settings Edit
+@FilePath: \Leetcode\0007_01.py
+'''
+
 x = 123
 
 class Solution:
