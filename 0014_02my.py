@@ -1,20 +1,15 @@
 '''
-@Description: 
+@Description: 14.最长公共前缀——分治法
 @Version: 1.0
 @Autor: Vicro
-@Date: 2020-07-27 16:41:58
+@Date: 2020-07-27 21:06:59
 @LastEditors: Vicro
-@LastEditTime: 2020-07-27 22:15:09
+@LastEditTime: 2020-07-27 22:14:04
 '''
-#
-# @lc app=leetcode.cn id=14 lang=python3
-#
-# [14] 最长公共前缀
-#
-
-# @lc code=start
+strs = ["flower","flow","flowerss","flowesss"]
+# print(len(List))
 class Solution:
-    def longestCommonPrefix(self, strs: List[str]) -> str:
+    def longestCommonPrefix(self, strs):
         def lcp(start, end):
             if start == end:
                 return strs[start]
@@ -30,5 +25,7 @@ class Solution:
             
         return "" if not strs else lcp(0, len(strs)-1)
 
-# @lc code=end
 
+K = Solution()
+RESULT = K.longestCommonPrefix(strs)
+print(RESULT)
