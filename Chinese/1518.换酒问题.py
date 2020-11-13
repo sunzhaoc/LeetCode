@@ -3,7 +3,7 @@ Description:
 Version: 1.0
 Autuor: Vicro
 Date: 2020-11-12 22:36:33
-LastEditTime: 2020-11-12 23:02:28
+LastEditTime: 2020-11-13 11:07:29
 FilePath: \Leetcode\Chinese\1518.换酒问题.py
 '''
 #
@@ -15,13 +15,19 @@ FilePath: \Leetcode\Chinese\1518.换酒问题.py
 # @lc code=start
 class Solution:
     def numWaterBottles(self, numBottles, numExchange):
+        ans = numBottles
+
         if numExchange > numBottles:
-            return numBottles
+            return ans
+        
+        while (numExchange <= numBottles):
+            ans += numBottles // numExchange # 换了多少新的
+            numBottles =  numBottles - (numBottles // numExchange) * numExchange + (numBottles // numExchange)
 
-        empty = numBottles
-        while (empty > numExchange):
-            empty = empty / numExchange
+        return ans
 
-
+sol = Solution()
+A = sol.numWaterBottles(9, 3)
+print(A)
 # @lc code=end
 
