@@ -3,7 +3,7 @@ Description:
 Version: 1.0
 Autuor: Vicro
 Date: 2020-11-13 17:25:01
-LastEditTime: 2020-11-16 23:35:47
+LastEditTime: 2020-11-19 14:07:45
 FilePath: \Leetcode\Chinese\874.模拟行走机器人.py
 '''
 #
@@ -27,7 +27,7 @@ class Solution:
         for command in commands:
             if command > 0:
                 for step in range(command):
-                    if [x + direction[dir][0], y + direction[dir][1]] not in obstacles:
+                    if (x + direction[dir][0], y + direction[dir][1]) not in obstacles:
                         x += direction[dir][0]
                         y += direction[dir][1]
                         res = max(res, x**2 + y**2)
@@ -35,12 +35,12 @@ class Solution:
                 if command == -1:
                     dir = direction[dir][3]
                 else:
-                    dir = direction[dir][4]
+                    dir = direction[dir][2]
         return res
 
 
 sol = Solution()
-A = sol.robotSim([4,-1,4,-2,4], [2,4])
+A = sol.robotSim([4,-1,4,-2,4], [[2,4], [3,4]])
 print(A)
 # @lc code=end
 
