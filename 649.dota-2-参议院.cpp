@@ -2,8 +2,8 @@
  * @Description: 
  * @Version: 1.0
  * @Author: Vicro
- * @Date: 2020-11-25 14:08:33
- * @LastEditTime: 2020-11-25 14:09:36
+ * @Date: 2020-11-25 14:44:59
+ * @LastEditTime: 2020-11-25 15:05:08
  * @FilePath: \Leetcode\649.dota-2-参议院.cpp
  */
 /*
@@ -11,13 +11,50 @@
  *
  * [649] Dota2 参议院
  */
-
 // @lc code=start
+#include <iostream>
+// #include <string>
+using namespace std;
+
+
 class Solution {
 public:
     string predictPartyVictory(string senate) {
-        bool R = true, D = true
+        bool R = true, D = true;
+        int person = 0;
+        while (D && R)
+        {
+            R = false;
+            D = false;
+            for (int i = 0; i < senate.size(); i++)
+            {
+                if (senate[i] == 'R')
+                {
+                    R = true;
+                    if (person < 0)
+                        senate[i] = '0';
+                    person++;
+                }
+                else if (senate[i] == 'D')
+                {
+                    D = true;
+                    if (person > 0)
+                        senate[i] = '0';
+                    person--;
+                }
+            }
+        }
+        return person > 0 ? "Radiant" : "Dire";
     }
 };
+
+int main(){
+    Solution sol1;
+    string A;
+    A = sol1.predictPartyVictory("RDDRRD");
+    cout << A << endl;
+    system("pause");
+    return 0;
+}
 // @lc code=end
 
