@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Author: Vicro
  * @Date: 2020-11-26 18:49:31
- * @LastEditTime: 2020-11-26 19:04:17
+ * @LastEditTime: 2020-11-26 21:52:02
  * @FilePath: \Leetcode\100.Same Tree.cpp
  */
 /*
@@ -42,16 +42,6 @@ public:
         }
     }
 };
-
-
-int main() 
-{
-    Solution sol1;
-    bool A = sol1.isSameTree([1,2,3], [1,2,3]);
-    cout << A << endl;
-    system("pause");
-    return 0;
-}
 
 // @lc code=end
 
