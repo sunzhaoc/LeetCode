@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Author: Vicro
  * @Date: 2020-11-26 18:49:31
- * @LastEditTime: 2020-11-26 21:52:02
+ * @LastEditTime: 2020-11-26 22:02:38
  * @FilePath: \Leetcode\100.Same Tree.cpp
  */
 /*
@@ -24,9 +24,6 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
-#include <iostream>
-using namespace std;
-
 
 class Solution {
 public:
