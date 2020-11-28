@@ -3,7 +3,7 @@ Description: :
 Version: 1.0
 Author: Vicro
 Date: 2020-11-28 20:31:40
-LastEditTime: 2020-11-28 20:58:31
+LastEditTime: 2020-11-28 21:20:56
 FilePath: \Leetcode\236.二叉树的最近公共祖先.py
 '''
 #
@@ -22,9 +22,18 @@ FilePath: \Leetcode\236.二叉树的最近公共祖先.py
 
 class Solution:
     def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
-        if not root or root == p or root == q:
-            return root
-        
+        if not root: return None
 
+        if root == q or root == p:
+            return root
+
+        left = self.lowestCommonAncestor(root.left, p, q)
+        right = self.lowestCommonAncestor(root.right,p, q)
+        
+        if not left: return right
+        if not right: return left
+
+        return root
+            
 # @lc code=end
 
