@@ -3,7 +3,7 @@ Description: :
 Version: 1.0
 Author: Vicro
 Date: 2020-11-28 20:31:40
-LastEditTime: 2020-11-28 21:20:56
+LastEditTime: 2020-11-28 21:36:46
 FilePath: \Leetcode\236.二叉树的最近公共祖先.py
 '''
 #
@@ -27,7 +27,7 @@ class Solution:
         if root == q or root == p:
             return root
 
-        left = self.lowestCommonAncestor(root.left, p, q)
+        left = self.lowestCommonAncestor(root.left, p, q)3
         right = self.lowestCommonAncestor(root.right,p, q)
         
         if not left: return right
