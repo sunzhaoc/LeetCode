@@ -2,14 +2,14 @@
 Description: 
 Version: 1.0
 Author: Vicro
-Date: 2020-11-28 21:59:57
-LastEditTime: 2020-11-29 20:13:56
-FilePath: \Leetcode\102.二叉树的层序遍历.py
+Date: 2020-11-29 20:00:02
+LastEditTime: 2020-11-29 20:17:59
+FilePath: \Leetcode\637.二叉树的层平均值.py
 '''
 #
-# @lc app=leetcode.cn id=102 lang=python3
+# @lc app=leetcode.cn id=637 lang=python3
 #
-# [102] 二叉树的层序遍历
+# [637] 二叉树的层平均值
 #
 
 # @lc code=start
@@ -21,11 +21,18 @@ FilePath: \Leetcode\102.二叉树的层序遍历.py
 #         self.right = None
 
 class Solution:
-    def levelOrder(self, root: TreeNode) -> List[List[int]]:
+    def averageOfLevels(self, root: TreeNode) -> List[float]:
         res = []
         self.dfs(root, 0, res)
         
-        return res
+        ans = []
+        for i in range(len(res)):
+            sum = 0.0 
+            for j in range(len(res[i])):
+                sum += res[i][j]
+            ans.append(sum/len(res[i]))
+            
+        return ans
     
     def dfs(self, root, level, res):
         if not root: return
