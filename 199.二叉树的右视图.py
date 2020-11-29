@@ -2,14 +2,14 @@
 Description: 
 Version: 1.0
 Author: Vicro
-Date: 2020-11-28 21:59:57
-LastEditTime: 2020-11-29 16:58:25
-FilePath: \Leetcode\102.二叉树的层序遍历.py
+Date: 2020-11-29 17:16:46
+LastEditTime: 2020-11-29 17:26:25
+FilePath: \Leetcode\199.二叉树的右视图.py
 '''
 #
-# @lc app=leetcode.cn id=102 lang=python3
+# @lc app=leetcode.cn id=199 lang=python3
 #
-# [102] 二叉树的层序遍历
+# [199] 二叉树的右视图
 #
 
 # @lc code=start
@@ -21,10 +21,13 @@ FilePath: \Leetcode\102.二叉树的层序遍历.py
 #         self.right = None
 
 class Solution:
-    def levelOrder(self, root: TreeNode) -> List[List[int]]:
+    def rightSideView(self, root: TreeNode) -> List[int]:
         res = []
-        self.dfs(root, 0, res) # python中list类型传参数传的是地址
-        return res
+        self.dfs(root, 0, res)
+        ans = []
+        for i in range(len(res)):
+            ans.append(res[i][-1])
+        return ans
         
     def dfs(self, root, level, res):
         if not root: return
@@ -36,5 +39,6 @@ class Solution:
         if root.right:
             self.dfs(root.right, level + 1, res)
             
+        
 # @lc code=end
 
