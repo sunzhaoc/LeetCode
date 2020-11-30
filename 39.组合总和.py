@@ -3,7 +3,7 @@ Description:
 Version: 1.0
 Author: Vicro
 Date: 2020-11-30 17:07:56
-LastEditTime: 2020-11-30 17:21:50
+LastEditTime: 2020-11-30 17:25:41
 FilePath: \Leetcode\39.组合总和.py
 '''
 #
@@ -17,7 +17,7 @@ class Solution:
     def combinationSum(self, candidates, target):
         res = []
         n = len(candidates)
-
+        candidates.sort()
         def backTrack(level, list):
             if sum(list) == target:
                 res.append(list)    
