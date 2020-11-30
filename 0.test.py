@@ -1,21 +1,12 @@
-'''
-Description: 
-Version: 1.0
-Author: Vicro
-Date: 2020-11-24 22:21:23
-LastEditTime: 2020-11-29 16:46:49
-FilePath: \Leetcode\0.test.py
-'''
-class Soulution():
-    def function01(self, x):
-        res = 2
-        self.function02(x, res)
-        return res
-    
-    def function02(self, x, res):
-        res += x
-        A= 1
+list1 = [2,3,4]
+list2 = [5,6,7, 9]
 
-sol = Soulution()
-A = sol.function01(1)
-print(A)
+list1 = ['s', 'e', 'g', 'g', 'd', 'd', 'w']
+list2 = ['q', 'a', 't']
+
+
+# for i in zip(list1, list1[3:]):0
+
+A = ''.join(list1[1]) * 1
+
+V = 12
