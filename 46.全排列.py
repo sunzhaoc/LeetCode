@@ -3,7 +3,7 @@ Description:
 Version: 1.0
 Author: Vicro
 Date: 2020-11-30 16:39:35
-LastEditTime: 2020-11-30 16:52:02
+LastEditTime: 2020-11-30 16:59:47
 FilePath: \Leetcode\46.全排列.py
 '''
 #
@@ -18,13 +18,13 @@ class Solution:
         res = []
         n = len(nums)
 
-        def backTrack(level, list):
+        def backTrack(level, choose_list, tochoose_list):
             if level == n:
-                res.append(list)
-            for i in range(n):
-                backTrack(level + 1, nums[:i] + nums[i + 1:])
+                res.append(choose_list)
+            for i in range(len(tochoose_list)):
+                backTrack(level + 1, choose_list + [tochoose_list[i]], tochoose_list[:i] + tochoose_list[i + 1:])
                 
-        backTrack(0, [])
+        backTrack(0, [], nums)
 
         return res
 
