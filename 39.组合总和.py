@@ -3,7 +3,7 @@ Description:
 Version: 1.0
 Author: Vicro
 Date: 2020-11-30 17:07:56
-LastEditTime: 2020-11-30 17:25:41
+LastEditTime: 2020-11-30 19:07:47
 FilePath: \Leetcode\39.组合总和.py
 '''
 #
@@ -18,12 +18,16 @@ class Solution:
         res = []
         n = len(candidates)
         candidates.sort()
+
         def backTrack(level, list):
             if sum(list) == target:
-                res.append(list)    
-
+                temp = sorted(list)
+                if temp not in res:
+                    res.append(temp)
+            
             for i in range(n):
-                backTrack(i + 1, list + [candidates[i]])
+                if sum(list) < target:
+                    backTrack(i + 1, list + [candidates[i]])
         
         backTrack(0, [])
         
