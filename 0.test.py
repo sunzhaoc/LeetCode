@@ -1,12 +1,13 @@
-list1 = [2,3,4]
-list2 = [5,6,7, 9]
+'''
+Description: 
+Version: 1.0
+Author: Vicro
+Date: 2020-11-24 22:21:23
+LastEditTime: 2020-12-01 12:50:13
+FilePath: \Leetcode\0.test.py
+'''
+A = [1, 2, 3]
 
-list1 = ['s', 'e', 'g', 'g', 'd', 'd', 'w']
-list2 = ['q', 'a', 't']
-
-
-# for i in zip(list1, list1[3:]):0
-
-A = ''.join(list1[1]) * 1
-
-V = 12
+B = A
+A.pop()
+C = 1
