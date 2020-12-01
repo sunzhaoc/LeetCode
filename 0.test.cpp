@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Author: Vicro
  * @Date: 2020-11-25 15:06:00
- * @LastEditTime: 2020-11-29 22:27:11
+ * @LastEditTime: 2020-12-01 21:10:26
  * @FilePath: \Leetcode\0.test.cpp
  */
 #include <iostream>
@@ -12,9 +12,13 @@
 using namespace std;
 
 int main(){
-    vector<vector<int>> temp(5, vector<int>(4,10));
+    int i = -1;
+    vector<int> res = {1};
 
-    int A = 1;
+    if (i < res.size() - 1){
+        return true;
+    }
+    
     system("pause");
     return 0;
 }
