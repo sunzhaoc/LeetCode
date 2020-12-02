@@ -3,7 +3,7 @@ Description:
 Version: 1.0
 Author: Vicro
 Date: 2020-11-30 13:20:22
-LastEditTime: 2020-11-30 14:37:14
+LastEditTime: 2020-12-02 15:38:20
 FilePath: \Leetcode\767.重构字符串.py
 '''
 #
