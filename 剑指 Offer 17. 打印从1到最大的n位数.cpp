@@ -3,17 +3,21 @@
  * @Version: 1.0
  * @Author: Vicro
  * @Date: 2020-12-03 22:53:19
- * @LastEditTime: 2020-12-03 23:04:02
- * @FilePath: \Leetcode\0.test.cpp
+ * @LastEditTime: 2020-12-03 23:05:34
+ * @FilePath: \Leetcode\剑指 Offer 17. 打印从1到最大的n位数.cpp
  */
-
 
 #include <math.h>
 #include <vector>
 #include <iostream>
 using namespace std;
 
-
+/*
+RESULT: Accept
+TIME: 20ms BEAT 27%
+MEMORY: 11.8MB BEAT 7%
+Description: 暴力解法
+*/
 class Solution {
 public:
     vector<int> printNumbers(int n) {
@@ -23,6 +27,7 @@ public:
         return res;
     }
 };
+
 
 int main(){
     Solution sol;
