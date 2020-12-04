@@ -3,14 +3,20 @@
  * @Version: 1.0
  * @Author: Vicro
  * @Date: 2020-12-04 14:14:02
- * @LastEditTime: 2020-12-04 14:48:36
- * @FilePath: \Leetcode\0.test.cpp
+ * @LastEditTime: 2020-12-04 14:57:05
+ * @FilePath: \Leetcode\剑指 Offer 04. 二维数组中的查找.cpp
  */
 
 #include <vector>
 #include <iostream>
 using namespace std;
 
+/*
+RESULT: Accept
+TIME:   48ms    BEAT 93.07%    O(n) = m + n
+MEMORY: 14MB    BEAT 5.11%     O(n) = 1 
+Description: 线性查找
+*/
 class Solution {
 public:
     bool findNumberIn2DArray(vector<vector<int>>matrix, int target) {
