@@ -3,14 +3,19 @@
  * @Version: 1.0
  * @Author: Vicro
  * @Date: 2020-12-04 15:04:14
- * @LastEditTime: 2020-12-04 16:22:56
+ * @LastEditTime: 2020-12-04 16:40:40
  * @FilePath: \Leetcode\剑指 Offer 29. 顺时针打印矩阵.cpp
  */
 #include <vector>
 #include <iostream>
 using namespace std;
 
-
+/*
+RESULT: Accept
+TIME:     28ms    BEAT 24.45%    O(n) = mn
+MEMORY: 10.5MB    BEAT  5.01%    O(n) = 1?
+Description: 使用四条边来定义边界，当 left > right 或 up > down 时，退出。
+*/
 class Solution {
 public:
     vector<int> spiralOrder(vector<vector<int>> matrix) {
@@ -18,18 +23,25 @@ public:
         int up = 0, down = (int)matrix.size() - 1, left = 0, right = (int)matrix[0].size() - 1;
         vector<int> ans;
         
-        while (!(up == down || left == right))
+        while (1)
         {
             for (int i = left; i <= right; i ++)    ans.push_back(matrix[up][i]);
             up ++;
+            if (up > down) break;
+
             for (int i = up; i <= down; i ++)   ans.push_back(matrix[i][right]);
             right --;
+            if (left > right) break;
+
             for (int i = right; i >= left; i --)    ans.push_back(matrix[down][i]);
             down --;
+            if (up > down) break;
+            
             for (int i = down; i >= up; i --)   ans.push_back(matrix[i][left]);
             left ++;
+            if (left > right) break;
         }
-        
+        return ans;
     }
 };
 
@@ -38,7 +50,7 @@ public:
 RESULT: Accept
 TIME:     20ms    BEAT 91.14%    O(n) = mn
 MEMORY: 10.5MB    BEAT  5.01%    O(n) = 1?
-Description: 
+Description: 使用四个角的点的坐标来定义边界,用计数的方法来判断退出条件。
 */
 // class Solution {
 // public:
