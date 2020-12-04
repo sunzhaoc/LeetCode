@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Author: Vicro
  * @Date: 2020-12-04 21:38:36
- * @LastEditTime: 2020-12-04 21:53:32
+ * @LastEditTime: 2020-12-04 22:14:41
  * @FilePath: \Leetcode\0.test.cpp
  */
 #include <iostream>
@@ -13,6 +13,9 @@ using namespace std;
 class Solution {
 public:
     int recursion(int n, int m){
+        if (n == 1) return 0;
+
+        int x = recursion(n - 1, m);
         
     }
 
