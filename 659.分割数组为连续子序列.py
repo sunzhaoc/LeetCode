@@ -3,7 +3,7 @@ Description:
 Version: 1.0
 Author: Vicro
 Date: 2020-12-04 13:18:25
-LastEditTime: 2020-12-04 14:08:20
+LastEditTime: 2020-12-04 14:09:06
 FilePath: \Leetcode\659.分割数组为连续子序列.py
 '''
 #
@@ -16,8 +16,8 @@ FilePath: \Leetcode\659.分割数组为连续子序列.py
 
 """
 RESULT: Accept
-TIME: 40ms BEAT 88.02%
-MEMORY: 14.5MB BEAT 28.29%
+TIME: 144ms BEAT 77%
+MEMORY: 14.6MB BEAT 42%
 Description: 
 """
 class Solution:
