@@ -2,39 +2,69 @@
  * @Description: 
  * @Version: 1.0
  * @Author: Vicro
- * @Date: 2020-12-04 14:14:02
- * @LastEditTime: 2020-12-04 14:48:36
+ * @Date: 2020-12-04 15:04:14
+ * @LastEditTime: 2020-12-04 16:01:36
  * @FilePath: \Leetcode\0.test.cpp
  */
-
 #include <vector>
 #include <iostream>
 using namespace std;
 
 class Solution {
 public:
-    bool findNumberIn2DArray(vector<vector<int>>matrix, int target) {
-        if (matrix.size() == 0) return false;
-        if (matrix[0].size() == 0) return false;
-        int min = matrix[0][0], max = matrix[matrix.size() - 1][matrix[0].size() - 1];
-        if ((target > max) || (target < min))   return false;
-
-        int row = 0, col = matrix[0].size() - 1;
-        while (row < matrix.size() && col >= 0)
+    vector<int> spiralOrder(vector<vector<int>> matrix) {
+        if (matrix.size() == 0 || matrix[0].size() == 0) return {};
+        vector<int> up_left = {0, 0}, up_right = {0, (int)matrix[0].size() - 1};
+        vector<int> down_left = {(int)matrix.size() - 1, 0}, down_right = {(int)matrix.size() - 1, (int)matrix[0].size() - 1};
+        int sum = matrix.size() * matrix[0].size(), num = 0;
+        vector<int> ans;
+        
+        while (1)
         {
-            if (matrix[row][col] == target) return true;
-            else if (matrix[row][col] < target) row ++;
-            else col --;                         
+            for (int i = up_left[1]; i <= up_right[1]; i++){
+                ans.push_back(matrix[up_left[0]][i]);
+                num ++;
+            }
+            up_left[0]++;   
+            up_right[0]++;
+            if (num >= sum) break;
+
+            for (int i = up_right[0]; i <= down_right[0]; i++){
+                ans.push_back(matrix[i][up_right[1]]);
+                num ++;
+            }
+            up_right[1]--;
+            down_right[1]--;
+            if (num >= sum) break;
+
+            for (int i = down_right[1]; i >= down_left[1]; i--){
+                ans.push_back(matrix[down_right[0]][i]);
+                num ++;
+            }
+            down_right[0]--;
+            down_left[0]--;
+            if (num >= sum) break;
+
+            for (int i = down_left[0]; i >= up_left[0]; i--){
+                ans.push_back(matrix[i][down_left[1]]);
+                num ++;
+            }
+            down_left[1]++;
+            up_left[1]++;
+            if (num >= sum) break;
         }
-        return false;
+        return ans;
     }
 };
 
 
 int main(){
     Solution sol;
-    bool ans = sol.findNumberIn2DArray({{}}, 20);
-    cout << ans << endl;
+    vector<int> ans = sol.spiralOrder({{1,2,3},{4,5,6},{7,8,9}});
+    // vector<int> ans = sol.spiralOrder({{1,2,3,4},{5,6,7,8},{9,10,11,12}});
+    for (int i = 0; i < ans.size(); i++){
+        cout << ans[i] << endl;
+    }
     system("pause");
     return 0;
 }
