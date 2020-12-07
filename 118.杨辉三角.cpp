@@ -3,8 +3,8 @@
  * @Version: 1.0
  * @Author: Vicro
  * @Date: 2020-12-07 13:50:44
- * @LastEditTime: 2020-12-07 14:30:46
- * @FilePath: \Leetcode\0.test.cpp
+ * @LastEditTime: 2020-12-07 14:31:11
+ * @FilePath: \Leetcode\118.杨辉三角.cpp
  */
 /*
  * @lc app=leetcode.cn id=118 lang=cpp
