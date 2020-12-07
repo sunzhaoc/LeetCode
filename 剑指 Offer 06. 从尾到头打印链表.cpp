@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Author: Vicro
  * @Date: 2020-12-07 14:42:50
- * @LastEditTime: 2020-12-07 15:24:11
+ * @LastEditTime: 2020-12-07 15:45:15
  * @FilePath: \Leetcode\剑指 Offer 06. 从尾到头打印链表.cpp
  */
 
@@ -23,8 +23,8 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME:      20ms    BEAT 10.68%    O(n) = n
-MEMORY:   9.2MB    BEAT 16.55%    O(n) = n
+TIME:     8ms    BEAT 71.58%    O(n) = n
+MEMORY: 8.8MB    BEAT 59.85%    O(n) = n
 Description: 改变链表结构法。
 */
 
@@ -37,10 +37,10 @@ public:
         ListNode *cur = head;
 
         while (cur){
-            next = cur->next;
-            cur->next = pre;
-            pre = cur;
-            cur = next;
+            next = cur->next;   //保存当前结点的下一个节点
+            cur->next = pre;    //当前结点指向前一个节点，反向改变指针
+            pre = cur;  //更新前一个节点
+            cur = next; //更新当前结点
         }
 
         while (pre){
@@ -51,6 +51,7 @@ public:
         return ans;      
     }
 };
+
 
 /*
 RESULT: Accept
