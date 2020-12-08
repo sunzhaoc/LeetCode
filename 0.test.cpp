@@ -2,53 +2,71 @@
  * @Description: 
  * @Version: 1.0
  * @Author: Vicro
- * @Date: 2020-12-07 13:50:44
- * @LastEditTime: 2020-12-07 14:30:46
+ * @Date: 2020-12-08 21:08:50
+ * @LastEditTime: 2020-12-08 21:47:58
  * @FilePath: \Leetcode\0.test.cpp
  */
 /*
- * @lc app=leetcode.cn id=118 lang=cpp
+ * @lc app=leetcode.cn id=842 lang=cpp
  *
- * [118] 杨辉三角
+ * [842] 将数组拆分成斐波那契序列
  */
 
 // @lc code=start
 #include <iostream>
 #include <vector>
+#include <math.h>
 using namespace std;
-
-
-/*
-RESULT: Accept
-TIME:     4ms    BEAT 35.46%    O(n) = n^2
-MEMORY: 6.7MB    BEAT 33.65%    O(n) = 1
-Description: 
-*/
 
 class Solution {
 public:
-    vector<vector<int>> generate(int numRows) {
-        if (numRows == 0)   return {};
-        if (numRows == 1)   return {{1}};
-        if (numRows == 2)   return {{1}, {1, 1}};
 
-        vector<vector<int>> ans = {{1}, {1, 1}};
-        for (int row = 3; row < numRows + 1; row ++){
-            ans.push_back({});
-            ans[row - 1].resize(row);
-            ans[row - 1][0] = ans[row - 1][row - 1] = 1;
-            for (int i = 0; i < row - 2; i ++){
-                ans[row - 1][1 + i] = ans[row - 2][i] + ans[row - 2][i + 1];
+    bool backtrack(int pos) {
+        if (pos == length)  return res.size() > 2;
+
+        s = 0;
+        for (int i = pos; i < length; i ++) {
+            s = s * 10 + (int)S[i];
+            if (s > m)  break;
+            if (res.size() >= 2 && s > res[-1] + res[-2])   break;
+            if (S[pos] == '0' && i > pos)   break;
+            if (res.size() < 2 || res[-1] + res[-2] == s) {
+                res.push_back(s);
+                if backtrack(i + 1) return true;
+                res.pop_back();
             }
         }
-        return ans;
+        return false;
+    }
+
+
+    vector<int> splitIntoFibonacci(string S) {
+        int m = pow(2, 31) - 1;
+        vector<int> res;
+        int length = S.size();
+        
+        int A = 1;
+
+        bool res = backtrack(0);
+        // if (res){
+        //     return res;
+        // }
+        // else{
+        //     return {};
+        // }
+        
     }
 };
 
 
-int main(){
+int main() {
     Solution sol;
-    vector<vector<int>> ans = sol.generate(5);
+    vector<int> ans = sol.splitIntoFibonacci("123456579");
+
+    for (int i = 0; i < ans.size(); i ++) {
+        cout << ans[i] << endl;
+    }
+
     system("pause");
     return 0;
 }
