@@ -3,8 +3,8 @@
  * @Version: 1.0
  * @Author: Vicro
  * @Date: 2020-12-09 10:28:43
- * @LastEditTime: 2020-12-09 10:40:37
- * @FilePath: \Leetcode\0.test.cpp
+ * @LastEditTime: 2020-12-09 10:41:55
+ * @FilePath: \Leetcode\62.不同路径.cpp
  */
 /*
  * @lc app=leetcode.cn id=62 lang=cpp
@@ -17,11 +17,18 @@
 using namespace std;
 
 
+/*
+RESULT: Accept
+TIME:     0ms    BEAT 100.00%    O(n) = m
+MEMORY: 6.3MB    BEAT  61.38%    O(n) = 1 
+Description: 利用数学组合数知识解决。因为m，n可互换，利用这点可以降低运算时间。
+*/
+
 class Solution {
 public:
     int uniquePaths(int m, int n) {
         long long sum_up = 1;
-        int sum_down = 1;
+        long long sum_down = 1;
 
         int max = (n >= m)? n : m;
         int min = (n <= m)? n : m;
@@ -43,5 +50,6 @@ int main() {
     system("pause");
     return 0;
 }
+
 // @lc code=end
 
