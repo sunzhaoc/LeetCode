@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Author: Vicro
  * @Date: 2020-12-09 10:52:00
- * @LastEditTime: 2020-12-09 11:04:17
+ * @LastEditTime: 2020-12-09 11:13:16
  * @FilePath: \Leetcode\105.从前序与中序遍历序列构造二叉树.cpp
  */
 /*
@@ -13,6 +13,8 @@
  */
 
 // @lc code=start
+#include <vector>
+using namespace std;
 
 // Definition for a binary tree node.
 struct TreeNode {
@@ -23,8 +25,12 @@ struct TreeNode {
 };
 
 
-#include <vector>
-using namespace std;
+/*
+RESULT: Accept
+TIME:     328ms    BEAT 5.16%    O(n) = 
+MEMORY: 149.9MB    BEAT 5.02%    O(n) =  
+Description: 
+*/
 
 class Solution {
 public:
@@ -44,8 +50,12 @@ public:
             inorder_right.push_back(inorder[i]);
         }
         for (int j = 1; j < m; j ++) {
-            if (j <= inorder.size())    preorder_left.push_back(preorder[j]);
+            if (j <= inorder_left.size())    preorder_left.push_back(preorder[j]);
+            else preorder_right.push_back(preorder[j]);
         }
+        root->left = buildTree(preorder_left, inorder_left);
+        root->right = buildTree(preorder_right, inorder_right);
+        return root;
     }
 };
 // @lc code=end
