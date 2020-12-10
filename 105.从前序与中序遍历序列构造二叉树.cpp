@@ -1,11 +1,20 @@
+// @before-stub-for-debug-begin
+#include <vector>
+#include <string>
+#include "commoncppproblem105.h"
+
+using namespace std;
+// @before-stub-for-debug-end
+
 /*
  * @Description: 
  * @Version: 1.0
  * @Author: Vicro
  * @Date: 2020-12-09 10:52:00
- * @LastEditTime: 2020-12-09 15:08:28
+ * @LastEditTime: 2020-12-09 17:14:51
  * @FilePath: \Leetcode\105.从前序与中序遍历序列构造二叉树.cpp
  */
+
 /*
  * @lc app=leetcode.cn id=105 lang=cpp
  *
@@ -13,8 +22,6 @@
  */
 
 // @lc code=start
-#include <vector>
-using namespace std;
 
 // Definition for a binary tree node.
 struct TreeNode {
@@ -27,24 +34,28 @@ struct TreeNode {
 
 /*
 RESULT: Accept
-TIME:     48ms    BEAT 34.73%    O(n) = n
-MEMORY: 17.3MB    BEAT 60.56%    O(n) = n
-Description: 
+TIME:     24ms    BEAT 74.08%    O(n) = n
+MEMORY: 17.8MB    BEAT 23.38%    O(n) = n
+Description: 利用哈希表保存索引来提速。
 */
 
 class Solution {
 public:
-    unorder_map<int, int> idx_map;
+    unordered_map<int, int> idx_map;
     int num = 0;
 
     TreeNode* helper(vector<int>& preorder, vector<int>& inorder, int left, int right) {
         if (left > right)   return nullptr;
-        
+        int val = preorder[num ++];
+        TreeNode *root = new TreeNode(val);
 
-        root->left = helper(preorder, l1 + 1, l1 + mid, inorder, l2, l2 + mid - 1);
-        root->right = helper(preorder, l1 + mid + 1, r1, inorder, l2 + mid + 1, r2);
+        int index = idx_map[val];
+
+        root->left = helper(preorder, inorder, left, index - 1);
+        root->right = helper(preorder, inorder, index + 1, right);
         return root;
     }
+
 
     TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder) {
         if (preorder.empty())   return nullptr;
@@ -57,6 +68,46 @@ public:
         return helper(preorder, inorder, 0, preorder.size() - 1);
     }
 };
+
+
+/*
+RESULT: Accept
+TIME:     48ms    BEAT 34.73%    O(n) = n
+MEMORY: 17.3MB    BEAT 60.56%    O(n) = n
+Description: 递归，上一方法的优化版本。
+*/
+
+// class Solution {
+// public:
+//     TreeNode* helper(const vector<int>& preorder, int l1, int r1, const vector<int>& inorder, int l2, int r2) {
+//         if (l1 > r1)    return nullptr;
+//         if (l1 == r1)       return new TreeNode(preorder[l1]);
+
+//         TreeNode* root = new TreeNode(preorder[l1]);
+        
+//         // int mid;
+//         // for (mid = l2; mid < r2; mid ++) {
+//         //     if (inorder[mid] == preorder[l1]) break;
+//         // }
+
+//         int mid = 0; // size of left
+//         while (l2 + mid <= r2) {
+//             if (inorder[l2 + mid] == preorder[l1])  break;
+//             mid ++;
+//         }
+        
+//         root->left = helper(preorder, l1 + 1, l1 + mid, inorder, l2, l2 + mid - 1);
+//         root->right = helper(preorder, l1 + mid + 1, r1, inorder, l2 + mid + 1, r2);
+//         return root;
+//     }
+
+
+//     TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder) {
+//         if (preorder.empty())   return nullptr;
+
+//         return helper(preorder, 0, preorder.size() - 1, inorder, 0, inorder.size() - 1);
+//     }
+// };
 
 
 /*
