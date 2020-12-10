@@ -3,8 +3,8 @@
  * @Version: 1.0
  * @Author: Vicro
  * @Date: 2020-12-10 10:20:34
- * @LastEditTime: 2020-12-10 10:29:26
- * @FilePath: \Leetcode\0.test.cpp
+ * @LastEditTime: 2020-12-10 10:31:11
+ * @FilePath: \Leetcode\860.柠檬水找零.cpp
  */
 /*
  * @lc app=leetcode.cn id=860 lang=cpp
@@ -18,10 +18,17 @@
 using namespace std;
 
 
+/*
+RESULT: Accept
+TIME:     36ms    BEAT 55.30%    O(n) = n
+MEMORY: 16.3MB    BEAT  8.20%    O(n) = 1
+Description: 
+*/
+
 class Solution {
 public:
     bool lemonadeChange(vector<int> bills) {
-        if (bills[0] != 0)  return false;
+        if (bills[0] != 5)  return false;
         
         int five = 1, ten = 0;
         
