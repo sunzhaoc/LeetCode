@@ -11,7 +11,7 @@
 /*
 RESULT: Accept
 TIME:   ms    BEAT %    O(n) = 
-MEMORY: MB    BEAT %    O(n) =  
+MEMORY: MB    BEAT %    O(n) = 
 Description: 
 */
 
@@ -19,6 +19,6 @@ Description:
 """
 RESULT: Accept
 TIME:   ms    BEAT %    O(n) = 
-MEMORY: MB    BEAT %    O(n) =  
+MEMORY: MB    BEAT %    O(n) = 
 Description: 
 """

@@ -1,12 +1,38 @@
 '''
-Description: 
-Version: 1.0
-Author: Vicro
-Date: 2020-11-24 22:21:23
-LastEditTime: 2020-12-02 21:13:38
-FilePath: \Leetcode\0.test.py
+'''
+description: 
+param {*}
+return {*}
+'''
+'''
+description: 
+param {*}
+return {*}
+'''
+'''
+description: 
+param {*}
+return {*}
+'''
+description: 
+param {*}
+return {*}
+'''
+'''
+description: 
+param {*}
+return {*}
+'''
+'''
+description: 
+param {*}
+return {*}
 '''
 
-A = 4 ^ 1
-
-A = 1
+from collections import defaultdict
+s=[('yellow',1),('blue', 2), ('yellow', 3), ('blue', 4), ('red', 1)]
+d=defaultdict(list)
+for k, v in s:
+    d[k].append(v)
+a=sorted(d.items())
+print(a)iii
