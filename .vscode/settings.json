@@ -1,14 +1,6 @@
 {
     "files.associations": {
-        "iostream": "cpp",
-        "vector": "cpp",
-        "deque": "cpp",
-        "string": "cpp",
-        "unordered_map": "cpp",
-        "array": "cpp",
-        "string_view": "cpp",
-        "initializer_list": "cpp",
-        "utility": "cpp"
+        "iostream": "cpp"
     },
     "files.exclude": {
         "**/.classpath": true,
@@ -16,6 +8,5 @@
         "**/.settings": true,
         "**/.factorypath": true
     },
-    "python.pythonPath": "X:\\SOFTWARE\\Anaconda3\\envs\\leetcode\\python.exe",
-    "C_Cpp.errorSquiggles": "Disabled"
+    "python.pythonPath": "X:\\SOFTWARE\\Anaconda3\\envs\\leetcode\\python.exe"
 }
