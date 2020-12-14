@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Author: Vicro
  * @Date: 2020-12-01 14:03:40
- * @LastEditTime: 2020-12-01 14:53:08
+ * @LastEditTime: 2020-12-14 21:44:57
  * @FilePath: \Leetcode\941.Valid Mountain Array.cpp
  */
 /*
@@ -17,6 +17,7 @@
 #include <string>
 #include <vector>
 using namespace std;
+
 
 class Solution {
 public:
@@ -50,6 +51,7 @@ public:
         
     }
 };
+
 
 int main(){
     Solution sol1;

@@ -3,8 +3,8 @@
  * @Version: 1.0
  * @Author: Vicro
  * @Date: 2020-11-25 14:44:59
- * @LastEditTime: 2020-11-25 19:31:48
- * @FilePath: \Leetcode\649.dota-2-参�??�?.cpp
+ * @LastEditTime: 2020-12-14 21:44:42
+ * @FilePath: \Leetcode\649.Dota2 Senate.cpp
  */
 /*
  * @lc app=leetcode.cn id=649 lang=cpp
@@ -47,6 +47,7 @@ public:
         return person > 0 ? "Radiant" : "Dire";
     }
 };
+
 
 int main(){
     Solution sol1;
