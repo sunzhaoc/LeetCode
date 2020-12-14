@@ -19,16 +19,16 @@ TIME: 108ms BEAT 51.19%
 MEMORY: 28.3MB BEAT 5.01%
 Description: 
 */
-// class Solution {
-// public:
-//     int findRepeatNumber(vector<int> nums) {
-//         unordered_map <int, int> list; 
-//         for (int i = 0; i < nums.size(); i++){
-//             if(++list[nums[i]] > 1) return nums[i];
-//         }
-//         return -1;
-//     }
-// };
+class Solution {
+public:
+    int findRepeatNumber(vector<int> nums) {
+        unordered_map <int, int> list; 
+        for (int i = 0; i < nums.size(); i++){
+            if(++list[nums[i]] > 1) return nums[i];
+        }
+        return -1;
+    }
+};
 
 
 int main(){
