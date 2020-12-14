@@ -1,4 +1,11 @@
-
+'''
+Description: 
+Version: 1.0
+Autor: Vicro
+Date: 2020-12-14 10:38:06
+LastEditTime: 2020-12-14 19:29:37
+FilePath: \Leetcode\49.字母异位词分组.py
+'''
 #
 # @lc app=leetcode.cn id=49 lang=python3
 #
