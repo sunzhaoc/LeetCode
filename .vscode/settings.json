@@ -1,6 +1,7 @@
 {
     "files.associations": {
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "unordered_map": "cpp"
     },
     "files.exclude": {
         "**/.classpath": true,
@@ -8,5 +9,5 @@
         "**/.settings": true,
         "**/.factorypath": true
     },
-    "python.pythonPath": "X:\\SOFTWARE\\Anaconda\\envs\\leetcode\\python.exe"
+    "python.pythonPath": "X:\\SOFTWARE\\Anaconda3\\envs\\leetcode\\python.exe"
 }

@@ -11,7 +11,7 @@ using namespace std;
  * @Version: 1.0
  * @Author: Vicro
  * @Date: 2020-12-09 10:52:00
- * @LastEditTime: 2020-12-09 17:14:51
+ * @LastEditTime: 2020-12-14 21:07:43
  * @FilePath: \Leetcode\105.从前序与中序遍历序列构造二叉树.cpp
  */
 
@@ -42,6 +42,7 @@ Description: 利用哈希表保存索引来提速。
 class Solution {
 public:
     unordered_map<int, int> idx_map;
+
     int num = 0;
 
     TreeNode* helper(vector<int>& preorder, vector<int>& inorder, int left, int right) {

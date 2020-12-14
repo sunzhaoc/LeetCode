@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2020-12-14 20:07:31
- * @LastEditTime: 2020-12-14 20:17:04
+ * @LastEditTime: 2020-12-14 20:54:41
  * @FilePath: \Leetcode\49.字母异位词分组.cpp
  */
 /*
@@ -14,8 +14,10 @@
 
 // @lc code=start
 #include <iostream>
+#include <vector>
 #include <unordered_map>
 using namespace std;
+
 
 /*
 RESULT: Accept
@@ -26,17 +28,34 @@ Description:
 
 class Solution {
 public:
-    vector<vector<string>> groupAnagrams(vector<string>& strs) {
+    vector<vector<string>> groupAnagrams(vector<string> strs) {
+        unordered_map<string, vector<string>> hash_map;
         
+        for (auto s: strs) {
+            string temp = s;
+            sort(temp.begin(), temp.end());
+            hash_map[temp].push_back(s);
+        }
+
+        int len = hash_map.size();
+        vector<vector<string>> ans(len);
+        int index = 0;
+        for (auto s: hash_map) {
+            ans[index] = s.second;
+            ++ index;
+        }
+
+        return ans;
     }
 };
 
 
 int main() {
     Solution sol;
-    
+    vector<vector<string>> ans = sol.groupAnagrams({"eat", "tea", "tan", "ate", "nat", "bat"});
+    for (int i = 0; i < ans.size(); i ++) {
+        cout << ans[i] << endl;
+    }
     system("pause");
     return 0;
 }
-// @lc code=end
-
