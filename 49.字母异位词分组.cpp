@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2020-12-14 20:07:31
- * @LastEditTime: 2020-12-14 20:54:41
+ * @LastEditTime: 2020-12-14 21:24:26
  * @FilePath: \Leetcode\49.字母异位词分组.cpp
  */
 /*
@@ -16,6 +16,7 @@
 #include <iostream>
 #include <vector>
 #include <unordered_map>
+#include <algorithm>
 using namespace std;
 
 
@@ -52,6 +53,8 @@ public:
 
 int main() {
     Solution sol;
+    int A = 0;
+    int B = 0;
     vector<vector<string>> ans = sol.groupAnagrams({"eat", "tea", "tan", "ate", "nat", "bat"});
     for (int i = 0; i < ans.size(); i ++) {
         cout << ans[i] << endl;

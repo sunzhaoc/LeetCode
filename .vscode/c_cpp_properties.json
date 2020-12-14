@@ -12,6 +12,7 @@
 //     ],
 //     "version": 4
 // }
+
 {
     "configurations": [
         {
@@ -19,15 +20,12 @@
             "intelliSenseMode": "clang-x64",
             "includePath": [
                 "${workspaceFolder}",
-                "X:/SOFTWARE/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++", //
-                "X:/SOFTWARE/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32", //
-                "X:/SOFTWARE/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward", //
-                "X:/SOFTWARE/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include", //
-                "X:/SOFTWARE/mingw64/include", //
-                "X:/SOFTWARE/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed" //
-                ,
-                "X:/SOFTWARE/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/tr1",
-                "X:/SOFTWARE/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include"
+                "X:/SOFTWARE/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++",//
+                "X:/SOFTWARE/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32",//
+                "X:/SOFTWARE/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward",//
+                "X:/SOFTWARE/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include",//
+                "X:/SOFTWARE/mingw64/include",//
+                "X:/SOFTWARE/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"//
             ],
             "defines": [
                 "_DEBUG",
@@ -38,18 +36,18 @@
             "browse": {
                 "path": [
                     "${workspaceFolder}",
-                    "X:/SOFTWARE/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++", //
-                    "X:/SOFTWARE/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32", //
-                    "X:/SOFTWARE/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward", //
-                    "X:/SOFTWARE/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include", //
-                    "X:/SOFTWARE/mingw64/include", //
-                    "X:/SOFTWARE/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed" //
+                    "X:/SOFTWARE/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++",//
+                    "X:/SOFTWARE/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32",//
+                    "X:/SOFTWARE/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward",//
+                    "X:/SOFTWARE/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include",//
+                    "X:/SOFTWARE/mingw64/include",//
+                    "X:/SOFTWARE/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"//
                 ],
                 "limitSymbolsToIncludedHeaders": true,
                 "databaseFilename": ""
             },
             "cStandard": "c11",
-            "cppStandard": "c++17"
+            "cppStandard": "c++17"  
         }
     ],
     "version": 4
