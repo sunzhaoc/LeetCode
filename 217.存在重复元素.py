@@ -7,7 +7,7 @@
 # @lc code=start
 import collections
 
-.
+
 """
 RESULT: Accept
 TIME:     64ms    BEAT 7.92%    O(n) = 
