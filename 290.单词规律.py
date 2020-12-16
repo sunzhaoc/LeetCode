@@ -3,7 +3,7 @@ Description:
 Version: 1.0
 Autor: Vicro
 Date: 2020-12-16 13:16:58
-LastEditTime: 2020-12-16 14:23:09
+LastEditTime: 2020-12-16 14:34:45
 FilePath: \Leetcode\290.单词规律.py
 '''
 #
@@ -39,7 +39,7 @@ class Solution:
 RESULT: Accept
 TIME:     48ms    BEAT 14.16%    O(n) = n + m
 MEMORY: 14.9MB    BEAT  5.37%    O(n) = n + m
-Description: 简单的哈希表思想。
+Description: 简单的【双射哈希表】思想。
 """
 
 # import collections
@@ -79,4 +79,3 @@ ans = sol.wordPattern("abba", "dog cat cat fish")
 print(ans)
         
 # @lc code=end
-
