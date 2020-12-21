@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2020-12-21 14:37:42
- * @LastEditTime: 2020-12-21 15:03:57
+ * @LastEditTime: 2020-12-21 15:42:21
  * @FilePath: \Leetcode\50.pow-x-n.cpp
  */
 /*
@@ -21,7 +21,7 @@ using namespace std;
 RESULT: Accept
 TIME:     0ms    BEAT 100.00%    O(n) = log n
 MEMORY: 6.1MB    BEAT  45.14%    O(n) = log n
-Description: 
+Description: 快速幂运算 + 递归。
 */
 
 class Solution {
