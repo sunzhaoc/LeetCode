@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2020-11-30 21:56:56
- * @LastEditTime: 2020-12-21 14:30:30
+ * @LastEditTime: 2020-12-21 15:16:15
  * @FilePath: \Leetcode\readme.md
 -->
 <!--
@@ -32,3 +32,14 @@ TIME:   ms    BEAT %    O(n) =
 MEMORY: MB    BEAT %    O(n) = 
 Description: 
 """
+
+#include <iostream>
+#include <string>
+#include <vector>
+using namespace std;
+
+int main() {
+    Solution sol;
+    cout << << endl;
+    return 0;
+}
