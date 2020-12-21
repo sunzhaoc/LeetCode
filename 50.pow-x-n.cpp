@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2020-12-21 14:37:42
- * @LastEditTime: 2020-12-21 15:42:21
+ * @LastEditTime: 2020-12-21 22:39:18
  * @FilePath: \Leetcode\50.pow-x-n.cpp
  */
 /*

@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2020-12-21 22:04:29
- * @LastEditTime: 2020-12-21 22:32:56
+ * @LastEditTime: 2020-12-21 22:37:08
  * @FilePath: \Leetcode\240.Search a 2D Matrix II.cpp
  */
 /*
@@ -18,10 +18,25 @@
 using namespace std;
 
 
+/*
+RESULT: Accept
+TIME:   184ms    BEAT 37.57%    O(n) = n + m
+MEMORY:  15MB    BEAT  5.74%    O(n) = 1
+Description: 
+*/
+
 class Solution {
 public:
     bool searchMatrix(vector<vector<int>>& matrix, int target) {
+        if (matrix.empty()) return false;
+        int row = 0, col = matrix[0].size() - 1;
         
+        while (row < matrix.size() && col >= 0) {
+            if (matrix[row][col] == target) return true;
+            else if (matrix[row][col] > target) col --;
+            else row ++;
+        }
+        return false;
     }
 };
 

@@ -20,8 +20,8 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME:     8ms    BEAT 84.19%    O(n) = 
-MEMORY: 9.8MB    BEAT 42.71%    O(n) = 
+TIME:     8ms    BEAT 84.19%    O(n) = n + m
+MEMORY: 9.8MB    BEAT 42.71%    O(n) = 1
 Description: 
 */
 
