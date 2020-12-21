@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2020-12-21 14:03:57
- * @LastEditTime: 2020-12-21 14:12:23
+ * @LastEditTime: 2020-12-21 14:18:59
  * @FilePath: \Leetcode\191.Number of 1 Bits.cpp
  */
 /*
@@ -16,6 +16,7 @@
 #include <stdint.h>
 #include <iostream>
 using namespace std;
+
 
 /*
 RESULT: Accept
