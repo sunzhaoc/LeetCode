@@ -3,14 +3,20 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2020-12-24 10:47:36
- * @LastEditTime: 2020-12-24 11:11:06
- * @FilePath: \Leetcode\demo01.cpp
+ * @LastEditTime: 2020-12-24 11:15:58
+ * @FilePath: \Leetcode\剑指 Offer 21. 调整数组顺序使奇数位于偶数前面.cpp
  */
 
 #include <vector>
 #include <iostream>
 using namespace std;
 
+/*
+RESULT: Accept
+TIME:   32ms    BEAT 97.86%    O(n) = 
+MEMORY: 18MB    BEAT 54.82%    O(n) = 
+Description: 本题要求在原数组中更改，故不能开辟新空间。使用首尾双指针。
+*/
 
 class Solution {
 public:
