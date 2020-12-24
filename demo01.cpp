@@ -2,54 +2,35 @@
  * @Description: 
  * @Version: 1.0
  * @Autor: Vicro
- * @Date: 2020-12-24 14:22:36
- * @LastEditTime: 2020-12-24 14:51:05
+ * @Date: 2020-12-24 14:52:46
+ * @LastEditTime: 2020-12-24 15:13:30
  * @FilePath: \Leetcode\demo01.cpp
  */
-#include <vector>
-#include <string>
 #include <iostream>
-#include <unordered_set>
+#include <vector>
+#include <unordered_map>
 using namespace std;
-
 
 
 class Solution {
 public:
-    vector<string> ans;
-    string s_copy;
-
-    vector<string> permutation(string s) {
-        s_copy = s;
-        dfs(0);
-        return ans;
-    }
-
-private:
-    void dfs(int x) {
-        if (x == s_copy.size() - 1) {
-            ans.push_back(s_copy);
-            return;
+    int majorityElement(vector<int>& nums) {
+        unordered_map<int, int> dic;
+        for (int i = 0; i < nums.size(); i ++) {
+            dic[nums[i]] ++;
+            if (dic[nums[i]] > nums.size() / 2) return nums[i];
         }
-
-        unordered_set<char> dic;
-        for (int i = x; i < s_copy.size(); i ++) {
-            if (dic.count(s_copy[i])) continue;
-            dic.insert(s_copy[i]);
-            swap(s_copy[i], s_copy[x]);
-            dfs(x + 1);
-            swap(s_copy[i], s_copy[x]);
-        }
+        return NULL;
     }
 };
 
 
 int main() {
     Solution sol;
-    vector<string> ans = sol.permutation("abc");
-    for (int i = 0; i < ans.size(); i ++) {
-        cout << ans[i] << endl;
-    }
+    // vector<int> nums = {1, 2, 3, 2, 2, 2, 5, 4, 2};
+    vector<int> nums = {10, 9, 9, 9, 10};
+    int ans = sol.majorityElement(nums);
+    cout << ans << endl;
     system("pause");
     return 0;
 }
