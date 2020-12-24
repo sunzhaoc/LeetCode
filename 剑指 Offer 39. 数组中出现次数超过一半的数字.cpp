@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2020-12-24 14:52:46
- * @LastEditTime: 2020-12-24 15:22:20
+ * @LastEditTime: 2020-12-24 15:31:20
  * @FilePath: \Leetcode\剑指 Offer 39. 数组中出现次数超过一半的数字.cpp
  */
 #include <iostream>
@@ -14,15 +14,21 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME:   ms    BEAT %    O(n) = 
-MEMORY: MB    BEAT %    O(n) = 
-Description: 
+TIME:     44ms    BEAT 70.57%    O(n) = n
+MEMORY: 18.8MB    BEAT 26.05%    O(n) = 1
+Description: 摩尔投票法。
+https://leetcode-cn.com/problems/shu-zu-zhong-chu-xian-ci-shu-chao-guo-yi-ban-de-shu-zi-lcof/solution/mian-shi-ti-39-shu-zu-zhong-chu-xian-ci-shu-chao-3/
 */
 
 class Solution {
 public:
     int majorityElement(vector<int>& nums) {
-
+        int vote = 0, ans;
+        for (int num: nums) {
+            if (vote == 0)  ans = num;
+            vote += num == ans ? 1 : -1;
+        }
+        return ans;
     }
 };
 
