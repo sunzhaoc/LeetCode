@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2020-12-24 10:47:36
- * @LastEditTime: 2020-12-24 11:26:33
+ * @LastEditTime: 2020-12-24 13:01:19
  * @FilePath: \Leetcode\剑指 Offer 21. 调整数组顺序使奇数位于偶数前面.cpp
  */
 
@@ -11,17 +11,26 @@
 #include <iostream>
 using namespace std;
 
+/*
+RESULT: Accept
+TIME:     44ms    BEAT 48.31%    O(n) = 
+MEMORY: 18.1MB    BEAT 38.97%    O(n) = 
+Description: 快慢双指针。
+https://leetcode-cn.com/problems/diao-zheng-shu-zu-shun-xu-shi-qi-shu-wei-yu-ou-shu-qian-mian-lcof/solution/ti-jie-shou-wei-shuang-zhi-zhen-kuai-man-shuang-zh/
+*/
 
 class Solution {
 public:
     vector<int> exchange(vector<int>& nums) {
-        int left = 0, right = nums.size() - 1;
-
-        while (left < nums.size()) {
-            if (left % 2 == 0) {
-                
+        int low = 0, fast = 0;
+        while (fast < nums.size()) {
+            if (nums[fast] % 2 == 1) {
+                swap(nums[fast], nums[low]);
+                low ++;
             }
+            fast ++;
         }
+        return nums;
     }
 };
 
