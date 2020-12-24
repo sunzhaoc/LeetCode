@@ -2,36 +2,51 @@
  * @Description: 
  * @Version: 1.0
  * @Autor: Vicro
- * @Date: 2020-12-24 10:47:36
- * @LastEditTime: 2020-12-24 11:11:06
+ * @Date: 2020-12-24 14:22:36
+ * @LastEditTime: 2020-12-24 14:51:05
  * @FilePath: \Leetcode\demo01.cpp
  */
-
 #include <vector>
+#include <string>
 #include <iostream>
+#include <unordered_set>
 using namespace std;
+
 
 
 class Solution {
 public:
-    vector<int> exchange(vector<int>& nums) {
-        int left = 0, right = nums.size() - 1;
-        int temp;
-        
-        while (left < right) {
-            if (nums[left] % 2 == 0 && nums[right] % 2 == 1)    swap(nums[left], nums[right]);
-            if (nums[left] % 2 == 1)    left ++;
-            if (nums[right] % 2 == 0)   right --;
+    vector<string> ans;
+    string s_copy;
+
+    vector<string> permutation(string s) {
+        s_copy = s;
+        dfs(0);
+        return ans;
+    }
+
+private:
+    void dfs(int x) {
+        if (x == s_copy.size() - 1) {
+            ans.push_back(s_copy);
+            return;
         }
-        return nums;
+
+        unordered_set<char> dic;
+        for (int i = x; i < s_copy.size(); i ++) {
+            if (dic.count(s_copy[i])) continue;
+            dic.insert(s_copy[i]);
+            swap(s_copy[i], s_copy[x]);
+            dfs(x + 1);
+            swap(s_copy[i], s_copy[x]);
+        }
     }
 };
 
 
 int main() {
     Solution sol;
-    vector<int> nums = {1, 2, 3, 4};
-    vector<int> ans = sol.exchange(nums);
+    vector<string> ans = sol.permutation("abc");
     for (int i = 0; i < ans.size(); i ++) {
         cout << ans[i] << endl;
     }

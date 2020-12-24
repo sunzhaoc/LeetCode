@@ -2,7 +2,9 @@
     "files.associations": {
         "iostream": "cpp",
         "vector": "cpp",
-        "string_view": "cpp"
+        "string_view": "cpp",
+        "deque": "cpp",
+        "string": "cpp"
     },
     "files.exclude": {
         "**/.classpath": true,
