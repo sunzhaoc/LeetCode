@@ -3,13 +3,28 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2020-12-24 14:52:46
- * @LastEditTime: 2020-12-24 15:15:04
+ * @LastEditTime: 2020-12-24 15:22:20
  * @FilePath: \Leetcode\剑指 Offer 39. 数组中出现次数超过一半的数字.cpp
  */
 #include <iostream>
 #include <vector>
 #include <unordered_map>
 using namespace std;
+
+
+/*
+RESULT: Accept
+TIME:   ms    BEAT %    O(n) = 
+MEMORY: MB    BEAT %    O(n) = 
+Description: 
+*/
+
+class Solution {
+public:
+    int majorityElement(vector<int>& nums) {
+
+    }
+};
 
 
 /*
