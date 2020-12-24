@@ -2,35 +2,42 @@
  * @Description: 
  * @Version: 1.0
  * @Autor: Vicro
- * @Date: 2020-12-24 14:52:46
- * @LastEditTime: 2020-12-24 15:13:30
+ * @Date: 2020-12-24 18:40:37
+ * @LastEditTime: 2020-12-24 18:45:13
  * @FilePath: \Leetcode\demo01.cpp
  */
-#include <iostream>
+
 #include <vector>
-#include <unordered_map>
+#include <iostream>
+#include <algorithm>
 using namespace std;
 
 
+/*
+RESULT: Accept
+TIME:   ms    BEAT %    O(n) = 
+MEMORY: MB    BEAT %    O(n) = 
+Description: 
+*/
+
 class Solution {
 public:
-    int majorityElement(vector<int>& nums) {
-        unordered_map<int, int> dic;
-        for (int i = 0; i < nums.size(); i ++) {
-            dic[nums[i]] ++;
-            if (dic[nums[i]] > nums.size() / 2) return nums[i];
+    vector<int> getLeastNumbers(vector<int>& arr, int k) {
+        vector<int> ans;
+        sort(arr.begin(), arr.end());
+        for (int i = 0; i < k; i ++) {
+            ans.push_back(arr[i]);
         }
-        return NULL;
+        return ans;
     }
 };
 
 
 int main() {
     Solution sol;
-    // vector<int> nums = {1, 2, 3, 2, 2, 2, 5, 4, 2};
-    vector<int> nums = {10, 9, 9, 9, 10};
-    int ans = sol.majorityElement(nums);
-    cout << ans << endl;
+    vector<int> arr = {3, 2, 1};
+    vector<int> ans = sol.getLeastNumbers(arr, 2);
+    for (int i = 0; i < ans.size(); i ++) cout << ans[i] << endl;
     system("pause");
     return 0;
 }
