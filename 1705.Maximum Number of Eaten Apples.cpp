@@ -3,8 +3,8 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2020-12-27 16:47:16
- * @LastEditTime: 2020-12-27 17:03:36
- * @FilePath: \Leetcode\5638.Maximum Number of Eaten Apples.cpp
+ * @LastEditTime: 2020-12-28 21:47:32
+ * @FilePath: \Leetcode\1705.Maximum Number of Eaten Apples.cpp
  */
 
 
@@ -50,7 +50,9 @@ public:
 
 int main() {
     Solution sol;
-    int ans = sol.eatenApples();
+    vector<int> apples = {1, 2, 3, 5, 2};
+    vector<int> days = {3, 2, 1, 4, 2};
+    int ans = sol.eatenApples(apples, days);
     cout << ans << endl;
     system("pause");
     return 0;
