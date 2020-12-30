@@ -3,8 +3,8 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2020-12-30 14:28:24
- * @LastEditTime: 2020-12-30 15:43:08
- * @FilePath: \Leetcode\demo01.cpp
+ * @LastEditTime: 2020-12-30 15:44:07
+ * @FilePath: \Leetcode\剑指 Offer 13. 机器人的运动范围.cpp
  */
 
 #include <iostream>
@@ -15,9 +15,9 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME:   ms    BEAT %    O(n) = mn
-MEMORY: MB    BEAT %    O(n) = mn
-Description: 
+TIME:     4ms    BEAT 74.75%    O(n) = mn
+MEMORY: 7.1MB    BEAT 41.49%    O(n) = mn
+Description: 递推。
 */
 
 class Solution {
