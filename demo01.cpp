@@ -3,101 +3,57 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2020-12-16 15:03:59
- * @LastEditTime: 2020-12-31 18:29:22
+ * @LastEditTime: 2021-01-04 10:39:28
  * @FilePath: \Leetcode\demo01.cpp
  */
+
+#include <vector>
+#include <string>
 #include <iostream>
-#include <cstring>
 using namespace std;
 
+class Solution {
 
-class robot
-{
-	public:
-		void out(int a);
-		void tran_int(int n);
-		~robot(){};
+private:
+    vector<vector<string>> result;
+    vector<string> path; // 放已经回文的子串
+
+    void backtracking (const string& s, int startIndex) {
+        // 如果起始位置已经大于s的大小，说明已经找到了一组分割方案了
+        if (startIndex >= s.size()) {
+            result.push_back(path);
+            return;
+        }
+        for (int i = startIndex; i < s.size(); i++) {
+            if (isPalindrome(s, startIndex, i)) {   // 是回文子串
+                // 获取[startIndex,i]在s中的子串
+                string str = s.substr(startIndex, i - startIndex + 1);
+                path.push_back(str);
+            } else {                                // 不是回文，跳过
+                continue;
+            }
+            backtracking(s, i + 1); // 寻找i+1为起始位置的子串
+            path.pop_back(); // 回溯过程，弹出本次已经填在的子串
+        }
+    }
+
+
+    bool isPalindrome(const string& s, int start, int end) {
+        for (int i = start, j = end; i < j; i++, j--) {
+            if (s[i] != s[j]) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+
+public:
+    vector<vector<string>> partition(string s) {
+        result.clear();
+        path.clear();
+
+        backtracking(s, 0);
+        return result;
+    }
 };
-
-
-char *num1[]=
-{
-	"","one","two","three","four","five","six","seven","eight",
-	"nine","ten","eleven","twelve","thirteen","fourteen",
-	"fifteen","sixteen","seventeen","eighteen","nineteen"
-};
-
-
-char *num10[]=
-{
-	"","","twenty","thirty","forty","fifty","sisty","seventy",
-	"eighty","ninety"
-};
-
-
-void robot::out(int a)
-{
-	int b=a%100;
-	if(a/100!=0)
-	{
-		cout<<num1[a/100]<<" hundred ";
-		if(b!=0)
-		cout<<"and ";
-	}
-	if(b<20)
-	{
-		cout<<num1[b];
-	}
-	else
-	{
-		cout<<num10[b/10];
-		if(b%10!=0)
-		cout<<"-"<<num1[b%10];
-	}
-}
-
-
-void robot::tran_int(int n)
-{
-	if(n>1999999999)
-		cout<<"Can not deal with more than 1999999999！"<<endl;
-	else
-	{
-		int a=n/1000000000,b=(n%1000000000)/1000000,c=(n%1000000)/1000,d=n%1000;
-		if(a!=0)
-		{
-			out(a);
-			cout<<" billion ";
-		}
-		if(b!=0)
-		{
-			out(b);
-			cout<<" million ";
-		}
-		if(c!=0)
-		{
-			out(c);
-			cout<<" thousand ";
-		}
-		if(d!=0)
-		{
-			if(d<100&&(a!=0||b!=0||c!=0))
-				cout<<"and ";
-				out(d);
-		}
-		cout<<endl;
-	} 
-}
-
-
-int main()
-{
-	int n;
-	cout<<"Please input a number: ";
-	cin>>n;
-	cout<<n<<endl;
-	robot a;
-	a.tran_int(n);
-	system("pause");
-	return 0;
-}
