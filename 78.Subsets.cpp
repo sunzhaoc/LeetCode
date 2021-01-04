@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2021-01-04 14:31:27
- * @LastEditTime: 2021-01-04 14:33:54
+ * @LastEditTime: 2021-01-04 14:56:09
  * @FilePath: \Leetcode\78.Subsets.cpp
  */
 /*
@@ -21,16 +21,35 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME:   ms    BEAT %    O(n) = 
-MEMORY: MB    BEAT %    O(n) = 
-USED TIME: 
-Description: 
+TIME:     4ms    BEAT 62.46%    O(n) = 
+MEMORY: 7.4MB    BEAT 51.64%    O(n) = 
+USED TIME: 19:19
+Description: 回溯 + 剪枝。
 */
 
 class Solution {
 public:
-    vector<vector<int>> subsets(vector<int>& nums) {
+    vector<vector<int>> ans;
 
+    void dfs(vector<int>& nums, int index, vector<int>& sub_list) {
+        if (index == nums.size()) {
+            ans.push_back(sub_list);
+            return;
+        }
+        else ans.push_back(sub_list);
+
+        for (int i = index; i < nums.size(); i ++) {
+            sub_list.push_back(nums[i]);
+            dfs(nums, i + 1, sub_list);
+            sub_list.pop_back();
+        }
+        
+    }
+
+    vector<vector<int>> subsets(vector<int>& nums) {
+        vector<int> sub_list = {};
+        dfs(nums, 0, sub_list);
+        return ans;
     }
 };
 
