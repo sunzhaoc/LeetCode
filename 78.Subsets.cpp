@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2021-01-04 14:31:27
- * @LastEditTime: 2021-01-04 14:56:09
+ * @LastEditTime: 2021-01-04 16:51:51
  * @FilePath: \Leetcode\78.Subsets.cpp
  */
 /*
@@ -24,7 +24,7 @@ RESULT: Accept
 TIME:     4ms    BEAT 62.46%    O(n) = 
 MEMORY: 7.4MB    BEAT 51.64%    O(n) = 
 USED TIME: 19:19
-Description: 回溯 + 剪枝。
+Description: 递归 + 剪枝。
 */
 
 class Solution {

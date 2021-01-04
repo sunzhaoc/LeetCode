@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2021-01-04 10:53:07
- * @LastEditTime: 2021-01-04 13:47:54
+ * @LastEditTime: 2021-01-04 16:52:05
  * @FilePath: \Leetcode\93.Restore IP Addresses.cpp
  */
 /*
@@ -23,7 +23,7 @@ using namespace std;
 RESULT: Accept
 TIME:   0ms    BEAT 100.00%    O(n) = 
 MEMORY: 7MB    BEAT  41.31%    O(n) = 
-Description: 回溯 + 剪枝。
+Description: 递归 + 剪枝。
 */
 
 class Solution {
