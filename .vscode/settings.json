@@ -6,7 +6,12 @@
         "deque": "cpp",
         "string": "cpp",
         "sstream": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "array": "cpp",
+        "initializer_list": "cpp",
+        "utility": "cpp",
+        "unordered_set": "cpp",
+        "set": "cpp"
     },
     "files.exclude": {
         "**/.classpath": true,
