@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2020-11-30 21:56:56
- * @LastEditTime: 2021-01-05 15:36:30
+ * @LastEditTime: 2021-01-05 16:47:33
  * @FilePath: \Leetcode\readme.md
 -->
 
@@ -18,6 +18,11 @@ Description:
 */
 
 
+#include <iostream>
+#include <string>
+#include <vector>
+using namespace std;
+
 
 /*
 RESULT: Accept
@@ -26,7 +31,6 @@ MEMORY: MB    BEAT %    O(n) =
 USED TIME: 
 Description: 
 */
-
 
 
 Python
@@ -38,10 +42,7 @@ MEMORY: MB    BEAT %    O(n) =
 Description: 
 """
 
-#include <iostream>
-#include <string>
-#include <vector>
-using namespace std;
+
 
 int main() {
     Solution sol;
