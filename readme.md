@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2020-11-30 21:56:56
- * @LastEditTime: 2021-01-05 09:18:36
+ * @LastEditTime: 2021-01-05 15:36:30
  * @FilePath: \Leetcode\readme.md
 -->
 
@@ -23,7 +23,7 @@ Description:
 RESULT: Accept
 TIME:   ms    BEAT %    O(n) = 
 MEMORY: MB    BEAT %    O(n) = 
-USED TIME:
+USED TIME: 
 Description: 
 */
 
