@@ -3,8 +3,8 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2021-01-05 16:18:41
- * @LastEditTime: 2021-01-05 16:40:58
- * @FilePath: \Leetcode\demo01.cpp
+ * @LastEditTime: 2021-01-05 16:41:16
+ * @FilePath: \Leetcode\剑指 Offer 42. 连续子数组的最大和.cpp
  */
 
 #include <iostream>
