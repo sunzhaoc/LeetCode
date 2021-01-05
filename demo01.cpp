@@ -2,71 +2,35 @@
  * @Description: 
  * @Version: 1.0
  * @Autor: Vicro
- * @Date: 2021-01-05 16:18:41
- * @LastEditTime: 2021-01-05 16:40:58
+ * @Date: 2021-01-05 19:27:05
+ * @LastEditTime: 2021-01-05 19:55:31
  * @FilePath: \Leetcode\demo01.cpp
  */
-
-#include <iostream>
+#include <unordered_map>
 #include <string>
-#include <vector>
+#include <iostream>
 using namespace std;
 
 
-/*
-RESULT: Accept
-TIME:     48ms    BEAT 60.26%    O(n) = n
-MEMORY: 22.8MB    BEAT 73.61%    O(n) = 1
-Description: 优化了一下。没有用数组存储。
-*/
-
 class Solution {
 public:
-    int maxSubArray(vector<int>& nums) {
-        if (nums.size() == 1) return nums[0];
-        int l = nums[0], r;
-        int res = l;
-
-        for (int i = 1; i < nums.size(); i ++) {
-            r = max(nums[i], l + nums[i]);
-            res = res < r ? r : res;
-            l = r;
+    char firstUniqChar(string s) {
+        unordered_map<char, int> map;
+        for (char i: s) {
+            map[i] = map.find(i) == map.end();
         }
-        return res;
+        for (char i: s) {
+            if (map[i]) return i;
+        }
+        return ' ';
     }
 };
 
 
-/*
-RESULT: Accept
-TIME:     48ms    BEAT 60.20%    O(n) = n
-MEMORY: 23.4MB    BEAT 14.57%    O(n) = n
-USED TIME: 16:57
-Description: 
-*/
-
-// class Solution {
-// public:
-//     int maxSubArray(vector<int>& nums) {
-//         if (nums.size() == 1) return nums[0];
-//         vector<int> dp(nums.size());
-//         dp[0] = nums[0];
-//         int res = dp[0];
-//         for (int i = 1; i < nums.size(); i ++) {
-//             dp[i] = max(nums[i], dp[i - 1] + nums[i]);
-//             res = res < dp[i] ? dp[i] : res;
-//         }
-//         return res;
-//     }
-// };
-
-
 int main() {
     Solution sol;
-    vector<int> nums = {-2,1,-3,4,-1,2,1,-5,4};
-    int ans = sol.maxSubArray(nums);
+    char ans = sol.firstUniqChar("abaccdeff");
     cout << ans << endl;
     system("pause");
     return 0;
 }
-
