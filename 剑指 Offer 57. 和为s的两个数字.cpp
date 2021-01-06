@@ -3,14 +3,21 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2021-01-06 18:41:29
- * @LastEditTime: 2021-01-06 19:02:42
- * @FilePath: \Leetcode\demo01.cpp
+ * @LastEditTime: 2021-01-06 19:04:27
+ * @FilePath: \Leetcode\剑指 Offer 57. 和为s的两个数字.cpp
  */
 #include <iostream>
 #include <string>
 #include <vector>
 using namespace std;
 
+
+/*
+RESULT: Accept
+TIME:    452ms    BEAT: 40.30%    O(n) = n
+MEMORY: 98.6MB    BEAT: 40.19%    O(n) = 1
+Description: 对撞双指针。Easy。
+*/
 
 class Solution {
 public:
