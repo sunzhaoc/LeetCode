@@ -25,8 +25,8 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME:    108ms    BEAT 44.36%    O(n) = 
-MEMORY: 25.3MB    BEAT 53.08%    O(n) = 
+TIME:    108ms    BEAT: 44.36%    O(n) = 
+MEMORY: 25.3MB    BEAT: 53.08%    O(n) = 
 USED TIME: 42:50
 Description: 递归。
 */

@@ -21,8 +21,8 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME:    196ms    BEAT 91.69%    O(n) = n
-MEMORY: 50.9MB    BEAT 65.52%    O(n) = 1
+TIME:    196ms    BEAT: 91.69%    O(n) = n
+MEMORY: 50.9MB    BEAT: 65.52%    O(n) = 1
 Description: 贪心。
 */
 

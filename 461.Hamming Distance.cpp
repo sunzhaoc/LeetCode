@@ -22,8 +22,8 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME:     0ms    BEAT 100.00%    O(n) = 1
-MEMORY: 6.3MB    BEAT   6.86%    O(n) = 1
+TIME:     0ms    BEAT: 100.00%    O(n) = 1
+MEMORY: 6.3MB    BEAT:   6.86%    O(n) = 1
 USED TIME: 03:46
 Description: 布赖恩·克尼根算法。
 */
@@ -44,8 +44,8 @@ public:
 
 /*
 RESULT: Accept
-TIME:     4ms    BEAT 31.20%    O(n) = 
-MEMORY: 6.2MB    BEAT 35.06%    O(n) = 
+TIME:     4ms    BEAT: 31.20%    O(n) = 
+MEMORY: 6.2MB    BEAT: 35.06%    O(n) = 
 USED TIME: 03:46
 Description: 
 */

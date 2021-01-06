@@ -22,8 +22,8 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME:   12ms    BEAT 67.75%    O(n) = 
-MEMORY: 12MB    BEAT 20.38%    O(n) = 
+TIME:   12ms    BEAT: 67.75%    O(n) = 
+MEMORY: 12MB    BEAT: 20.38%    O(n) = 
 USED TIME: 52:31
 Description: 递归 + 优化。
 */
@@ -66,8 +66,8 @@ public:
 
 /*
 RESULT: Accept
-TIME:     12ms    BEAT 67.75%    O(n) = 
-MEMORY: 12.4MB    BEAT  8.34%    O(n) = 
+TIME:     12ms    BEAT: 67.75%    O(n) = 
+MEMORY: 12.4MB    BEAT:  8.34%    O(n) = 
 USED TIME: 52:31
 Description: 递归
 */

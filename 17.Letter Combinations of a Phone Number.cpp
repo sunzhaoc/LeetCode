@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2021-01-04 14:02:52
- * @LastEditTime: 2021-01-04 16:59:57
+ * @LastEditTime: 2021-01-06 13:34:02
  * @FilePath: \Leetcode\17.Letter Combinations of a Phone Number.cpp
  */
 /*
@@ -30,8 +30,8 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME:     4ms    BEAT 39.47%    O(n) = 3^m * 4^n
-MEMORY: 7.1MB    BEAT 13.93%    O(n) = 3^m * 4^n
+TIME:     4ms    BEAT: 39.47%    O(n) = 3^m * 4^n
+MEMORY: 7.1MB    BEAT: 13.93%    O(n) = 3^m * 4^n
 USED TIME: 18:57
 Description: 递归。
 */

@@ -23,8 +23,8 @@ class TreeNode:
 
 """
 RESULT: Accept
-TIME:    172ms    BEAT 62.14%    O(n) = n
-MEMORY: 85.6MB    BEAT 30.23%    O(n) = n
+TIME:    172ms    BEAT: 62.14%    O(n) = n
+MEMORY: 85.6MB    BEAT: 30.23%    O(n) = n
 Description: 上一方法的优化版本
 """
 
@@ -42,8 +42,8 @@ class Solution:
 
 """
 RESULT: Accept
-TIME:   1060ms    BEAT 5.16%    O(n) = 
-MEMORY: 90.6MB    BEAT 5.01%    O(n) =  
+TIME:   1060ms    BEAT: 5.16%    O(n) = 
+MEMORY: 90.6MB    BEAT: 5.01%    O(n) =  
 Description: 
 """
 

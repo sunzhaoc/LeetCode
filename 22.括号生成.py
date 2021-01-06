@@ -17,8 +17,8 @@ FilePath: \Leetcode\22.括号生成.py
 
 """
 RESULT: Accept
-TIME:     40ms    BEAT 77.19%    O(n) = n^2
-MEMORY: 13.8MB    BEAT 12.96%    O(n) = n^2
+TIME:     40ms    BEAT: 77.19%    O(n) = n^2
+MEMORY: 13.8MB    BEAT: 12.96%    O(n) = n^2
 Description: 
 """
 

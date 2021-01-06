@@ -20,8 +20,8 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME:     4ms    BEAT 55.68%    O(n) = nlogn
-MEMORY: 6.3MB    BEAT 39.63%    O(n) = n
+TIME:     4ms    BEAT: 55.68%    O(n) = nlogn
+MEMORY: 6.3MB    BEAT: 39.63%    O(n) = n
 Description: 最大堆
 */
 

@@ -17,8 +17,8 @@ FilePath: \Leetcode\399.除法求值.py
 
 """
 RESULT: Accept
-TIME:     44ms    BEAT 27.53%    O(n) = 
-MEMORY: 14.9MB    BEAT 11.39%    O(n) = 
+TIME:     44ms    BEAT: 27.53%    O(n) = 
+MEMORY: 14.9MB    BEAT: 11.39%    O(n) = 
 Description: 
 """
 
@@ -88,8 +88,8 @@ Description:
 
 """
 RESULT: Accept
-TIME:   ms    BEAT %    O(n) = 
-MEMORY: MB    BEAT %    O(n) = 
+TIME:   ms    BEAT: %    O(n) = 
+MEMORY: MB    BEAT: %    O(n) = 
 Description: 
 """
 

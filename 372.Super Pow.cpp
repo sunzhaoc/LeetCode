@@ -21,8 +21,8 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME:     28ms    BEAT 50.17%    O(n) = 
-MEMORY: 11.9MB    BEAT 13.99%    O(n) = 
+TIME:     28ms    BEAT: 50.17%    O(n) = 
+MEMORY: 11.9MB    BEAT: 13.99%    O(n) = 
 Description: 快速幂运算 + 递归。
 */
 

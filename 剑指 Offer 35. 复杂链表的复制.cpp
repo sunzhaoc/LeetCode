@@ -31,8 +31,8 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME:     20ms    BEAT 48.70%    O(n) = 
-MEMORY: 11.2MB    BEAT 72.31%    O(n) = 
+TIME:     20ms    BEAT: 48.70%    O(n) = 
+MEMORY: 11.2MB    BEAT: 72.31%    O(n) = 
 USED TIME: 14:55
 Description: 哈希表。
 */

@@ -14,8 +14,8 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME: 20ms BEAT 27%
-MEMORY: 11.8MB BEAT 7%
+TIME: 20ms BEAT: 27%
+MEMORY: 11.8MB BEAT: 7%
 Description: 暴力解法
 */
 class Solution {

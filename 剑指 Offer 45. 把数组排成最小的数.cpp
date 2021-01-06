@@ -16,8 +16,8 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME:     12ms    BEAT 71.84%    O(n) = 
-MEMORY: 11.6MB    BEAT 36.69%    O(n) = 
+TIME:     12ms    BEAT: 71.84%    O(n) = 
+MEMORY: 11.6MB    BEAT: 36.69%    O(n) = 
 USED TIME: 37:17
 Description: Important！！！需要自定义排序规则。
 */

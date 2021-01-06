@@ -23,8 +23,8 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME:     8ms    BEAT 71.58%    O(n) = n
-MEMORY: 8.8MB    BEAT 59.85%    O(n) = n
+TIME:     8ms    BEAT: 71.58%    O(n) = n
+MEMORY: 8.8MB    BEAT: 59.85%    O(n) = n
 Description: 改变链表结构法。
 */
 
@@ -55,8 +55,8 @@ public:
 
 /*
 RESULT: Accept
-TIME:      20ms    BEAT 10.68%    O(n) = n
-MEMORY:   9.2MB    BEAT 16.55%    O(n) = n
+TIME:      20ms    BEAT: 10.68%    O(n) = n
+MEMORY:   9.2MB    BEAT: 16.55%    O(n) = n
 Description: 堆栈法，因为输出为逆序，可以利用堆栈的性质。
 */
 
@@ -85,8 +85,8 @@ Description: 堆栈法，因为输出为逆序，可以利用堆栈的性质。
 
 /*
 RESULT: Accept
-TIME:      56ms    BEAT 7.40%    O(n) = n
-MEMORY: 248.7MB    BEAT 5.01%    O(n) = n
+TIME:      56ms    BEAT: 7.40%    O(n) = n
+MEMORY: 248.7MB    BEAT: 5.01%    O(n) = n
 Description: 递归解法。链表非常长时可能导致函数调用栈溢出。
 */
 
@@ -105,8 +105,8 @@ Description: 递归解法。链表非常长时可能导致函数调用栈溢出�
 
 /*
 RESULT: Accept
-TIME:     0ms    BEAT 100.00%    O(n) = n
-MEMORY: 8.7MB    BEAT  73.12%    O(n) = 1
+TIME:     0ms    BEAT: 100.00%    O(n) = n
+MEMORY: 8.7MB    BEAT:  73.12%    O(n) = 1
 Description: 利用algorithm中的reverse函数进行反转。
 */
 

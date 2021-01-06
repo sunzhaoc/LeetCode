@@ -21,8 +21,8 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME:      8ms    BEAT 93.51%    O(n) = m + log n
-MEMORY: 11.5MB    BEAT 29.29%    O(n) = 1
+TIME:      8ms    BEAT: 93.51%    O(n) = m + log n
+MEMORY: 11.5MB    BEAT: 29.29%    O(n) = 1
 Description: 
 https://leetcode-cn.com/problems/patching-array/solution/an-yao-qiu-bu-qi-shu-zu-tan-xin-suan-fa-b4bwr/
 */

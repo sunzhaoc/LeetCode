@@ -22,8 +22,8 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME:    300ms    BEAT 11.40%    O(n) = 
-MEMORY: 74.5MB    BEAT 22.90%    O(n) = 
+TIME:    300ms    BEAT: 11.40%    O(n) = 
+MEMORY: 74.5MB    BEAT: 22.90%    O(n) = 
 Description: 递归。传地址，优化。
 时空差距并没有那么大。
 */
@@ -71,8 +71,8 @@ public:
 
 /*
 RESULT: Accept
-TIME:     420ms    BEAT 5.13%    O(n) = 
-MEMORY: 159.8MB    BEAT 5.03%    O(n) = 
+TIME:     420ms    BEAT: 5.13%    O(n) = 
+MEMORY: 159.8MB    BEAT: 5.03%    O(n) = 
 USED TIME: 01:19:43
 Description: 递归。传参数，优化。
 */

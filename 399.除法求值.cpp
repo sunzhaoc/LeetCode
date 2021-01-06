@@ -22,8 +22,8 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME:   ms    BEAT %    O(n) = 
-MEMORY: MB    BEAT %    O(n) = 
+TIME:   ms    BEAT: %    O(n) = 
+MEMORY: MB    BEAT: %    O(n) = 
 USED TIME: 
 Description: 
 */

@@ -10,8 +10,8 @@ FilePath: \Leetcode\剑指 Offer 10- II. 青蛙跳台阶问题.py
 
 """
 RESULT: Accept
-TIME:     36ms    BEAT 82.11%    O(n) = 
-MEMORY: 14.8MB    BEAT  5.05%    O(n) =  
+TIME:     36ms    BEAT: 82.11%    O(n) = 
+MEMORY: 14.8MB    BEAT:  5.05%    O(n) =  
 Description: 
 """
 

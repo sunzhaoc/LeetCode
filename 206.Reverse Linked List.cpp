@@ -23,8 +23,8 @@ struct ListNode {
 
 /*
 RESULT: Accept
-TIME:    12ms    BEAT 53.35%    O(n) = n
-MEMORY: 8.6MB    BEAT 41.13%    O(n) = 1
+TIME:    12ms    BEAT: 53.35%    O(n) = n
+MEMORY: 8.6MB    BEAT: 41.13%    O(n) = 1
 Description: 
 */
 

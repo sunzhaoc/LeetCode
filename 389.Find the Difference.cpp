@@ -19,8 +19,8 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME:     4ms    BEAT 73.81%    O(n) = n
-MEMORY: 6.9MB    BEAT 21.88%    O(n) = 1
+TIME:     4ms    BEAT: 73.81%    O(n) = n
+MEMORY: 6.9MB    BEAT: 21.88%    O(n) = 1
 Description: 位运算。
 */
 
@@ -37,8 +37,8 @@ public:
 
 /*
 RESULT: Accept
-TIME:     4ms    BEAT 73.81%    O(n) = n
-MEMORY: 6.8MB    BEAT 45.80%    O(n) = 1
+TIME:     4ms    BEAT: 73.81%    O(n) = n
+MEMORY: 6.8MB    BEAT: 45.80%    O(n) = 1
 Description: 求和。
 */
 

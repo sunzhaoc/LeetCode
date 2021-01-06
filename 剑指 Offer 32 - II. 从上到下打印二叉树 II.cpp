@@ -18,8 +18,8 @@ struct TreeNode {
 
 /*
 RESULT: Accept
-TIME:      8ms    BEAT 49.68%    O(n) = 
-MEMORY: 13.8MB    BEAT  5.11%    O(n) = 
+TIME:      8ms    BEAT: 49.68%    O(n) = 
+MEMORY: 13.8MB    BEAT:  5.11%    O(n) = 
 USED TIME: 05:55
 Description: 二叉树的前序遍历。
 */

@@ -17,8 +17,8 @@ FilePath: \Leetcode\389.找不同.py
 
 """
 RESULT: Accept
-TIME:     44ms    BEAT 60.53%    O(n) = n
-MEMORY: 14.8MB    BEAT  5.13%    O(n) = 26
+TIME:     44ms    BEAT: 60.53%    O(n) = n
+MEMORY: 14.8MB    BEAT:  5.13%    O(n) = 26
 Description: 用哈希表计数。
 """
 

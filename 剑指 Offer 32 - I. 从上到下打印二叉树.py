@@ -18,8 +18,8 @@ import collections
 
 """
 RESULT: Accept
-TIME:     40ms    BEAT 69.78%    O(n) = 
-MEMORY: 14.9MB    BEAT  7.85%    O(n) = 
+TIME:     40ms    BEAT: 69.78%    O(n) = 
+MEMORY: 14.9MB    BEAT:  7.85%    O(n) = 
 Description: BFS
 """
 

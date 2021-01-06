@@ -9,8 +9,8 @@ FilePath: \Leetcode\剑指 Offer 39. 数组中出现次数超过一半的数字.
 
 """
 RESULT: Accept
-TIME:     52ms    BEAT 62.30%    O(n) = n
-MEMORY: 15.9MB    BEAT  9.82%    O(n) = 1
+TIME:     52ms    BEAT: 62.30%    O(n) = n
+MEMORY: 15.9MB    BEAT:  9.82%    O(n) = 1
 Description: 摩尔投票法。
 """
 

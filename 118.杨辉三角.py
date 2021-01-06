@@ -7,8 +7,8 @@
 # @lc code=start
 """
 RESULT: Accept
-TIME:     32ms    BEAT 93.78%    O(n) = n^2
-MEMORY: 13.6MB    BEAT 15.89%    O(n) = 1
+TIME:     32ms    BEAT: 93.78%    O(n) = n^2
+MEMORY: 13.6MB    BEAT: 15.89%    O(n) = 1
 Description: 
 """
 class Solution:

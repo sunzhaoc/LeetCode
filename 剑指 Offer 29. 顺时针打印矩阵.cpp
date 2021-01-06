@@ -12,8 +12,8 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME:     28ms    BEAT 24.45%    O(n) = mn
-MEMORY: 10.5MB    BEAT  5.01%    O(n) = 1?
+TIME:     28ms    BEAT: 24.45%    O(n) = mn
+MEMORY: 10.5MB    BEAT:  5.01%    O(n) = 1?
 Description: 使用四条边来定义边界，当 left > right 或 up > down 时，退出。
 */
 
@@ -49,8 +49,8 @@ public:
 
 /*
 RESULT: Accept
-TIME:     20ms    BEAT 91.14%    O(n) = mn
-MEMORY: 10.5MB    BEAT  5.01%    O(n) = 1?
+TIME:     20ms    BEAT: 91.14%    O(n) = mn
+MEMORY: 10.5MB    BEAT:  5.01%    O(n) = 1?
 Description: 使用四个角的点的坐标来定义边界,用计数的方法来判断退出条件。
 */
 

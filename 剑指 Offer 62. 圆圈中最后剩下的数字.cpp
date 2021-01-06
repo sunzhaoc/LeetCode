@@ -11,8 +11,8 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME:     4ms    BEAT 99.88%    O(n) = n
-MEMORY: 6.3MB    BEAT 34.63%    O(n) = 1
+TIME:     4ms    BEAT: 99.88%    O(n) = n
+MEMORY: 6.3MB    BEAT: 34.63%    O(n) = 1
 Description: 约瑟夫环问题，需了解其基本知识。再使用递归公式推导。
 https://leetcode-cn.com/problems/yuan-quan-zhong-zui-hou-sheng-xia-de-shu-zi-lcof/solution/huan-ge-jiao-du-ju-li-jie-jue-yue-se-fu-huan-by-as/
 */

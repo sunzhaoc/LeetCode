@@ -20,8 +20,8 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME:     40ms    BEAT 82.13%    O(n) = n
-MEMORY: 17.4MB    BEAT 12.61%    O(n) = n
+TIME:     40ms    BEAT: 82.13%    O(n) = n
+MEMORY: 17.4MB    BEAT: 12.61%    O(n) = n
 Description: 贪心。
 */
 

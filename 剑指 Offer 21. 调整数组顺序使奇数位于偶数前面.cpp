@@ -13,8 +13,8 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME:     44ms    BEAT 48.31%    O(n) = 
-MEMORY: 18.1MB    BEAT 38.97%    O(n) = 
+TIME:     44ms    BEAT: 48.31%    O(n) = 
+MEMORY: 18.1MB    BEAT: 38.97%    O(n) = 
 Description: 快慢双指针。
 https://leetcode-cn.com/problems/diao-zheng-shu-zu-shun-xu-shi-qi-shu-wei-yu-ou-shu-qian-mian-lcof/solution/ti-jie-shou-wei-shuang-zhi-zhen-kuai-man-shuang-zh/
 */
@@ -37,8 +37,8 @@ public:
 
 /*
 RESULT: Accept
-TIME:   32ms    BEAT 97.86%    O(n) = 
-MEMORY: 18MB    BEAT 54.82%    O(n) = 
+TIME:   32ms    BEAT: 97.86%    O(n) = 
+MEMORY: 18MB    BEAT: 54.82%    O(n) = 
 Description: 本题要求在原数组中更改，故不能开辟新空间。使用首尾双指针。
 */
 

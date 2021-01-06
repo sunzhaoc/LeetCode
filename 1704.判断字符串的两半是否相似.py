@@ -9,8 +9,8 @@ FilePath: \Leetcode\5637.判断字符串的两半是否相似.py
 
 """
 RESULT: Accept
-TIME:     40ms    BEAT 100%    O(n) = |S|
-MEMORY: 14.9MB    BEAT 100%    O(n) = |S|
+TIME:     40ms    BEAT: 100%    O(n) = |S|
+MEMORY: 14.9MB    BEAT: 100%    O(n) = |S|
 Description: 
 https://leetcode-cn.com/circle/discuss/KyAmtm/
 """
@@ -32,8 +32,8 @@ class Solution:
 
 """
 RESULT: Accept
-TIME:     48ms    BEAT 100%    O(n) = 
-MEMORY: 17.7MB    BEAT 100%    O(n) = 
+TIME:     48ms    BEAT: 100%    O(n) = 
+MEMORY: 17.7MB    BEAT: 100%    O(n) = 
 Description: 
 """
 

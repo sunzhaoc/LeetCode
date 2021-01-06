@@ -10,8 +10,8 @@
 
 /*
 RESULT: Accept
-TIME:     0ms    BEAT 100.00%    O(n) = n
-MEMORY: 6.2MB    BEAT  25.71%    O(n) = 1
+TIME:     0ms    BEAT: 100.00%    O(n) = n
+MEMORY: 6.2MB    BEAT:  25.71%    O(n) = 1
 Description: 
 */
 

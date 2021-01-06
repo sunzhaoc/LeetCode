@@ -14,8 +14,8 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME:   16ms    BEAT 80.40%    O(n) = n
-MEMORY: 15MB    BEAT 82.48%    O(n) = n
+TIME:   16ms    BEAT: 80.40%    O(n) = n
+MEMORY: 15MB    BEAT: 82.48%    O(n) = n
 USED TIME: 44:33
 Description: 
 */

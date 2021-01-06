@@ -14,8 +14,8 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME:     20ms    BEAT 98.55%    O(n) = 
-MEMORY:    8MB    BEAT 72.49%    O(n) = 
+TIME:     20ms    BEAT: 98.55%    O(n) = 
+MEMORY:    8MB    BEAT: 72.49%    O(n) = 
 Description: 回溯 + 剪枝
 */
 

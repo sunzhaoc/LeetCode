@@ -19,8 +19,8 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME:     0ms    BEAT 100.00%    O(n) = log n
-MEMORY: 6.1MB    BEAT  45.14%    O(n) = log n
+TIME:     0ms    BEAT: 100.00%    O(n) = log n
+MEMORY: 6.1MB    BEAT:  45.14%    O(n) = log n
 Description: 快速幂运算 + 递归。
 */
 
@@ -41,8 +41,8 @@ private:
 
 /*
 RESULT: Time Out
-TIME:   ms    BEAT %    O(n) = 
-MEMORY: MB    BEAT %    O(n) = 
+TIME:   ms    BEAT: %    O(n) = 
+MEMORY: MB    BEAT: %    O(n) = 
 Description: 
 */
 

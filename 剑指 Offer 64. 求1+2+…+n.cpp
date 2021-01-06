@@ -12,8 +12,8 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME:     0ms    BEAT 100.00%    O(n) = n
-MEMORY: 6.5MB    BEAT  10.61%    O(n) = n
+TIME:     0ms    BEAT: 100.00%    O(n) = n
+MEMORY: 6.5MB    BEAT:  10.61%    O(n) = n
 Description: 官解，递归，利用位运算符 && 的短路性质。
 */
 

@@ -17,8 +17,8 @@ FilePath: \Leetcode\155.最小栈.py
 
 """
 RESULT: Accept
-TIME:     60ms    BEAT 96.63%    O(n) = 1
-MEMORY: 17.8MB    BEAT 17.39%    O(n) = 1
+TIME:     60ms    BEAT: 96.63%    O(n) = 1
+MEMORY: 17.8MB    BEAT: 17.39%    O(n) = 1
 USED TIME: 05:18
 Description: 双堆。
 """

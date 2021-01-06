@@ -18,8 +18,8 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME:    36ms    BEAT 13.81%    O(n) = 
-MEMORY: 7.4MB    BEAT 19.28%    O(n) = 
+TIME:    36ms    BEAT: 13.81%    O(n) = 
+MEMORY: 7.4MB    BEAT: 19.28%    O(n) = 
 Description: 双射哈希表。
 */ 
 

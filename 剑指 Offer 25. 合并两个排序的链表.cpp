@@ -17,8 +17,8 @@ struct ListNode {
 
 /*
 RESULT: Accept
-TIME:     44ms    BEAT 55.30%    O(n) =
-MEMORY: 19.2MB    BEAT 40.20%    O(n) = 
+TIME:     44ms    BEAT: 55.30%    O(n) =
+MEMORY: 19.2MB    BEAT: 40.20%    O(n) = 
 Description: 递归。
 */
 
@@ -42,8 +42,8 @@ public:
 
 /*
 RESULT: Accept
-TIME:     36ms    BEAT 91.48%    O(n) = m + n
-MEMORY: 19.1MB    BEAT 63.70%    O(n) = 1
+TIME:     36ms    BEAT: 91.48%    O(n) = m + n
+MEMORY: 19.1MB    BEAT: 63.70%    O(n) = 1
 Description: 迭代。
 */
 

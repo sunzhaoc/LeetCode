@@ -34,8 +34,8 @@ struct TreeNode {
 
 /*
 RESULT: Accept
-TIME:     24ms    BEAT 74.08%    O(n) = n
-MEMORY: 17.8MB    BEAT 23.38%    O(n) = n
+TIME:     24ms    BEAT: 74.08%    O(n) = n
+MEMORY: 17.8MB    BEAT: 23.38%    O(n) = n
 Description: 利用哈希表保存索引来提速。
 */
 
@@ -73,8 +73,8 @@ public:
 
 /*
 RESULT: Accept
-TIME:     48ms    BEAT 34.73%    O(n) = n
-MEMORY: 17.3MB    BEAT 60.56%    O(n) = n
+TIME:     48ms    BEAT: 34.73%    O(n) = n
+MEMORY: 17.3MB    BEAT: 60.56%    O(n) = n
 Description: 递归，上一方法的优化版本。
 */
 
@@ -113,8 +113,8 @@ Description: 递归，上一方法的优化版本。
 
 /*
 RESULT: Accept
-TIME:     328ms    BEAT 5.16%    O(n) = 
-MEMORY: 149.9MB    BEAT 5.02%    O(n) =  
+TIME:     328ms    BEAT: 5.16%    O(n) = 
+MEMORY: 149.9MB    BEAT: 5.02%    O(n) =  
 Description: 
 */
 

@@ -16,8 +16,8 @@ FilePath: \Leetcode\842.将数组拆分成斐波那契序列.py
 
 """
 RESULT: Accept
-TIME:     52ms    BEAT 78.89%    O(n) = 
-MEMORY: 13.6MB    BEAT 11.93%    O(n) =  
+TIME:     52ms    BEAT: 78.89%    O(n) = 
+MEMORY: 13.6MB    BEAT: 11.93%    O(n) =  
 Description: https://leetcode-cn.com/problems/split-array-into-fibonacci-sequence/solution/python-3dai-fan-hui-zhi-de-hui-su-jian-z-i9ol/
 """
 
@@ -57,8 +57,8 @@ class Solution:
 
 """
 RESULT: Accept
-TIME:    112ms    BEAT 49.34%    O(n) = 
-MEMORY: 13.6MB    BEAT 15.38%    O(n) = 
+TIME:    112ms    BEAT: 49.34%    O(n) = 
+MEMORY: 13.6MB    BEAT: 15.38%    O(n) = 
 Description: 从后往前进行遍历。上一个方法的优化版本。
 """
 
@@ -116,8 +116,8 @@ Description: 从后往前进行遍历。上一个方法的优化版本。
 
 """
 RESULT: Accept
-TIME:    128ms    BEAT 47.23%    O(n) = 
-MEMORY: 13.6MB    BEAT 11.40%    O(n) = 
+TIME:    128ms    BEAT: 47.23%    O(n) = 
+MEMORY: 13.6MB    BEAT: 11.40%    O(n) = 
 Description: 从后往前进行遍历。
 """
 

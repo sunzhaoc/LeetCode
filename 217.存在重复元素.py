@@ -10,8 +10,8 @@ import collections
 
 """
 RESULT: Accept
-TIME:     64ms    BEAT 7.92%    O(n) = 
-MEMORY: 23.5MB    BEAT 5.36%    O(n) =  
+TIME:     64ms    BEAT: 7.92%    O(n) = 
+MEMORY: 23.5MB    BEAT: 5.36%    O(n) =  
 Description: 
 """
 

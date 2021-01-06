@@ -16,8 +16,8 @@ FilePath: \Leetcode\62.不同路径.py
 
 """
 RESULT: Accept
-TIME:     40ms    BEAT 67.30%    O(n) = m
-MEMORY: 13.5MB    BEAT 44.86%    O(n) = 1
+TIME:     40ms    BEAT: 67.30%    O(n) = m
+MEMORY: 13.5MB    BEAT: 44.86%    O(n) = 1
 Description: 利用数学组合数知识解决。因为m，n可互换，利用这点可以降低运算时间。
 """
 
@@ -33,8 +33,8 @@ class Solution:
 
 """
 RESULT: Time Out
-TIME:   ms    BEAT %    O(n) = 
-MEMORY: MB    BEAT %    O(n) =  
+TIME:   ms    BEAT: %    O(n) = 
+MEMORY: MB    BEAT: %    O(n) =  
 Description: 回溯法，此方法会超时。
 """
 

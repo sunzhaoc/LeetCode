@@ -23,8 +23,8 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME:      8ms    BEAT 42.42%    O(n) = n
-MEMORY: 12.4MB    BEAT 21.83%    O(n) = n
+TIME:      8ms    BEAT: 42.42%    O(n) = n
+MEMORY: 12.4MB    BEAT: 21.83%    O(n) = n
 USED TIME: 04:50
 Description: BFS
 */

@@ -13,8 +13,8 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME:   48ms    BEAT 93.07%    O(n) = m + n
-MEMORY: 14MB    BEAT 5.11%     O(n) = 1 
+TIME:   48ms    BEAT: 93.07%    O(n) = m + n
+MEMORY: 14MB    BEAT: 5.11%     O(n) = 1 
 Description: 线性查找
 */
 class Solution {

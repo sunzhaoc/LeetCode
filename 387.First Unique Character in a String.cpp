@@ -21,8 +21,8 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME:   152ms    BEAT 25.24%    O(n) = n
-MEMORY:  11MB    BEAT 14.99%    O(n) = <=26
+TIME:   152ms    BEAT: 25.24%    O(n) = n
+MEMORY:  11MB    BEAT: 14.99%    O(n) = <=26
 Description: 使用哈希表存储索引。这方法其实没什么必要。。。
 */
 
@@ -48,8 +48,8 @@ public:
 
 /*
 RESULT: Accept
-TIME:    108ms    BEAT 48.22%    O(n) = n
-MEMORY: 10.8MB    BEAT 33.78%    O(n) = <=26
+TIME:    108ms    BEAT: 48.22%    O(n) = n
+MEMORY: 10.8MB    BEAT: 33.78%    O(n) = <=26
 Description: 哈希表。使用哈希表存储频数。
 */
 

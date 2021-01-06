@@ -9,8 +9,8 @@ FilePath: \Leetcode\剑指 Offer 09. 用两个栈实现队列.py
 
 """
 RESULT: Accept
-TIME:    400ms    BEAT 96.04%    O(n) = 
-MEMORY: 18.3MB    BEAT 10.15%    O(n) = 
+TIME:    400ms    BEAT: 96.04%    O(n) = 
+MEMORY: 18.3MB    BEAT: 10.15%    O(n) = 
 Description: 
 """
 

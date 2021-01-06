@@ -16,8 +16,8 @@ FilePath: \Leetcode\387.字符串中的第一个唯一字符.py
 
 """
 RESULT: Accept
-TIME:    104ms    BEAT 77.33%    O(n) = n
-MEMORY: 14.7MB    BEAT 10.40%    O(n) = <=26
+TIME:    104ms    BEAT: 77.33%    O(n) = n
+MEMORY: 14.7MB    BEAT: 10.40%    O(n) = <=26
 Description: 哈希表。使用哈希表存储频数。
 """
 

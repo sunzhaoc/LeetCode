@@ -21,8 +21,8 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME:     4ms    BEAT 62.46%    O(n) = 
-MEMORY: 7.4MB    BEAT 51.64%    O(n) = 
+TIME:     4ms    BEAT: 62.46%    O(n) = 
+MEMORY: 7.4MB    BEAT: 51.64%    O(n) = 
 USED TIME: 19:19
 Description: 递归 + 剪枝。
 */

@@ -10,8 +10,8 @@ FilePath: \Leetcode\剑指 Offer 12. 矩阵中的路径.py
 
 """
 RESULT: Accept
-TIME:    268ms    BEAT 27.81%    O(n) = 
-MEMORY: 18.4MB    BEAT  5.00%    O(n) = 
+TIME:    268ms    BEAT: 27.81%    O(n) = 
+MEMORY: 18.4MB    BEAT:  5.00%    O(n) = 
 Description: 回溯 + 剪枝
 """
 

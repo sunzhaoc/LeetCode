@@ -12,8 +12,8 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME:     48ms    BEAT 22.92%    O(n) = 1
-MEMORY: 15.2MB    BEAT 43.19%    O(n) = 1
+TIME:     48ms    BEAT: 22.92%    O(n) = 1
+MEMORY: 15.2MB    BEAT: 43.19%    O(n) = 1
 USED TIME: 06:10
 Description: 双堆。
 */

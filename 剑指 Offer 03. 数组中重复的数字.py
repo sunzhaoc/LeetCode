@@ -12,8 +12,8 @@ FilePath: \Leetcode\剑指 Offer 03. 数组中重复的数字.py
 
 """
 RESULT: Accept
-TIME:     64ms    BEAT 30.83%
-MEMORY: 22.6MB    BEAT 46.93%
+TIME:     64ms    BEAT: 30.83%
+MEMORY: 22.6MB    BEAT: 46.93%
 Description: 官方解答，实际也没快多少。但使用set类型比dict类型要省空间。
 """
 class Solution:
@@ -29,8 +29,8 @@ class Solution:
 
 """
 RESULT: Accept
-TIME:     60ms    BEAT 44.55%
-MEMORY: 22.9MB    BEAT 8.40%
+TIME:     60ms    BEAT: 44.55%
+MEMORY: 22.9MB    BEAT: 8.40%
 Description: 
 """
 # class Solution:

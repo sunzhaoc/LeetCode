@@ -17,8 +17,8 @@ FilePath: \Leetcode\135.分发糖果.py
 
 """
 RESULT: Accept
-TIME:     88ms    BEAT 44.52%    O(n) = n
-MEMORY: 16.5MB    BEAT 18.08%    O(n) = n
+TIME:     88ms    BEAT: 44.52%    O(n) = n
+MEMORY: 16.5MB    BEAT: 18.08%    O(n) = n
 Description: 贪心。
 """
 

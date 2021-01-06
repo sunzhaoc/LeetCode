@@ -17,8 +17,8 @@ FilePath: \Leetcode\290.单词规律.py
 
 """
 RESULT: Accept
-TIME:     36ms    BEAT 79.88%    O(n) = n + m
-MEMORY: 14.6MB    BEAT  5.37%    O(n) = n + m
+TIME:     36ms    BEAT: 79.88%    O(n) = n + m
+MEMORY: 14.6MB    BEAT:  5.37%    O(n) = n + m
 Description: 官解。利用split()函数快速分割字符串。
 """
 
@@ -37,8 +37,8 @@ class Solution:
 
 """
 RESULT: Accept
-TIME:     48ms    BEAT 14.16%    O(n) = n + m
-MEMORY: 14.9MB    BEAT  5.37%    O(n) = n + m
+TIME:     48ms    BEAT: 14.16%    O(n) = n + m
+MEMORY: 14.9MB    BEAT:  5.37%    O(n) = n + m
 Description: 简单的【双射哈希表】思想。
 """
 

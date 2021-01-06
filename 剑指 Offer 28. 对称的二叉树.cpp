@@ -18,8 +18,8 @@ struct TreeNode {
 
 /*
 RESULT: Accept
-TIME:      4ms    BEAT 92.49%    O(n) = 
-MEMORY: 16.3MB    BEAT 58.62%    O(n) = 
+TIME:      4ms    BEAT: 92.49%    O(n) = 
+MEMORY: 16.3MB    BEAT: 58.62%    O(n) = 
 USED TIME: 08:21
 Description: 
 */

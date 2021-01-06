@@ -20,8 +20,8 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME:     0ms    BEAT 100.00%    O(n) = 
-MEMORY: 6.3MB    BEAT   5.96%    O(n) = 
+TIME:     0ms    BEAT: 100.00%    O(n) = 
+MEMORY: 6.3MB    BEAT:   5.96%    O(n) = 
 Description: 位运算。巧用n & (n - 1)
 (n − 1)：二进制数字n最右边的1变成0，此1右边的0都变成1。
 n & (n − 1)：二进制数字n最右边的1变成0，其余不变。

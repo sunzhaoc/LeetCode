@@ -23,8 +23,8 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME:     0ms    BEAT 100.00%    O(n) = 
-MEMORY: 6.2MB    BEAT  22.65%    O(n) = 
+TIME:     0ms    BEAT: 100.00%    O(n) = 
+MEMORY: 6.2MB    BEAT:  22.65%    O(n) = 
 Description: 
 */
 
@@ -44,8 +44,8 @@ public:
 
 /*
 RESULT: WRONG
-TIME:   ms    BEAT %    O(n) = sqrt(n)
-MEMORY: MB    BEAT %    O(n) = 1
+TIME:   ms    BEAT: %    O(n) = sqrt(n)
+MEMORY: MB    BEAT: %    O(n) = 1
 Description: 利用sqrt函数。能运行但提交报错。
 */
 

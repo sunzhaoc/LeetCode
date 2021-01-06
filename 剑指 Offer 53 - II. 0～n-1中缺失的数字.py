@@ -9,8 +9,8 @@ FilePath: \Leetcode\剑指 Offer 53 - II. 0～n-1中缺失的数字.py
 
 """
 RESULT: Accept
-TIME: 40ms BEAT 88.02%
-MEMORY: 14.5MB BEAT 28.29%
+TIME: 40ms BEAT: 88.02%
+MEMORY: 14.5MB BEAT: 28.29%
 Description: 二分查找
 """
 class Solution:

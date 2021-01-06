@@ -9,8 +9,8 @@ FilePath: \Leetcode\1706.球会落何处.py
 
 """
 RESULT: Wrong
-TIME:   ms    BEAT %    O(n) = mn
-MEMORY: MB    BEAT %    O(n) = n
+TIME:   ms    BEAT: %    O(n) = mn
+MEMORY: MB    BEAT: %    O(n) = n
 Description: DP。 与下面相同，VSCode下正确，相同的用例提交错误。似乎是BUG？
 https://leetcode-cn.com/problems/where-will-the-ball-fall/solution/java-shuang-bai-di-gui-by-ethan-jx-yvx6/
 """
@@ -35,8 +35,8 @@ class Solution:
 
 """
 RESULT: Wrong
-TIME:   ms    BEAT %    O(n) = mn
-MEMORY: MB    BEAT %    O(n) = n
+TIME:   ms    BEAT: %    O(n) = mn
+MEMORY: MB    BEAT: %    O(n) = n
 Description: DP。VSCode下正确，相同的用例提交错误。似乎是BUG？
 https://leetcode-cn.com/problems/where-will-the-ball-fall/solution/java-shuang-bai-di-gui-by-ethan-jx-yvx6/
 """

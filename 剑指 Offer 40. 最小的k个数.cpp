@@ -16,8 +16,8 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME:    116ms    BEAT 32.11%    O(n) = nlogk
-MEMORY: 19.4MB    BEAT 28.42%    O(n) = k
+TIME:    116ms    BEAT: 32.11%    O(n) = nlogk
+MEMORY: 19.4MB    BEAT: 28.42%    O(n) = k
 Description: 堆。优先队列。
 */
 
@@ -52,8 +52,8 @@ public:
 
 /*
 RESULT: Accept
-TIME:   72ms    BEAT 70.31%    O(n) = nlogn
-MEMORY: 19MB    BEAT 51.31%    O(n) = logn
+TIME:   72ms    BEAT: 70.31%    O(n) = nlogn
+MEMORY: 19MB    BEAT: 51.31%    O(n) = logn
 Description: 排序法。时间复杂度即为排序的复杂度。
 */
 

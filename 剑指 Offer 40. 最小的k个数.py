@@ -10,8 +10,8 @@ FilePath: \Leetcode\剑指 Offer 40. 最小的k个数.py
 
 """
 RESULT: Accept
-TIME:     60ms    BEAT 80.44%    O(n) = nlogn
-MEMORY: 15.8MB    BEAT 10.43%    O(n) = logn
+TIME:     60ms    BEAT: 80.44%    O(n) = nlogn
+MEMORY: 15.8MB    BEAT: 10.43%    O(n) = logn
 Description: 排序法。时间复杂度即为排序的复杂度。
 """
 

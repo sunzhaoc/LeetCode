@@ -15,8 +15,8 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME:     48ms    BEAT 60.26%    O(n) = n
-MEMORY: 22.8MB    BEAT 73.61%    O(n) = 1
+TIME:     48ms    BEAT: 60.26%    O(n) = n
+MEMORY: 22.8MB    BEAT: 73.61%    O(n) = 1
 Description: 优化了一下。没有用数组存储。
 */
 
@@ -39,8 +39,8 @@ public:
 
 /*
 RESULT: Accept
-TIME:     48ms    BEAT 60.20%    O(n) = n
-MEMORY: 23.4MB    BEAT 14.57%    O(n) = n
+TIME:     48ms    BEAT: 60.20%    O(n) = n
+MEMORY: 23.4MB    BEAT: 14.57%    O(n) = n
 USED TIME: 16:57
 Description: 
 */

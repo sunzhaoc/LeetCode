@@ -14,8 +14,8 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME:     0ms    BEAT 100.00%    O(n) = log2(N)
-MEMORY: 6.1MB    BEAT  27.84%    O(n) = 1
+TIME:     0ms    BEAT: 100.00%    O(n) = log2(N)
+MEMORY: 6.1MB    BEAT:  27.84%    O(n) = 1
 Description: 快速求余法，二分求余法。
 https://leetcode-cn.com/problems/jian-sheng-zi-ii-lcof/solution/mian-shi-ti-14-ii-jian-sheng-zi-iitan-xin-er-fen-f/
 */
@@ -46,8 +46,8 @@ private:
 
 /*
 RESULT: Accept
-TIME:     0ms    BEAT 100.00%    O(n) = n
-MEMORY: 6.1MB    BEAT  27.84%    O(n) = 1
+TIME:     0ms    BEAT: 100.00%    O(n) = n
+MEMORY: 6.1MB    BEAT:  27.84%    O(n) = 1
 Description: 循环求余法。
 */
 

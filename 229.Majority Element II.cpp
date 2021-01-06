@@ -20,8 +20,8 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME:     32ms    BEAT 69.75%    O(n) = 2n
-MEMORY: 15.7MB    BEAT 48.92%    O(n) = 1
+TIME:     32ms    BEAT: 69.75%    O(n) = 2n
+MEMORY: 15.7MB    BEAT: 48.92%    O(n) = 1
 Description: 摩尔投票法。So Hard！本题是求个数大于长度1/3的所有数。假设数组长度为n,那么我们稍微思考可以得出结论个数超过3/n的数不会超过2个。
 https://leetcode-cn.com/problems/majority-element-ii/solution/liang-fu-dong-hua-yan-shi-mo-er-tou-piao-fa-zui-zh/
 */

@@ -14,8 +14,8 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME:     44ms    BEAT 70.57%    O(n) = n
-MEMORY: 18.8MB    BEAT 26.05%    O(n) = 1
+TIME:     44ms    BEAT: 70.57%    O(n) = n
+MEMORY: 18.8MB    BEAT: 26.05%    O(n) = 1
 Description: 摩尔投票法。
 https://leetcode-cn.com/problems/shu-zu-zhong-chu-xian-ci-shu-chao-guo-yi-ban-de-shu-zi-lcof/solution/mian-shi-ti-39-shu-zu-zhong-chu-xian-ci-shu-chao-3/
 */
@@ -35,8 +35,8 @@ public:
 
 /*
 RESULT: Accept
-TIME:    104ms    BEAT  5.34%    O(n) = n
-MEMORY: 18.9MB    BEAT 12.33%    O(n) = n
+TIME:    104ms    BEAT:  5.34%    O(n) = n
+MEMORY: 18.9MB    BEAT: 12.33%    O(n) = n
 Description: 哈希表。
 */
 

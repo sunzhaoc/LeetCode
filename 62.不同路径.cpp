@@ -19,8 +19,8 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME:     0ms    BEAT 100.00%    O(n) = m
-MEMORY: 6.3MB    BEAT  61.38%    O(n) = 1 
+TIME:     0ms    BEAT: 100.00%    O(n) = m
+MEMORY: 6.3MB    BEAT:  61.38%    O(n) = 1 
 Description: 利用数学组合数知识解决。因为m，n可互换，利用这点可以降低运算时间。
 */
 

@@ -15,8 +15,8 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME:     4ms    BEAT 74.75%    O(n) = mn
-MEMORY: 7.1MB    BEAT 41.49%    O(n) = mn
+TIME:     4ms    BEAT: 74.75%    O(n) = mn
+MEMORY: 7.1MB    BEAT: 41.49%    O(n) = mn
 Description: 递推。
 */
 
@@ -47,8 +47,8 @@ private:
 
 /*
 RESULT: Accept
-TIME:    36ms    BEAT 5.93%    O(n) = mn
-MEMORY: 9.9MB    BEAT 5.01%    O(n) = mn
+TIME:    36ms    BEAT: 5.93%    O(n) = mn
+MEMORY: 9.9MB    BEAT: 5.01%    O(n) = mn
 Description: BFS
 */
 

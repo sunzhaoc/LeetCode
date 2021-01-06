@@ -20,8 +20,8 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME:     0ms    BEAT 100.00%    O(n) = 
-MEMORY: 6.2MB    BEAT  34.12%    O(n) = 
+TIME:     0ms    BEAT: 100.00%    O(n) = 
+MEMORY: 6.2MB    BEAT:  34.12%    O(n) = 
 Description: 二刷，每日一题。
 */
 
@@ -49,8 +49,8 @@ public:
 
 /*
 RESULT: Accept
-TIME:   ms    BEAT %    O(n) = 
-MEMORY: MB    BEAT %    O(n) = 
+TIME:   ms    BEAT: %    O(n) = 
+MEMORY: MB    BEAT: %    O(n) = 
 Description: 参考答案，贪心。
 */
 

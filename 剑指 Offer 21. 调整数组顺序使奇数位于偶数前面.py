@@ -10,8 +10,8 @@ FilePath: \Leetcode\剑指 Offer 21. 调整数组顺序使奇数位于偶数前�
 
 """
 RESULT: Accept
-TIME:     52ms    BEAT 85.11%    O(n) = 
-MEMORY: 18.8MB    BEAT  6.84%    O(n) = 
+TIME:     52ms    BEAT: 85.11%    O(n) = 
+MEMORY: 18.8MB    BEAT:  6.84%    O(n) = 
 Description: 快慢双指针。
 """
 
@@ -28,8 +28,8 @@ class Solution:
         
 """
 RESULT: Accept
-TIME:     84ms    BEAT 8.51%    O(n) = 
-MEMORY: 18.7MB    BEAT 9.65%    O(n) = 
+TIME:     84ms    BEAT: 8.51%    O(n) = 
+MEMORY: 18.7MB    BEAT: 9.65%    O(n) = 
 Description: 本题要求在原数组中更改，故不能开辟新空间。使用首尾双指针。
 """
 

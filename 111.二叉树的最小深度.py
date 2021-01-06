@@ -23,8 +23,8 @@ FilePath: \Leetcode\111.二叉树的最小深度.py
 
 """
 RESULT: Accept
-TIME:    648ms    BEAT 16.24%    O(n) = N
-MEMORY: 55.4MB    BEAT  7.24%    O(n) = H
+TIME:    648ms    BEAT: 16.24%    O(n) = N
+MEMORY: 55.4MB    BEAT:  7.24%    O(n) = H
 Description: DFS
 """
 

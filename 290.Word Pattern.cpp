@@ -20,8 +20,8 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME:     0ms    BEAT 100.00%    O(n) = m + n
-MEMORY: 6.5MB    BEAT  59.44%    O(n) = m + n
+TIME:     0ms    BEAT: 100.00%    O(n) = m + n
+MEMORY: 6.5MB    BEAT:  59.44%    O(n) = m + n
 Description: 简单的【双射哈希表】思想。
 */
 

@@ -17,8 +17,8 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME: 0ms BEAT 100.00%
-MEMORY: 6.5MB BEAT 14.32%
+TIME: 0ms BEAT: 100.00%
+MEMORY: 6.5MB BEAT: 14.32%
 Description: 从前往后遍历数组，开辟一个新的字符串，遇到空格就append %20，希望能在原来的字符串上进行修改。
 */
 class Solution {

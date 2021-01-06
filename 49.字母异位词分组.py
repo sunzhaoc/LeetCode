@@ -16,8 +16,8 @@ FilePath: \Leetcode\49.字母异位词分组.py
 
 """
 RESULT: Accept
-TIME:     56ms    BEAT 82.75%    O(n) = 
-MEMORY: 17.6MB    BEAT 19.59%    O(n) = 
+TIME:     56ms    BEAT: 82.75%    O(n) = 
+MEMORY: 17.6MB    BEAT: 19.59%    O(n) = 
 Description: 官解，与下面的方法相同，只是更简洁一点。
 """
 
@@ -35,8 +35,8 @@ class Solution:
 
 """
 RESULT: Accept
-TIME:     56ms    BEAT 82.75%    O(n) = 
-MEMORY: 17.3MB    BEAT 20.63%    O(n) = 
+TIME:     56ms    BEAT: 82.75%    O(n) = 
+MEMORY: 17.3MB    BEAT: 20.63%    O(n) = 
 Description: 
 """
 

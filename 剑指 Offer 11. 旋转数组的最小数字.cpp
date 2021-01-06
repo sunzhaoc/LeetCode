@@ -10,8 +10,8 @@
 
 /*
 RESULT: Accept
-TIME: 4ms BEAT 99.63%
-MEMORY: 12.4MB BEAT 5.15%
+TIME: 4ms BEAT: 99.63%
+MEMORY: 12.4MB BEAT: 5.15%
 Description: 二分法
 */
 class Solution {

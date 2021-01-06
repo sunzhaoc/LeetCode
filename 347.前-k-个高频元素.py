@@ -21,7 +21,7 @@ import collections
 #         return [i[0] for i in collections.Counter(nums).most_common(k)]
 
 
-"""Write by myself -- Beat 93.81 and 33.05"""
+"""Write by myself -- BEAT: 93.81 and 33.05"""
 # class Solution:
 #     def topKFrequent(self, nums, k):
 #         stat = collections.Counter(nums)

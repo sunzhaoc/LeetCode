@@ -9,8 +9,8 @@ FilePath: \Leetcode\剑指 Offer 38. 字符串的排列.py
 
 """
 RESULT: Accept
-TIME:    120ms    BEAT 80.78%    O(n) = 
-MEMORY: 19.3MB    BEAT 21.13%    O(n) = 
+TIME:    120ms    BEAT: 80.78%    O(n) = 
+MEMORY: 19.3MB    BEAT: 21.13%    O(n) = 
 Description: 与下面的方法相同。只不过传递的是索引所以更快一些。
 """
 
@@ -38,8 +38,8 @@ class Solution:
 
 """
 RESULT: Accept
-TIME:    200ms    BEAT 36.71%    O(n) = 
-MEMORY: 19.5MB    BEAT 18.97%    O(n) = 
+TIME:    200ms    BEAT: 36.71%    O(n) = 
+MEMORY: 19.5MB    BEAT: 18.97%    O(n) = 
 Description: 回溯 + 剪枝。
 """
 
@@ -63,8 +63,8 @@ Description: 回溯 + 剪枝。
 
 """
 RESULT: Accept
-TIME:    352ms    BEAT 16.23%    O(n) = 
-MEMORY: 28.9MB    BEAT  5.00%    O(n) = 
+TIME:    352ms    BEAT: 16.23%    O(n) = 
+MEMORY: 28.9MB    BEAT:  5.00%    O(n) = 
 Description: 回溯。仅在最后去除重复的元素。
 """
 

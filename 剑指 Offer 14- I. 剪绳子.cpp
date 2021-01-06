@@ -13,8 +13,8 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME:     0ms    BEAT 100.00%    O(n) = 1
-MEMORY: 6.4MB    BEAT  22.58%    O(n) = 1
+TIME:     0ms    BEAT: 100.00%    O(n) = 1
+MEMORY: 6.4MB    BEAT:  22.58%    O(n) = 1
 Description: 数学推导。3比2好，尽量多的3，其次是2。
 https://leetcode-cn.com/problems/jian-sheng-zi-lcof/solution/mian-shi-ti-14-i-jian-sheng-zi-tan-xin-si-xiang-by/
 仅有求整、求余、次方运算，

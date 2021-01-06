@@ -9,8 +9,8 @@ FilePath: \Leetcode\剑指 Offer 11. 旋转数组的最小数字.py
 
 """
 RESULT: Accept
-TIME: 40ms BEAT 72%
-MEMORY: 13.7MB BEAT 24%
+TIME: 40ms BEAT: 72%
+MEMORY: 13.7MB BEAT: 24%
 Description: 二分查找
 """
 class Solution:

@@ -15,8 +15,8 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME: 108ms BEAT 51.19%
-MEMORY: 28.3MB BEAT 5.01%
+TIME: 108ms BEAT: 51.19%
+MEMORY: 28.3MB BEAT: 5.01%
 Description: 
 */
 class Solution {

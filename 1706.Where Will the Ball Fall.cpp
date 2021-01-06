@@ -13,8 +13,8 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME:     56ms    BEAT 100.00%    O(n) = mn
-MEMORY: 13.3MB    BEAT 100.00%    O(n) = n
+TIME:     56ms    BEAT: 100.00%    O(n) = mn
+MEMORY: 13.3MB    BEAT: 100.00%    O(n) = n
 Description: DP
 https://leetcode-cn.com/problems/where-will-the-ball-fall/solution/java-shuang-bai-di-gui-by-ethan-jx-yvx6/
 */

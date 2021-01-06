@@ -17,8 +17,8 @@ FilePath: \Leetcode\714.买卖股票的最佳时机含手续费.py
 
 """
 RESULT: Accept
-TIME:    904ms    BEAT 68.62%    O(n) = n
-MEMORY: 21.4MB    BEAT 38.40%    O(n) = 1
+TIME:    904ms    BEAT: 68.62%    O(n) = n
+MEMORY: 21.4MB    BEAT: 38.40%    O(n) = 1
 Description: 贪心
 """
 

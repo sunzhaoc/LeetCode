@@ -28,8 +28,8 @@ struct TreeNode {
 
 /*
 RESULT: Accept
-TIME:     420ms    BEAT 57.20%    O(n) = 
-MEMORY: 143.1MB    BEAT 16.33%    O(n) = 
+TIME:     420ms    BEAT: 57.20%    O(n) = 
+MEMORY: 143.1MB    BEAT: 16.33%    O(n) = 
 Description: DFS
 */
 
@@ -51,8 +51,8 @@ public:
 
 /*
 RESULT: Accept
-TIME:   520ms    BEAT  6.12%    O(n) = 
-MEMORY: 143MB    BEAT 24.68%    O(n) = 
+TIME:   520ms    BEAT:  6.12%    O(n) = 
+MEMORY: 143MB    BEAT: 24.68%    O(n) = 
 Description: DFS
 */
 
