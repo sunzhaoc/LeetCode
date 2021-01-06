@@ -2,34 +2,51 @@
  * @Description: 
  * @Version: 1.0
  * @Autor: Vicro
- * @Date: 2021-01-05 19:27:05
- * @LastEditTime: 2021-01-05 19:55:31
+ * @Date: 2021-01-05 20:22:28
+ * @LastEditTime: 2021-01-05 20:35:17
  * @FilePath: \Leetcode\demo01.cpp
  */
-#include <unordered_map>
-#include <string>
-#include <iostream>
-using namespace std;
 
+#include <iostream>
+#include <string>
+#include <vector>
+using namespace std;
 
 class Solution {
 public:
-    char firstUniqChar(string s) {
-        unordered_map<char, int> map;
-        for (char i: s) {
-            map[i] = map.find(i) == map.end();
+    int search(vector<int>& nums, int target) {
+        if (nums.size() == 0) return 0;
+        if (nums.size() == 1 && target != nums[0]) return 0;
+                if (nums.size() == 1 && target == nums[0]) return 1;
+        int l = 0, r = nums.size() - 1;
+        int mid;
+        while (l < r) {
+            mid = (r - l) / 2 + l;
+            if (nums[mid] > target) r = mid;
+            else l = mid + 1;
         }
-        for (char i: s) {
-            if (map[i]) return i;
+        if (nums[mid] != target) return 0;
+        int res = mid;
+        l = 0, r = nums.size() - 1;
+        while (l < r) {
+            mid = (r - l) / 2 + l;
+            if (nums[mid] >= target) r = mid - 1;
+            else l = mid;
         }
-        return ' ';
+
+        return res - mid + 1;
     }
 };
 
 
 int main() {
     Solution sol;
-    char ans = sol.firstUniqChar("abaccdeff");
+    // vector<int> nums = {5,7,7,8,8,10};
+    // int ans = sol.search(nums, 8);
+    // vector<int> nums = {5,7,7,8,8,10};
+    // int ans = sol.search(nums, 6);
+    vector<int> nums = {1};
+    int ans = sol.search(nums, 0);
     cout << ans << endl;
     system("pause");
     return 0;
