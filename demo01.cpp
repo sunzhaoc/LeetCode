@@ -2,90 +2,64 @@
  * @Description: 
  * @Version: 1.0
  * @Autor: Vicro
- * @Date: 2021-01-06 19:07:19
- * @LastEditTime: 2021-01-06 19:36:56
+ * @Date: 2020-12-16 15:03:59
+ * @LastEditTime: 2021-01-06 20:07:26
  * @FilePath: \Leetcode\demo01.cpp
  */
-#include <iostream>
 #include <vector>
+#include <string>
+#include <iostream>
 using namespace std;
 
 
-/*
-RESULT: Accept
-TIME:     0ms    BEAT: 100.00%    O(n) = 
-MEMORY: 6.8MB    BEAT:  79.34%    O(n) = 
-USED TIME: 15:01
-Description: 与下面的方法相同，只是用了等差数列的数学知识。
-*/
-
-class Solution {
+class Test
+{
 public:
-    vector<vector<int>> findContinuousSequence(int target) {
-        int l = 1;
-        int r = 2;
-        vector<vector<int>> res;
-        vector<int> path;
-        while (l < r) {
-            int sum = (l + r) * (r - l + 1) / 2;
-            if (sum == target) {
-                path.clear();
-                for (int i = l; i <= r; i ++) {
-                    path.emplace_back(i);
-                }
-                res.emplace_back(path);
-                l ++;
-            }
-            else if (sum < target) r ++;
-            else l ++;
-        }
-        return res;
+    string name;
+    explicit Test( const string &name):name(move(name))
+    {
+        std::cout << "I am being constructed.\n";
+    }
+
+    Test(const Test &other):name(std::move(other.name))
+    {
+        cout << "I am being copy constructed.\n";
+    }
+
+    Test( Test &&other):name(move(other.name))
+    {
+        cout << "I am being moved.\n";
     }
 };
+int main()
+{
+	//1>
+    std::cout<<"emplace_back:"<<std::endl;
+    std::vector<Test>T;
+    T.emplace_back("yang");
+	//输出 	I am being constructed
+
+	//2>
+    std::cout<<"emplace_back2:"<<std::endl;
+    std::vector<Test>T4;
+    T4.emplace_back(Test("aaaa"));
+    //输出 	I am being constructed
+    //		I am being moved
+
+	//3>
+    std::cout<<"push_back1:"<<std::endl;
+    std::vector<Test>T2;
+    T2.push_back(Test("a"));
+    //输出 	I am being constructed
+    //		I am being moved
+
+    //4>
+    std::cout<<"push_back2:"<<std::endl;
+    std::vector<Test>T3;
+    Test t("aaa");
+    T3.push_back(t);
+     //输出 	I am being constructed
+    //		I am being copy constructed
 
 
-/*
-RESULT: Accept
-TIME:    616ms    BEAT: 5.09%    O(n) = 
-MEMORY: 96.4MB    BEAT: 5.02%    O(n) = 
-USED TIME: 10:25
-Description: 
-*/
-
-// class Solution {
-// public:
-//     vector<vector<int>> findContinuousSequence(int target) {
-//         vector<vector<int>> res;
-
-//         int begin = 1;
-//         int end = target / 2 + 1;
-//         while (begin < end) {
-//             int sum = 0;
-//             vector<int> path;
-//             for (int i = begin; i <= end; i ++) {
-//                 sum += i;
-//                 path.push_back(i);
-//                 if (sum == target) {
-//                     res.push_back(path);
-//                     break;
-//                 } 
-//                 if (sum > target)
-//                 {
-//                     path.clear();
-//                     break;
-//                 }
-                
-//             }
-//             begin ++;
-//         }
-//         return res;
-//     }
-// };
-
-
-int main() {
-    Solution sol;
-    vector<vector<int>> ans = sol.findContinuousSequence(9);
-    system("pause");
-    return 0;
 }
