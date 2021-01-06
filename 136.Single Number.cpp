@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Author: Vicro
  * @Date: 2020-12-02 21:14:42
- * @LastEditTime: 2020-12-02 21:25:03
+ * @LastEditTime: 2021-01-06 16:49:51
  * @FilePath: \Leetcode\136.Single Number.cpp
  */
 /*
@@ -19,6 +19,7 @@
 Accept: 17.81 22.10
 异或
 */
+
 class Solution {
 public:
     int singleNumber(vector<int>& nums) {
