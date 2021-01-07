@@ -2,64 +2,49 @@
  * @Description: 
  * @Version: 1.0
  * @Autor: Vicro
- * @Date: 2020-12-16 15:03:59
- * @LastEditTime: 2021-01-06 20:07:26
+ * @Date: 2021-01-06 20:16:46
+ * @LastEditTime: 2021-01-07 10:27:17
  * @FilePath: \Leetcode\demo01.cpp
  */
-#include <vector>
-#include <string>
+
+
 #include <iostream>
+#include <string>
+#include <vector>
 using namespace std;
 
 
-class Test
-{
+class Solution {
 public:
-    string name;
-    explicit Test( const string &name):name(move(name))
-    {
-        std::cout << "I am being constructed.\n";
-    }
-
-    Test(const Test &other):name(std::move(other.name))
-    {
-        cout << "I am being copy constructed.\n";
-    }
-
-    Test( Test &&other):name(move(other.name))
-    {
-        cout << "I am being moved.\n";
+    string reverseWords(string s) {
+        int r = s.length() - 1;
+        int l = r;
+        string res;
+        for (int l = s.length() - 1; l >= 0; l --) {
+            if (s[l] == ' ' && l == r) {
+                r --;
+            }
+            else if (s[l] == ' ' && l != r) {
+                res += s.substr(l + 1, r - (l + 1) + 1);
+                res += ' ';
+                r = l - 1;
+            }
+            else if (l == 0 && l != ' ') {
+                res += s.substr(l, r - l + 1);
+                return res;
+            }
+        }
+        return res.substr(0, res.length() - 1);
     }
 };
-int main()
-{
-	//1>
-    std::cout<<"emplace_back:"<<std::endl;
-    std::vector<Test>T;
-    T.emplace_back("yang");
-	//输出 	I am being constructed
-
-	//2>
-    std::cout<<"emplace_back2:"<<std::endl;
-    std::vector<Test>T4;
-    T4.emplace_back(Test("aaaa"));
-    //输出 	I am being constructed
-    //		I am being moved
-
-	//3>
-    std::cout<<"push_back1:"<<std::endl;
-    std::vector<Test>T2;
-    T2.push_back(Test("a"));
-    //输出 	I am being constructed
-    //		I am being moved
-
-    //4>
-    std::cout<<"push_back2:"<<std::endl;
-    std::vector<Test>T3;
-    Test t("aaa");
-    T3.push_back(t);
-     //输出 	I am being constructed
-    //		I am being copy constructed
 
 
+int main() {
+    Solution sol;
+    // string ans = sol.reverseWords("  hello world!  ");
+    // string ans = sol.reverseWords("the sky is blue");
+    string ans = sol.reverseWords("a good   example");
+    cout << ans << endl;
+    system("pause");
+    return 0;
 }
