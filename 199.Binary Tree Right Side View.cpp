@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2021-01-07 16:57:33
- * @LastEditTime: 2021-01-07 17:09:26
+ * @LastEditTime: 2021-01-07 17:24:06
  * @FilePath: \Leetcode\199.Binary Tree Right Side View.cpp
  */
 /*
@@ -58,26 +58,26 @@ USED TIME: 06:16
 Description: 
 */
 
-class Solution {
-public:
-    vector<vector<int>> res;
-    vector<int> path;
-    void dfs(TreeNode* node, int depth) {
-        if (node == nullptr) return;
+// class Solution {
+// public:
+//     vector<vector<int>> res;
+//     vector<int> path;
+//     void dfs(TreeNode* node, int depth) {
+//         if (node == nullptr) return;
         
-        if (res.size() == depth) res.push_back({});
-        res[depth].push_back(node->val);
-        dfs(node->left, depth + 1);
-        dfs(node->right, depth + 1);
-    }
-    vector<int> rightSideView(TreeNode* root) {
-        dfs(root, 0);
-        for (int i = 0; i < res.size(); i ++) {
-            path.push_back(res[i][res[i].size() - 1]);
-        }
-        return path;
-    }
-};
+//         if (res.size() == depth) res.push_back({});
+//         res[depth].push_back(node->val);
+//         dfs(node->left, depth + 1);
+//         dfs(node->right, depth + 1);
+//     }
+//     vector<int> rightSideView(TreeNode* root) {
+//         dfs(root, 0);
+//         for (int i = 0; i < res.size(); i ++) {
+//             path.push_back(res[i][res[i].size() - 1]);
+//         }
+//         return path;
+//     }
+// };
 
 // @lc code=end
 
