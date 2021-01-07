@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2021-01-07 13:13:16
- * @LastEditTime: 2021-01-07 13:38:36
+ * @LastEditTime: 2021-01-07 13:38:54
  * @FilePath: \Leetcode\剑指 Offer 61. 扑克牌中的顺子.cpp
  */
 
@@ -64,7 +64,7 @@ Description: set + 遍历。
 //                 repeat.insert(i);
 //             }
 //         }
-        
+
 //         return maxNum - minNum < 5;
 //     }
 // };
