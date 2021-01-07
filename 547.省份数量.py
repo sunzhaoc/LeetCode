@@ -3,7 +3,7 @@ Description:
 Version: 1.0
 Autor: Vicro
 Date: 2021-01-07 09:25:54
-LastEditTime: 2021-01-07 09:44:13
+LastEditTime: 2021-01-07 10:00:15
 FilePath: \Leetcode\547.省份数量.py
 '''
 
@@ -11,7 +11,7 @@ FilePath: \Leetcode\547.省份数量.py
 RESULT: Accept
 TIME:     56ms    BEAT: 71.07%    O(n) = 
 MEMORY: 15.1MB    BEAT: 13.01%    O(n) = 
-Description: 
+Description: 并查集。
 """
 
 class Solution:
@@ -39,4 +39,3 @@ class Solution:
 sol = Solution()
 ans = sol.findCircleNum( [[1,1,0],[1,1,0],[0,0,1]])
 print(ans)
-
