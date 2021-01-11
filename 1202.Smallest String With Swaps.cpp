@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2021-01-11 09:22:41
- * @LastEditTime: 2021-01-11 10:41:30
+ * @LastEditTime: 2021-01-11 10:48:37
  * @FilePath: \Leetcode\1202.Smallest String With Swaps.cpp
  */
 /*
@@ -24,9 +24,9 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME:   ms    BEAT: %    O(n) = 
-MEMORY: MB    BEAT: %    O(n) = 
-Description: 
+TIME:    352ms    BEAT: 48.40%    O(n) = 
+MEMORY: 43.4MB    BEAT: 47.36%    O(n) = 
+Description: 并查集。
 */
 
 class Solution {
@@ -65,6 +65,7 @@ public:
 
         vector<vector<char>> v(size);
 
+        // 扎堆分类
         for (int i = 0; i < size; i ++) {
             v[find(i)].push_back(s[i]);
         } 
@@ -93,5 +94,6 @@ int main() {
     system("pause");
     return 0;
 }
+
 // @lc code=end
 
