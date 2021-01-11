@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2020-11-30 21:56:56
- * @LastEditTime: 2021-01-07 15:31:54
+ * @LastEditTime: 2021-01-11 09:50:20
  * @FilePath: \Leetcode\readme.md
 -->
 
@@ -25,6 +25,8 @@ Description:
 #include <iostream>
 #include <string>
 #include <vector>
+#include <algorithm>
+#include <math.h>
 using namespace std;
 
 
