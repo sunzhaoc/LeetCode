@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2021-01-12 14:23:16
- * @LastEditTime: 2021-01-12 15:34:09
+ * @LastEditTime: 2021-01-12 20:04:45
  * @FilePath: \Leetcode\3.Longest Substring Without Repeating Characters.cpp
  */
 /*
@@ -28,28 +28,37 @@ using namespace std;
 RESULT: Accept
 TIME:   ms    BEAT: %    O(n) = 
 MEMORY: MB    BEAT: %    O(n) = 
-Description: 官解。临界条件有点绕。
+Description: 
 */
 
 class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
-        unordered_set<char> occ;
-        int n = s.length();
+        if (s.length() == 0) return 0;
+        if (s.length() == 1) return 1;
         
-        int rk = -1, ans = 0;
-        for (int i = 0; i < n; i ++) {
-            if (i != 0) occ.erase(s[i - 1]);
+        unordered_map<int, int> map;
+        int left = 0, right = 0;
+        int max_length = 0;
+        
+        while (right < s.length()) {
 
-            while (rk + 1 < n && !occ.count(s[rk + 1])) {
-                occ.insert(s[rk + 1]);
-                ++ rk;
+            // 没找到 or 找到但不在窗口中。
+            if (map.find(s[right]) == map.end() || map.find(s[right])->second < left) {
+                map[s[right]] = right;
+                max_length = right - left + 1 > max_length ? right - left + 1 : max_length;
+                right ++;
             }
 
-            ans = max(ans, rk - i + 1);
+            // 找到且在窗口中。
+            else {
+                map[s[right]] = right;
+                max_length = (right - 1 - left + 1) > max_length ? (right - 1 - left + 1) : max_length;
+                left = map.find(s[right])->second + 1;
+                }
+            }
         }
-        
-        return ans;        
+        return max_length;
     }
 };
 
