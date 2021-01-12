@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2020-12-16 15:03:59
- * @LastEditTime: 2021-01-11 16:39:41
+ * @LastEditTime: 2021-01-12 09:22:35
  * @FilePath: \Leetcode\1721.Swapping Nodes in a Linked List.cpp
  */
 
@@ -24,27 +24,62 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME:    1116ms    BEAT: 100.00%    O(n) = 
+TIME:    1196ms    BEAT: 100.00%    O(n) = 
 MEMORY: 176.3MB    BEAT: 100.00%    O(n) = 
-Description: 
+Description: lucifer1005的代码。
 */
 
 class Solution {
 public:
     ListNode* swapNodes(ListNode* head, int k) {
-        int n = 0;
-        for (auto p = head; p; p = p->next) n += 1;
+        int len = 0;
+        ListNode* ptr = head;
+        while (ptr) {
+            len ++;
+            ptr = ptr->next;
+        }
 
-        auto a = head;
-        for (int i = 1; i < k; i ++) a = a->next;
+        auto get_node = [=](int idx) {
+            ListNode* ptr = head;
+            for (int i = 0; i < idx - 1; ++i) {
+                ptr = ptr->next;
+            }
+            return ptr;
+        };
 
-        auto b = head;
-        for (int i = 1; i < n - k + 1; i ++) b = b->next;
-
-        swap(a->val, b->val);
+        auto left = get_node(k);
+        auto right = get_node(len + 1 - k);
+        swap(left->val, right->val);
         return head;
     }
 };
+
+
+/*
+RESULT: Accept
+TIME:    1116ms    BEAT: 100.00%    O(n) = 
+MEMORY: 176.3MB    BEAT: 100.00%    O(n) = 
+Description: Heltion的代码。
+*/
+
+// class Solution {
+// public:
+//     ListNode* swapNodes(ListNode* head, int k) {
+//         int n = 0;
+//         for (auto p = head; p; p = p->next) n += 1;
+//         // 写成下面这种会容易理解一点。
+//         // for (auto p = head; p = nullptr; p = p->next) n += 1;
+
+//         auto a = head;
+//         for (int i = 1; i < k; i ++) a = a->next;
+
+//         auto b = head;
+//         for (int i = 1; i < n - k + 1; i ++) b = b->next;
+
+//         swap(a->val, b->val);
+//         return head;
+//     }
+// };
 
 
 /*
