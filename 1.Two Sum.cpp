@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2021-01-12 10:09:44
- * @LastEditTime: 2021-01-12 10:17:42
+ * @LastEditTime: 2021-01-12 10:40:05
  * @FilePath: \Leetcode\1.Two Sum.cpp
  */
 /*
@@ -19,7 +19,32 @@
 #include <vector>
 #include <algorithm>
 #include <math.h>
+#include <unordered_map>
 using namespace std;
+
+
+/*
+RESULT: Accept
+TIME:   12ms    BEAT: 80.10%    O(n) = n
+MEMORY:  9MB    BEAT: 39.21%    O(n) = n
+USED TIME: 哈希表。
+Description: 
+*/
+
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        unordered_map<int, int> map;
+        for (int i = 0; i < nums.size(); i ++) {
+            auto it = map.find(target - nums[i]);
+            if (it != map.end()) {
+                return {i, it->second};
+            }
+            map[nums[i]] = i;
+        }
+        return {};
+    }
+};
 
 
 /*
@@ -27,7 +52,7 @@ RESULT: Accept
 TIME:   12ms    BEAT: 80.10%    O(n) = n^2
 MEMORY:  9MB    BEAT: 87.50%    O(n) = 1
 USED TIME: 05:31
-Description: 
+Description: 暴力枚举。
 */
 
 class Solution {
