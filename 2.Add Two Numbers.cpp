@@ -3,8 +3,8 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2021-01-12 10:47:24
- * @LastEditTime: 2021-01-12 10:47:40
- * @FilePath: \Leetcode\2.两数相加.cpp
+ * @LastEditTime: 2021-01-12 13:41:18
+ * @FilePath: \Leetcode\2.Add Two Numbers.cpp
  */
 /*
  * @lc app=leetcode.cn id=2 lang=cpp
@@ -24,11 +24,93 @@ struct ListNode {
 };
 
 
+#include <iostream>
+#include <string>
+#include <vector>
+#include <algorithm>
+#include <math.h>
+#include <unordered_map>
+using namespace std;
+
+
+/*
+RESULT: Accept
+TIME:   44ms    BEAT: 84.67%    O(n) = max(m, n)
+MEMORY: 70MB    BEAT: 12.79%    O(n) = max(m, n) + 1 = max(m, n)
+USED TIME: 22:41
+Description: 
+*/
+
 class Solution {
 public:
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+        ListNode* head = new ListNode(0);
+        ListNode* res = head;
 
+        int add = 0;
+
+        while (l1 || l2) {
+            if (l1 && l2) {
+                head->next = new ListNode((l1->val + l2->val + add) % 10);
+                add = (l1->val + l2->val + add) / 10;
+                l1 = l1->next;
+                l2 = l2->next;  
+                head = head->next;
+            }
+            else if (l1) {
+                head->next = new ListNode((l1->val + add) % 10);
+                add = (l1->val + add) / 10;
+                l1 = l1->next;
+                head = head->next;
+            }
+            else if (l2) {
+                head->next = new ListNode((l2->val + add) % 10);
+                add = (l2->val + add) / 10;
+                l2 = l2->next; 
+                head = head->next;
+            }
+
+        }
+        if (add != 0 ) {
+            head->next = new ListNode(add);
+        }
+        return res->next;
     }
 };
+
+
+/*
+RESULT: Wrong
+USED TIME: 38:00
+Description: 看清题目节点数在[0,100]内，故不能直接相加。
+*/
+
+// class Solution {
+// public:
+//     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+//         int sum = 0;
+//         int cifang = 0;
+        
+//         for (auto p = l1; p; p = p->next) {
+//             sum += p->val * pow(10, cifang);
+//             cifang ++;
+//         }
+//         cifang = 0;
+//         for (auto p = l2; p; p = p->next) {
+//             sum += p->val * pow(10, cifang);
+//             cifang ++;
+//         }
+
+//         string sum2 = to_string(sum);
+//         ListNode* res = new ListNode(1);
+//         ListNode* ans = res;
+//         for (int i = sum2.length() - 1; i >= 0; i --) {
+//             res->next = new ListNode(sum2[i]-48);
+//             res = res->next;
+//         }
+//         return ans->next;
+//     }
+// };
+
 // @lc code=end
 
