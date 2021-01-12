@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2021-01-12 14:23:16
- * @LastEditTime: 2021-01-12 20:04:45
+ * @LastEditTime: 2021-01-12 20:09:52
  * @FilePath: \Leetcode\3.Longest Substring Without Repeating Characters.cpp
  */
 /*
@@ -26,9 +26,9 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME:   ms    BEAT: %    O(n) = 
-MEMORY: MB    BEAT: %    O(n) = 
-Description: 
+TIME:    52ms    BEAT: 51.20%    O(n) = n
+MEMORY: 8.6MB    BEAT: 57.41%    O(n) = 128
+Description: 优化了一下代码结构。
 */
 
 class Solution {
@@ -52,13 +52,13 @@ public:
 
             // 找到且在窗口中。
             else {
+                left = map.find(s[right])->second + 1;
                 map[s[right]] = right;
                 max_length = (right - 1 - left + 1) > max_length ? (right - 1 - left + 1) : max_length;
-                left = map.find(s[right])->second + 1;
-                }
+                right ++;
             }
         }
-        return max_length;
+    return max_length;
     }
 };
 
@@ -116,7 +116,8 @@ int main() {
     // int ans = sol.lengthOfLongestSubstring("");
     // int ans = sol.lengthOfLongestSubstring("au");
     // int ans = sol.lengthOfLongestSubstring("dvdf");
-    int ans = sol.lengthOfLongestSubstring("tmmzuxt");
+    // int ans = sol.lengthOfLongestSubstring("tmmzuxt");
+    // int ans = sol.lengthOfLongestSubstring("aab");
     cout << ans << endl;
     system("pause");
     return 0;
