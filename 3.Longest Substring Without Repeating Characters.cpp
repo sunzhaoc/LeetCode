@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2021-01-12 14:23:16
- * @LastEditTime: 2021-01-12 15:00:08
+ * @LastEditTime: 2021-01-12 15:05:34
  * @FilePath: \Leetcode\3.Longest Substring Without Repeating Characters.cpp
  */
 /*
@@ -23,10 +23,19 @@
 using namespace std;
 
 
+
+class Solution {
+public:
+    int lengthOfLongestSubstring(string s) {
+        
+    }
+};
+
+
 /*
 RESULT: Accept
-TIME:    36ms    BEAT: 66.78%    O(n) = 
-MEMORY: 8.6MB    BEAT: 59.70%    O(n) = 
+TIME:    36ms    BEAT: 66.78%    O(n) = n
+MEMORY: 8.6MB    BEAT: 59.70%    O(n) = 128 (ASCII字符集)
 USED TIME: 30:22
 Description: 
 */
