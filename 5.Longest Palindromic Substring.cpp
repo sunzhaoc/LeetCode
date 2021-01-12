@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2021-01-12 20:10:58
- * @LastEditTime: 2021-01-12 21:14:45
+ * @LastEditTime: 2021-01-12 21:18:47
  * @FilePath: \Leetcode\5.Longest Palindromic Substring.cpp
  */
 /*
@@ -22,13 +22,27 @@
 #include <unordered_map>
 using namespace std;
 
+/*
+RESULT: Accept
+TIME:   ms    BEAT: %    O(n) = 
+MEMORY: MB    BEAT: %    O(n) = 
+Description: DP。
+*/
+
+class Solution {
+public:
+    string longestPalindrome(string s) {
+
+    }
+};
+
 
 /*
 RESULT: Accept
 TIME:     268ms    BEAT: 52.94%    O(n) = n^2
 MEMORY: 234.5MB    BEAT: 38.85%    O(n) = 1
 USED TIME: 19:37
-Description: 中心扩展法。
+Description: 中心扩展法。注意偶数和奇数的情况。
 */
 
 // class Solution {
