@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2021-01-12 14:23:16
- * @LastEditTime: 2021-01-12 15:11:58
+ * @LastEditTime: 2021-01-12 15:34:09
  * @FilePath: \Leetcode\3.Longest Substring Without Repeating Characters.cpp
  */
 /*
@@ -28,7 +28,7 @@ using namespace std;
 RESULT: Accept
 TIME:   ms    BEAT: %    O(n) = 
 MEMORY: MB    BEAT: %    O(n) = 
-Description: 官解。
+Description: 官解。临界条件有点绕。
 */
 
 class Solution {
@@ -40,7 +40,7 @@ public:
         int rk = -1, ans = 0;
         for (int i = 0; i < n; i ++) {
             if (i != 0) occ.erase(s[i - 1]);
-            
+
             while (rk + 1 < n && !occ.count(s[rk + 1])) {
                 occ.insert(s[rk + 1]);
                 ++ rk;
