@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2021-01-12 20:10:58
- * @LastEditTime: 2021-01-12 21:18:47
+ * @LastEditTime: 2021-01-13 08:23:59
  * @FilePath: \Leetcode\5.Longest Palindromic Substring.cpp
  */
 /*
@@ -32,7 +32,17 @@ Description: DP。
 class Solution {
 public:
     string longestPalindrome(string s) {
+        int len = s.length();
+        if (len = 1) return s;
 
+        vector<vector<bool>> dp(len, vector<bool>(len));
+        for (int i = 0; i < len; i ++) dp[i][i] = true;
+
+        for (int i = 1; i < len; i ++) {
+            for (int j = 0; j < i; j ++) {
+                
+            }
+        }
     }
 };
 
@@ -49,7 +59,7 @@ Description: 中心扩展法。注意偶数和奇数的情况。
 // public:
 //     string longestPalindrome(string s) {
 //         if (s.length() == 1) return s;
-        
+
 //         vector<int> res(3), tmp(3);
 //         int len = 1;
 //         for (int i = 1; i < s.length(); i ++) {
@@ -75,7 +85,7 @@ Description: 中心扩展法。注意偶数和奇数的情况。
 // private:
 //     vector<int> fun(string s, int mid1, int mid2) {
 //         int x = 0;
-        
+
 //         while (mid1 - x >= 0 && mid2 + x < s.length() && s[mid1 - x] == s[mid2 + x]) x ++;
 
 //         if (mid1 == mid2) return {mid1 - x + 1, mid2 + x - 1, 2 * x - 1};
