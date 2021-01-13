@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2021-01-12 20:10:58
- * @LastEditTime: 2021-01-13 08:23:59
+ * @LastEditTime: 2021-01-13 13:10:16
  * @FilePath: \Leetcode\5.Longest Palindromic Substring.cpp
  */
 /*
@@ -23,26 +23,49 @@
 using namespace std;
 
 /*
+Manacher算法:
+https://leetcode-cn.com/problems/longest-palindromic-substring/solution/tu-jie-ma-la-che-suan-fa-by-wang_ni_ma-if33/
+*/
+
+
+/*
 RESULT: Accept
-TIME:   ms    BEAT: %    O(n) = 
-MEMORY: MB    BEAT: %    O(n) = 
+TIME:   256ms    BEAT: 53.56%    O(n) = n^2
+MEMORY: 8.4MB    BEAT: 75.34%    O(n) = n^2
 Description: DP。
+使用数组定义DP能通过，使用vector会报超时。
+在国际版中均能AC，使用数组140ms，使用vector 588ms。
 */
 
 class Solution {
 public:
     string longestPalindrome(string s) {
         int len = s.length();
-        if (len = 1) return s;
+        if (len == 1) return s;
 
-        vector<vector<bool>> dp(len, vector<bool>(len));
+        int maxLen = 1;
+        int begin = 0;
+        
+        bool dp[len][len];
+        // vector<vector<bool>> dp(len, vector<bool>(len));
         for (int i = 0; i < len; i ++) dp[i][i] = true;
 
-        for (int i = 1; i < len; i ++) {
-            for (int j = 0; j < i; j ++) {
-                
+        for (int j = 1; j < len; j ++) {
+            for (int i = 0; i < j; i ++) {
+                if (s[i] != s[j]) dp[i][j] = false;
+                else {
+                    if (j - i < 3) dp[i][j] = true;
+                    else dp[i][j] = dp[i + 1][j - 1];
+                }
+
+                if (dp[i][j] && j - i + 1 > maxLen) {
+                    maxLen = j - i + 1;
+                    begin = i;
+                }
             }
         }
+
+        return s.substr(begin, maxLen);
     }
 };
 
@@ -52,7 +75,8 @@ RESULT: Accept
 TIME:     268ms    BEAT: 52.94%    O(n) = n^2
 MEMORY: 234.5MB    BEAT: 38.85%    O(n) = 1
 USED TIME: 19:37
-Description: 中心扩展法。注意偶数和奇数的情况。
+Description: 中心扩展法。注意偶数和奇数的情况，这两种可以合并成一种。
+也可以借鉴Manacher算法中添加分隔符#的方法，使奇偶变为一种情况。
 */
 
 // class Solution {
@@ -98,8 +122,9 @@ int main() {
     Solution sol;
     // string ans = sol.longestPalindrome("babad");
     // string ans = sol.longestPalindrome("cbbd");
-    // string ans = sol.longestPalindrome("a");
-    string ans = sol.longestPalindrome("ac");
+    string ans = sol.longestPalindrome("a");
+    // string ans = sol.longestPalindrome("ac");
+    // string ans = sol.longestPalindrome("aaaa");
     cout << ans << endl;
     system("pause");
     return 0;
