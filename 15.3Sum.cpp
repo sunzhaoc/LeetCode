@@ -31,7 +31,7 @@ using namespace std;
 /*
 RESULT: Accept
 TIME:   132ms    BEAT: 46.20%    O(n) = n^2
-MEMORY:  20MB    BEAT: 49.29%    O(n) = logn
+MEMORY:  20MB    BEAT: 49.29%    O(n) = logn 空间复杂度主要取决于排序所用的额外空间。
 Description: 双指针。
 */
 
