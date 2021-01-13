@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2021-01-13 13:10:56
- * @LastEditTime: 2021-01-13 13:56:23
+ * @LastEditTime: 2021-01-13 14:05:01
  * @FilePath: \Leetcode\684.Redundant Connection.cpp
  */
 /*
@@ -131,6 +131,17 @@ Description: 并查集。判断如果成环，则删除。
 //         return {};
 //     }
 // };
+
+
+int main() {
+    Solution sol;
+    vector<vector<int>> edges = {{1,2},{2,3},{3,4},{1,4},{1,5}};
+    vector<int> ans = sol.findRedundantConnection(edges);
+    cout << ans[0] << " " << ans[1] << endl;
+    system("pause");
+    return 0;
+}
+
 
 // @lc code=end
 
