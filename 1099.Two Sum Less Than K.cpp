@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2021-01-14 19:30:15
- * @LastEditTime: 2021-01-14 20:07:50
+ * @LastEditTime: 2021-01-14 20:08:49
  * @FilePath: \Leetcode\1099.Two Sum Less Than K.cpp
  */
 
@@ -20,7 +20,8 @@ using namespace std;
 RESULT: Accept
 TIME:     4ms    BEAT:  97.09%    O(n) = nlogn
 MEMORY: 8.7MB    BEAT: 100.00%    O(n) = 1
-LAST EDIT TIME: 20:21
+USED TIME: 20:21
+LAST EDIT TIME: 2021年1月14日20:8:52
 Description: 双指针法。
 */
 
