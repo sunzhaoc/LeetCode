@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2021-01-14 21:35:06
- * @LastEditTime: 2021-01-14 22:25:30
+ * @LastEditTime: 2021-01-14 22:36:09
  * @FilePath: \Leetcode\454.4Sum II.cpp
  */
 /*
@@ -25,15 +25,33 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME:   ms    BEAT: %    O(n) = 
-MEMORY: MB    BEAT: %    O(n) = 
-LAST EDIT TIME: 
-Description: 
+TIME:    188ms    BEAT: 98.61%    O(n) = n^2
+MEMORY: 28.4MB    BEAT: 95.96%    O(n) = n^2
+LAST EDIT TIME: 2021年1月14日22:35:39
+Description: 分组 + 哈希。改进了一下空间法度。
 */
 
 class Solution {
 public:
     int fourSumCount(vector<int>& A, vector<int>& B, vector<int>& C, vector<int>& D) {
+        unordered_map<int, int> map1, map2;
+        for (int &i: A) {
+            for (int &j: B) {
+                map1[i + j] ++;
+            }
+        }
+
+        int count = 0;
+
+        for (int &i: C) {
+            for (int &j: D) {
+                if (map1.find(0 -i - j) != map1.end()) {
+                    count += map1.find(-i-j)->second;
+                }
+            }
+        }
+
+        return count;
     }
 };
 
@@ -44,38 +62,38 @@ TIME:  324ms    BEAT: 98.01%    O(n) = n^2
 MEMORY: 46MB    BEAT: 27.51%    O(n) = n^2
 USED TIME: 35:20
 LAST EDIT TIME: 2021年1月14日22:13:16
-Description: 
+Description: 分组 + 哈希。
 */
 
-// class Solution {
-// public:
-//     int fourSumCount(vector<int>& A, vector<int>& B, vector<int>& C, vector<int>& D) {
-//         unordered_map<int, int> map1, map2;
-//         for (int &i: A) {
-//             for (int &j: B) {
-//                 map1[i + j] ++;
-//             }
-//         }
+class Solution {
+public:
+    int fourSumCount(vector<int>& A, vector<int>& B, vector<int>& C, vector<int>& D) {
+        unordered_map<int, int> map1, map2;
+        for (int &i: A) {
+            for (int &j: B) {
+                map1[i + j] ++;
+            }
+        }
 
-//         for (int &i: C) {
-//             for (int &j: D) {
-//                 map2[i + j] ++;
-//             }
-//         }
+        for (int &i: C) {
+            for (int &j: D) {
+                map2[i + j] ++;
+            }
+        }
 
-//         int count = 0;
-//         auto x = map1.begin();
+        int count = 0;
+        auto x = map1.begin();
 
-//         while (x != map1.end()) {
-//             if (map2.find(0 - x->first) != map2.end()) {
-//                 count += (x->second * map2.find(0 - x->first)->second);
-//             }
-//             x ++;
-//         }
+        while (x != map1.end()) {
+            if (map2.find(0 - x->first) != map2.end()) {
+                count += (x->second * map2.find(0 - x->first)->second);
+            }
+            x ++;
+        }
 
-//         return count;
-//     }
-// };
+        return count;
+    }
+};
 
 
 int main() {
