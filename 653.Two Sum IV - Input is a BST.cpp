@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2021-01-14 19:07:58
- * @LastEditTime: 2021-01-14 19:20:52
+ * @LastEditTime: 2021-01-14 19:21:19
  * @FilePath: \Leetcode\653.Two Sum IV - Input is a BST.cpp
  */
 /*
@@ -66,5 +66,6 @@ public:
         return false;
     }
 };
+
 // @lc code=end
 
