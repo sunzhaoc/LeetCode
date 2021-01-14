@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2020-11-30 21:56:56
- * @LastEditTime: 2021-01-13 16:56:21
+ * @LastEditTime: 2021-01-14 17:22:51
  * @FilePath: \Leetcode\readme.md
 -->
 
@@ -14,7 +14,7 @@ C++
 RESULT: Accept
 TIME:   ms    BEAT: %    O(n) = 
 MEMORY: MB    BEAT: %    O(n) = 
-LAST EDIT TIME:
+LAST EDIT TIME: 
 Description: 
 */
 
@@ -38,7 +38,7 @@ RESULT: Accept
 TIME:   ms    BEAT: %    O(n) = 
 MEMORY: MB    BEAT: %    O(n) = 
 USED TIME: 
-LAST EDIT TIME:
+LAST EDIT TIME: 
 Description: 
 */
 
@@ -58,6 +58,19 @@ int main() {
 }
 
 
+int main() {
+    Solution sol;
+    vector<int> nums = {};
+    vector<int> ans = sol.(nums);
+    for (int i = 0; i < ans.size(); i ++) {
+        cout << ans[i] << endl; 
+    }
+    system("pause");
+    return 0;
+}
+
+
+
 
 
 
@@ -70,7 +83,7 @@ RESULT: Accept
 TIME:   ms    BEAT: %    O(n) = 
 MEMORY: MB    BEAT: %    O(n) = 
 Description: 
-LAST EDIT TIME:
+LAST EDIT TIME: 
 """
 
 
