@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2021-01-14 16:57:09
- * @LastEditTime: 2021-01-14 17:23:08
+ * @LastEditTime: 2021-01-14 19:06:24
  * @FilePath: \Leetcode\560.Subarray Sum Equals K.cpp
  */
 /*
@@ -20,6 +20,33 @@
 #include <math.h>
 #include <unordered_map>
 using namespace std;
+
+
+/*
+RESULT: Accept
+TIME:     84ms    BEAT: 98.89%    O(n) = n
+MEMORY: 35.2MB    BEAT: 76.23%    O(n) = n
+USED TIME: 04:05
+LAST EDIT TIME: 2021年1月14日18:57:6
+Description: 前缀和 + 哈希表 优化。初始化哈希表要注意一下。
+*/
+
+class Solution {
+public:
+    int subarraySum(vector<int>& nums, int k) {
+        unordered_map<int, int> map;
+        int count = 0, sum = 0; // 哈希表的初始化要注意一下。
+        map[0] = 1;
+
+        for (int &x: nums) {
+            sum += x;
+            if (map.find(sum - k) != map.end()) count += map[sum - k];
+            map[sum] ++;
+        }
+
+        return count;
+    }
+};
 
 
 /*
