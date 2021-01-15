@@ -11,7 +11,8 @@
         "initializer_list": "cpp",
         "utility": "cpp",
         "unordered_set": "cpp",
-        "set": "cpp"
+        "set": "cpp",
+        "unordered_map": "cpp"
     },
     "files.exclude": {
         "**/.classpath": true,
