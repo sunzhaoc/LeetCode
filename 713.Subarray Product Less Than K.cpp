@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2021-01-15 13:46:51
- * @LastEditTime: 2021-01-15 14:38:31
+ * @LastEditTime: 2021-01-15 15:17:45
  * @FilePath: \Leetcode\713.Subarray Product Less Than K.cpp
  */
 /*
@@ -24,24 +24,29 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME:   ms    BEAT: %    O(n) = 
-MEMORY: MB    BEAT: %    O(n) = 
-USED TIME: 
-LAST EDIT TIME: 
+TIME:    116ms    BEAT: 99.76%    O(n) = n
+MEMORY: 83.3MB    BEAT: 96.82%    O(n) = 1
+LAST EDIT TIME: 2021年1月15日15:6:46
 Description: 
 */
 
 class Solution {
 public:
     int numSubarrayProductLessThanK(vector<int>& nums, int k) {
-        int left, right, count = 0, x = 1;
-        
-        for (int i = 0; i < nums.size(); i ++) {
-            x *= nums[i];
-            if (x >= k) {
-                count += 
+        if (k <= 1) return 0;
+        int sum = 1;
+        int count = 0, left = 0;
+
+        for (int right = 0; right < nums.size(); right ++) {
+            sum *= nums[right];
+            while (sum >= k) {
+                sum /= nums[left];
+                left ++;
             }
+            count += (right - left + 1); // 这步有点秀。计算以[v, right]区间, left <= v <= right。
         }
+
+        return count;
     }
 };
 
