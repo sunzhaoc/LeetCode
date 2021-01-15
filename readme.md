@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2020-11-30 21:56:56
- * @LastEditTime: 2021-01-14 17:22:51
+ * @LastEditTime: 2021-01-15 13:47:34
  * @FilePath: \Leetcode\readme.md
 -->
 
@@ -70,8 +70,14 @@ int main() {
 }
 
 
-
-
+int main() {
+    Solution sol;
+    vector<int> nums = {};
+    int ans = sol.(nums);
+    cout << ans << endl; 
+    system("pause");
+    return 0;
+}
 
 
 

@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2021-01-15 09:45:28
- * @LastEditTime: 2021-01-15 11:24:16
+ * @LastEditTime: 2021-01-15 12:28:24
  * @FilePath: \Leetcode\947.Most Stones Removed with Same Row or Column.cpp
  */
 /*
@@ -159,15 +159,15 @@ https://leetcode-cn.com/problems/most-stones-removed-with-same-row-or-column/sol
 //     }
 // };
 
-// int main() {
-//     Solution sol;
-//     vector<vector<int>> stones = {{0,0},{0,1},{1,0},{1,2},{2,1},{2,2}};
-//     // vector<vector<int>> stones = {{0,0},{0,2},{1,1},{2,0},{2,2}};
-//     int ans = sol.removeStones(stones);
-//     cout << ans << endl;
-//     system("pause");
-//     return 0;
-// }
+int main() {
+    Solution sol;
+    vector<vector<int>> stones = {{0,0},{0,1},{1,0},{1,2},{2,1},{2,2}};
+    // vector<vector<int>> stones = {{0,0},{0,2},{1,1},{2,0},{2,2}};
+    int ans = sol.removeStones(stones);
+    cout << ans << endl;
+    system("pause");
+    return 0;
+}
 
 // @lc code=end
 
