@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2021-01-15 09:45:28
- * @LastEditTime: 2021-01-15 11:22:06
+ * @LastEditTime: 2021-01-15 11:24:16
  * @FilePath: \Leetcode\947.Most Stones Removed with Same Row or Column.cpp
  */
 /*
@@ -21,10 +21,11 @@
 #include <unordered_map>
 using namespace std;
 
+
 /*
 RESULT: Accept
-TIME:    236ms    BEAT: 41.21%    O(n) = n^2
-MEMORY: 13.8MB    BEAT: 71.21%    O(n) = n^2
+TIME:    236ms    BEAT: 41.21%    O(n) = na(n)
+MEMORY: 13.8MB    BEAT: 71.21%    O(n) = n
 LAST EDIT TIME: 2021年1月15日11:20:35
 Description: 优化了一下空间。
 */
@@ -86,8 +87,8 @@ public:
 
 /*
 RESULT: Accept
-TIME:    320ms    BEAT: 28.14%    O(n) = n^2
-MEMORY: 14.1MB    BEAT: 66.66%    O(n) = n^2
+TIME:    320ms    BEAT: 28.14%    O(n) = na(n)
+MEMORY: 14.1MB    BEAT: 66.66%    O(n) = n
 LAST EDIT TIME: 2021年1月15日11:5:43
 Description:又tm是并查集。
 https://leetcode-cn.com/problems/most-stones-removed-with-same-row-or-column/solution/tu-jie-bing-cha-ji-by-yexiso-nbcz/
