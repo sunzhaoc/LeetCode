@@ -3,8 +3,8 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2021-01-18 13:58:32
- * @LastEditTime: 2021-01-18 13:59:31
- * @FilePath: \Leetcode\53.最大子序和.cpp
+ * @LastEditTime: 2021-01-18 14:07:23
+ * @FilePath: \Leetcode\53.Maximum Subarray.cpp
  */
 /*
  * @lc app=leetcode.cn id=53 lang=cpp
@@ -25,17 +25,22 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME:   ms    BEAT: %    O(n) = 
-MEMORY: MB    BEAT: %    O(n) = 
-USED TIME: 
-LAST EDIT TIME: 
-Description: 
+TIME:      8ms    BEAT: 97.71%    O(n) = n
+MEMORY: 12.9MB    BEAT: 95.78%    O(n) = n
+USED TIME: 03:04
+LAST EDIT TIME: 2021年1月18日14:7:22
+Description: DP
 */
 
 class Solution {
 public:
     int maxSubArray(vector<int>& nums) {
-
+        vector<int> dp(nums.size());
+        dp[0] = nums[0];
+        for (int i = 1; i < nums.size(); i ++) {
+            dp[i] = max(dp[i - 1] + nums[i], nums[i]);
+        }
+        return *max_element(dp.begin(), dp.end());
     }
 };
 
