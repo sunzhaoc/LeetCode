@@ -3,8 +3,8 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2021-01-17 10:13:36
- * @LastEditTime: 2021-01-17 10:40:15
- * @FilePath: \Leetcode\demo01.cpp
+ * @LastEditTime: 2021-01-18 11:20:17
+ * @FilePath: \Leetcode\1725.Number Of Rectangles That Can Form The Largest Square.cpp
  */
 
 #include <iostream>
@@ -15,6 +15,15 @@
 #include <unordered_map>
 using namespace std;
 
+
+/*
+RESULT: Accept
+TIME:     40ms    BEAT: 100.00%    O(n) = 
+MEMORY: 18.1MB    BEAT: 100.00%    O(n) = 
+USED TIME: 11：00
+LAST EDIT TIME: 2021年1月18日11:18:56
+Description: 比赛的时候写的。
+*/
 
 class Solution {
 public:
@@ -40,6 +49,7 @@ int main() {
     Solution sol;
     vector<vector<int>> nums = {{5,8},{3,9},{5,12},{16,5}};
     int ans = sol.countGoodRectangles(nums);
+    cout << ans << endl;
     system("pause");
     return 0;
 }

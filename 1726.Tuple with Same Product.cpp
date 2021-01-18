@@ -3,8 +3,8 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2021-01-17 10:13:43
- * @LastEditTime: 2021-01-17 10:52:22
- * @FilePath: \Leetcode\demo02.cpp
+ * @LastEditTime: 2021-01-18 11:18:02
+ * @FilePath: \Leetcode\1726.Tuple with Same Product.cpp
  */
 
 #include <iostream>
@@ -15,6 +15,15 @@
 #include <unordered_map>
 using namespace std;
 
+
+/*
+RESULT: Accept
+TIME:    564ms    BEAT: 100.00%    O(n) = 
+MEMORY: 79.4MB    BEAT: 100.00%    O(n) = 
+USED TIME: 11:00
+LAST EDIT TIME: 2021-1-18 11:16:41
+Description: 比赛的时候写的。
+*/
 
 class Solution {
 public:
