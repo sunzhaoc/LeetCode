@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2021-01-18 22:04:37
- * @LastEditTime: 2021-01-18 22:20:18
+ * @LastEditTime: 2021-01-19 10:11:35
  * @FilePath: \Leetcode\525.Contiguous Array.cpp
  */
 /*
@@ -25,11 +25,10 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME:   ms    BEAT: %    O(n) = 
-MEMORY: MB    BEAT: %    O(n) = 
-USED TIME: 
-LAST EDIT TIME: 
-Description: 
+TIME:   124ms    BEAT: 99.80%    O(n) = n
+MEMORY:  77MB    BEAT: 93.18%    O(n) = 1
+LAST EDIT TIME: 2021年1月19日10:3:0
+Description: 前缀和。把所有的0都换成-1，这个方法有点妙。
 */
 
 class Solution {
@@ -48,16 +47,28 @@ public:
 
         int sum = 0;
         for (int i = 0; i < nums.size(); i ++) {
-            
+            sum += nums[i];
+
+            auto it = map.find(sum);
+            if (it != map.end()) {
+                max_len = max(max_len, i - it->second);
+            }
+            else {
+                map[sum] = i;
+            }
         }
+
+        return max_len;
     }
 };
 
 
 int main() {
     Solution sol;
-    vector<int> nums = {0,1};
+    // vector<int> nums = {0,1};
     // vector<int> nums = {0,1,0};
+    // vector<int> nums = {1,1,1,1,1,1,0,1,0,1,0};
+    vector<int> nums = {1,0,1,0,1,1,1,1,1,1,1,0,1,0,1,0,1,0};
     int ans = sol.findMaxLength(nums);
     cout << ans << endl; 
     system("pause");
