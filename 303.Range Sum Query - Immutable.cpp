@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2021-01-16 21:45:33
- * @LastEditTime: 2021-01-16 21:46:22
+ * @LastEditTime: 2021-01-18 22:03:26
  * @FilePath: \Leetcode\303.Range Sum Query - Immutable.cpp
  */
 /*
@@ -24,23 +24,31 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME:   ms    BEAT: %    O(n) = 
-MEMORY: MB    BEAT: %    O(n) = 
-USED TIME: 
-LAST EDIT TIME: 
+TIME:     32ms    BEAT: 96.59%    O(n) = 
+MEMORY: 16.7MB    BEAT: 98.19%    O(n) = 
+USED TIME: 04:31
+LAST EDIT TIME: 2021年1月18日22:3:9
 Description: 
 */
 
 class NumArray {
 public:
+    vector<int> tmp;
     NumArray(vector<int>& nums) {
-
+        int sum = 0;
+        for (int i = 0; i < nums.size(); i ++) {
+            sum += nums[i];
+            tmp.push_back(sum);
+        }
     }
     
     int sumRange(int i, int j) {
-
+        // if (i == j) return tmp[i];
+        if (i == 0) return tmp[j];
+        return (tmp[j] - tmp[i - 1]);
     }
 };
+
 
 /**
  * Your NumArray object will be instantiated and called as such:
