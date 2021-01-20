@@ -12,7 +12,8 @@
         "utility": "cpp",
         "unordered_set": "cpp",
         "set": "cpp",
-        "unordered_map": "cpp"
+        "unordered_map": "cpp",
+        "map": "cpp"
     },
     "files.exclude": {
         "**/.classpath": true,
