@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2021-01-22 14:24:34
- * @LastEditTime: 2021-01-22 14:52:35
+ * @LastEditTime: 2021-01-22 15:43:34
  * @FilePath: \Leetcode\200.Number of Islands.cpp
  */
 /*
@@ -20,16 +20,135 @@
 #include <algorithm>
 #include <math.h>
 #include <unordered_map>
+#include <queue>
 using namespace std;
 
 
+/*
+RESULT: Accept
+TIME:    20ms    BEAT: 95.60%    O(n) = 
+MEMORY: 9.8MB    BEAT: 51.84%    O(n) = 
+LAST EDIT TIME: 2021年1月22日15:42:46
+Description: 并查集。自己写出来的。耶~~~
+*/
 
 class Solution {
 public:
-    int numIslands(vector<vector<char>>& grid) {
+    vector<int> parent;
+    int count;
 
+    void init(vector<vector<char>>& grid) {
+        for (int i = 0; i < grid.size(); i ++) {
+            for (int j = 0; j < grid[0].size(); j ++) {
+                if (grid[i][j] == '1') {
+                    parent.push_back(i * grid[0].size() + j);
+                    count ++;
+                }
+                else {
+                    parent.push_back(-1);
+                }
+            }
+        }
+    }
+
+    int find(int x) {
+        int son, tmp;
+        son = x;
+
+        while (x != parent[x]) {
+            x = parent[x];
+        }
+
+        while (son != x) {
+            tmp = parent[son];
+            parent[son] = x;
+            son = tmp;
+        }
+
+        return x;
+    }
+
+    void islandUnion(int x, int y) {
+        int rootX = find(x);
+        int rootY = find(y);
+
+        if (rootX != rootY) {
+            parent[rootY] = rootX;
+            count --;
+        }
+    }
+
+    int numIslands(vector<vector<char>>& grid) {
+        int numRow = grid.size();
+        int numCol = grid[0].size();
+
+        int ans = 0;
+        init(grid);
+        
+        for (int i = 0; i < numRow; i ++) {
+            for (int j = 0; j < numCol; j ++) {
+                if (grid[i][j] == '0') continue;
+                grid[i][j] = '0';
+                if (i - 1 >= 0 && grid[i - 1][j] == '1') islandUnion(i * numCol + j, (i - 1) * numCol + j);
+                if (i + 1 < numRow && grid[i + 1][j] == '1') islandUnion(i * numCol + j, (i + 1) * numCol + j);
+                if (j - 1 >= 0 && grid[i][j - 1] == '1') islandUnion(i * numCol + j, i * numCol + j - 1);
+                if (j + 1 < numCol && grid[i][j + 1] == '1') islandUnion(i * numCol + j, i * numCol + j + 1);
+            }
+        }
+
+        return count;
     }
 };
+
+
+/*
+RESULT: Accept
+TIME:    20ms    BEAT: 95.60%    O(n) = MN
+MEMORY: 9.8MB    BEAT: 53.38%    O(n) = min(M, N)
+LAST EDIT TIME: 2021年1月22日15:23:30
+Description: BFS
+*/
+
+// class Solution {
+// public:
+//     int numIslands(vector<vector<char>>& grid) {
+//         int ans = 0;
+//         for (int i = 0; i < grid.size(); i ++) {
+//             for (int j = 0; j < grid[0].size(); j ++) {
+//                 if (grid[i][j] == '0') continue;
+
+//                 grid[i][j] == '0';
+//                 ans ++;
+//                 queue<pair<int, int>> neighbours;
+//                 neighbours.push({i, j});
+//                 while (!neighbours.empty()) {
+//                     auto it = neighbours.front();
+//                     neighbours.pop();
+//                     int row = it.first, col = it.second;
+                    
+//                     if (row - 1 >= 0 && grid[row - 1][col] == '1') {
+//                         neighbours.push({row - 1, col});
+//                         grid[row - 1][col] = '0';
+//                     }
+//                     if (row + 1 < grid.size() && grid[row + 1][col] == '1') {
+//                         neighbours.push({row + 1, col});
+//                         grid[row + 1][col] = '0';
+//                     }
+//                     if (col - 1 >= 0 && grid[row][col - 1] == '1') {
+//                         neighbours.push({row, col - 1});
+//                         grid[row][col - 1] = '0';
+//                     }
+//                     if (col + 1 < grid[0].size() && grid[row][col + 1] == '1') {
+//                         neighbours.push({row, col + 1});
+//                         grid[row][col + 1] = '0';
+//                     }
+//                 }
+//             }
+//         }
+
+//         return ans;
+//     }
+// };
 
 
 /*
