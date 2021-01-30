@@ -38,7 +38,6 @@ using namespace std;
 RESULT: Accept
 TIME:   ms    BEAT: %    O(n) = 
 MEMORY: MB    BEAT: %    O(n) = 
-USED TIME: 
 LAST EDIT TIME: 
 Description: 
 */
