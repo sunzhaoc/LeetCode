@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2021-01-30 16:28:56
- * @LastEditTime: 2021-01-30 17:35:59
+ * @LastEditTime: 2021-01-30 18:17:41
  * @FilePath: \Leetcode\80.Remove Duplicates from Sorted Array II.cpp
  */
 /*
@@ -21,6 +21,35 @@
 #include <unordered_map>
 #include <set>
 using namespace std;
+
+
+/*
+RESULT: Accept
+TIME:      0ms    BEAT: 100.00%    O(n) = n
+MEMORY: 10.7MB    BEAT:  89.08%    O(n) = 1
+LAST EDIT TIME: 2021年1月30日18:17:19
+Description: 双指针。值得想一想。
+*/
+
+class Solution {
+public:
+    int removeDuplicates(vector<int>& nums) {
+        if (nums.size() == 0) return 0;
+        if (nums.size() <= 2) return nums.size();
+        int left = 1, right = 2;
+        while (right <= nums.size() - 1) {
+            if (nums[left - 1] == nums[right]) {
+                right ++;
+            }
+            else {
+                nums[++left] = nums[right];
+                right ++;
+            }
+        }
+        
+        return left + 1;
+    }
+};
 
 
 /*
