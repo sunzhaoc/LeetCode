@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2021-01-30 16:28:56
- * @LastEditTime: 2021-01-30 18:17:41
+ * @LastEditTime: 2021-01-30 18:21:01
  * @FilePath: \Leetcode\80.Remove Duplicates from Sorted Array II.cpp
  */
 /*
@@ -46,7 +46,6 @@ public:
                 right ++;
             }
         }
-        
         return left + 1;
     }
 };
