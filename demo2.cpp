@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2021-01-23 17:45:58
- * @LastEditTime: 2021-01-24 11:31:23
+ * @LastEditTime: 2021-01-31 11:38:30
  * @FilePath: \Leetcode\demo2.cpp
  */
 #include <iostream>
@@ -17,94 +17,46 @@ using namespace std;
 
 
 
-
 class Solution {
 public:
-    int minCharacters(string a, string b) {
-
-        if (a.length() == 1 && b.length() == 1) return 0;
-        char maxA = 'a';
-        char minA = 'z';
-        char maxB = 'a';
-        char minB = 'z';
-        for (int i = 0; i < a.length(); i ++) {
-            if (a[i] > maxA) maxA = a[i];
-            if (a[i] < minA) minA = a[i];
-        }
-
-        for (int i = 0; i < b.length(); i ++) {
-            if (b[i] > maxB) maxB = b[i];
-            if (b[i] < minB) minB = b[i];
-        }
-
-        if (maxA < minB || maxB < minA) return 0;
-
-
-        int numA = 0;
-        // A < B
-        for (int i = 0; i < a.length(); i ++) {
-            if (a[i] >= minB) numA ++;
-        }
-        
-        int numA2 = 0;
-        // A > B
-        for (int i = 0; i < a.length(); i ++) {
-            if (a[i] <= maxB) {
-                char tmp = a[i];
-                numA2 ++;
-                }
-
-        }
-
-        int numB = 0;
-        for (int i = 0; i < b.length(); i ++) {
-            if (b[i] <= maxA) numB ++;
-        }
-
-        int numB2 = 0;
-        for (int i = 0; i < b.length(); i ++) {
-            if (b[i] >= minA) numB2 ++;
-        }
-
-
-        int ans = min(min(numA, numB), min(numA2, numB2));
-
-        unordered_map<char, int> mapA;
-        for (int i = 0; i < a.length(); i ++) {
-            mapA[a[i]] ++;
-        }
-
-        unordered_map<char, int> mapB;
-        for (int i = 0; i < b.length(); i ++) {
-            mapB[b[i]] ++;
-        }
-
-        int tmpnum = INT_MAX;
-        auto itA = mapA.begin();
-        while (itA != mapA.end()) {
-            auto xxx = mapB.find(itA->first);
-            if (xxx != mapB.end()) {
-                int tmpmin = a.length() - itA->second + b.length() - xxx->second;
-                tmpnum = min(tmpnum, tmpmin);
+    vector<int> restoreArray(vector<vector<int>>& adjacentPairs) {
+        unordered_map<int, vector<int>> map;
+        for (auto it: adjacentPairs) {
+            auto it0 = map.find(it[0]);
+            auto it1 = map.find(it[1]);
+            
+            if (it0 == map.end() && it1 == map.end()) {
+                map[it[0]].push_back(it[1]);
+                map[it[0]].push_back(it[0]);
+                map[it[1]].push_back(it[0]);
+                map[it[1]].push_back(it[1]);
             }
-            itA ++;
-        }
-
-
-        int tmpnum2= INT_MAX;
-        auto itB = mapB.begin();
-        while (itB != mapB.end()) {
-            auto xxx = mapA.find(itB->first);
-            if (xxx != mapA.end()) {
-                int tmpmin = b.length() - itB->second + a.length() - xxx->second;
-                tmpnum2 = min(tmpnum2, tmpmin);
+            else if (it0 != map.end() && it1 != map.end()) {
+                map[map[it[0]][0]].resize(map[it[0]].size() + map[it[1]].size());
+                map[map[it[1]][0]].resize(map[it[0]].size() + map[it[1]].size());
+                merge(map[it[0]].begin(), map[it[0]].end(), map[it[1]].end(), map[it[1]].begin(), map[map[it[1]][0]]);
+                merge(map[it[1]].begin(), map[it[1]].end(), map[it[0]].end(), map[it[0]].begin(), map[map[it[0]][0]]);
+                map[it[0]].clear();
+                map[it[1]].clear();
             }
-            itB ++;
+            else if (it0 != map.end()) {
+                map[map[it[0]][0]].clear();
+                map[it[0]].push_back(it[1]);
+                map[it[1]] = map[it[0]];
+                reverse(map[it[0]].begin(), map[it[0]].end());
+                map[map[it[0]][map[it[0]].size() - 1]] = map[it[0]];
+                map[it[0]].clear();
+            }
+            else if (it1 != map.end()) {
+                map[map[it[1]][0]].clear();
+                map[it[1]].push_back(it[0]);
+                map[it[0]] = map[it[1]];
+                reverse(map[it[1]].begin(), map[it[1]].end());
+                map[map[it[1]][map[it[1]].size() - 1]] = map[it[1]];
+                map[it[1]].clear();
+            }
         }
-
-        int ans2 = min(tmpnum, tmpnum2);
-        return min(ans, ans2);
-        
+        int V = 1;
     }
 };
 
@@ -113,11 +65,11 @@ public:
 
 int main() {
     Solution sol;
-    string a = "ace";
-    string b = "abe";
-
-    int ans = sol.minCharacters(a, b);
-    cout << ans << endl;
+    vector<vector<int>> tmp = {{1,2} , {3,4}, {2, 3}};
+    vector<int> ans = sol.restoreArray(tmp);
+    for (int i = 0 ;i < ans.size(); i ++) {
+        cout << ans[i] << endl;
+    }
     system("pause");
     return 0;
 }
