@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2021-03-01 16:30:02
- * @LastEditTime: 2021-03-01 16:36:18
+ * @LastEditTime: 2021-03-01 16:42:54
  * @FilePath: \Leetcode\141.Linked List Cycle.cpp
  */
 /*
@@ -32,11 +32,27 @@ struct ListNode {
 #include <unordered_set>
 using namespace std;
 
+/*
+RESULT: Accept
+TIME:    12ms    BEAT: 51.96%    O(n) = n
+MEMORY: 7.9MB    BEAT: 52.46%    O(n) = 1
+LAST EDIT TIME: 2021年3月1日16:42:41
+Description: 双指针。快慢指针。
+*/
 
 class Solution {
 public:
     bool hasCycle(ListNode *head) {
-        
+        if (head == nullptr || head->next == nullptr) return false;
+        ListNode* slow = head, * fast = head->next;
+        while (slow != fast) {
+            if (fast == nullptr ||fast->next == nullptr) {
+                return false;
+            }
+            slow = slow->next;
+            fast = fast->next->next;
+        }
+        return true;
     }
 };
 
