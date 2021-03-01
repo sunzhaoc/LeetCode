@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2021-03-01 15:03:44
- * @LastEditTime: 2021-03-01 15:32:59
+ * @LastEditTime: 2021-03-01 15:36:33
  * @FilePath: \Leetcode\101.Symmetric Tree.cpp
  */
 /*
@@ -38,15 +38,16 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME:   ms    BEAT: %    O(n) = n
-MEMORY: MB    BEAT: %    O(n) = n
-LAST EDIT TIME: 
-Description: 
+TIME:    8ms    BEAT: 46.16%    O(n) = n
+MEMORY: 16MB    BEAT: 12.09%    O(n) = n
+LAST EDIT TIME: 2021年3月1日15:36:14
+Description: 迭代。
 */
 
 class Solution {
 public:
     bool isSymmetric(TreeNode* root) {
+        TreeNode* node1 = root, * node2 = root;
         queue<TreeNode*> q;
         q.push(node1);
         q.push(node2);
