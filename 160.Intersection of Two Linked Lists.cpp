@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2021-03-01 11:11:13
- * @LastEditTime: 2021-03-01 15:01:21
+ * @LastEditTime: 2021-03-01 15:03:10
  * @FilePath: \Leetcode\160.Intersection of Two Linked Lists.cpp
  */
 /*
@@ -36,7 +36,7 @@ RESULT: Accept
 TIME:     52ms    BEAT: 67.23%    O(n) = 
 MEMORY: 14.3MB    BEAT: 59.67%    O(n) = 
 LAST EDIT TIME: 2021年3月1日15:0:30
-Description: 
+Description: 遍历自己，再遍历另一个。如果相等就是相同的结点。
 */
 
 class Solution {
