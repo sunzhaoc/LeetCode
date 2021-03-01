@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2020-11-30 21:56:56
- * @LastEditTime: 2021-01-23 22:27:06
+ * @LastEditTime: 2021-03-01 09:09:44
  * @FilePath: \Leetcode\readme.md
 -->
 
@@ -38,6 +38,7 @@ using namespace std;
 RESULT: Accept
 TIME:   ms    BEAT: %    O(n) = 
 MEMORY: MB    BEAT: %    O(n) = 
+USED TIME: 
 LAST EDIT TIME: 
 Description: 
 */
