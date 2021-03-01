@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2021-03-01 16:51:15
- * @LastEditTime: 2021-03-01 17:25:03
+ * @LastEditTime: 2021-03-01 19:25:19
  * @FilePath: \Leetcode\234.Palindrome Linked List.cpp
  */
 /*
@@ -37,9 +37,9 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME:   ms    BEAT: %    O(n) = 
-MEMORY: MB    BEAT: %    O(n) = 
-LAST EDIT TIME: 
+TIME:     20ms    BEAT: 85.69%    O(n) = n
+MEMORY: 13.5MB    BEAT: 91.19%    O(n) = 1
+LAST EDIT TIME: 2021年3月1日19:23:23
 Description: 
 */
 
@@ -48,7 +48,18 @@ public:
     bool isPalindrome(ListNode* head) {
         if (head == nullptr || head->next == nullptr) return true;
         
+        ListNode* firstHalfEnd = endOfFirstHalf(head);
+        // 将后半部分翻转。
+        ListNode* secondHalfStart = reverseList(firstHalfEnd->next);
 
+        ListNode* p1 = head, * p2 = secondHalfStart;
+        while (p2 != nullptr) {
+            if (p1->val != p2->val) return false;
+            p1 = p1->next;
+            p2 = p2->next;
+        }
+        
+        return true;
     }
 
     // 反转链表，见206题。
