@@ -3,7 +3,7 @@ Description:
 Version: 1.0
 Author: Vicro
 Date: 2020-12-04 13:18:25
-LastEditTime: 2020-12-04 14:09:06
+LastEditTime: 2021-03-01 19:47:32
 FilePath: \Leetcode\659.分割数组为连续子序列.py
 '''
 #
@@ -49,8 +49,7 @@ class Solution:
                     tail[i + 2] = 1
             else: return False
         return True
-                
-                
+
 
 sol = Solution()
 A = sol.isPossible([1,2,5,5,6,6,7,8,8,9])
