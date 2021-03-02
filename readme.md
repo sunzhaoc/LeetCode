@@ -60,8 +60,6 @@ int main() {
 }
 
 
-114. Flatten Binary Tree to Linked List
-
 
 int main() {
     Solution sol;
