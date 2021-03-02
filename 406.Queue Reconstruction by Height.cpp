@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2021-03-02 10:03:42
- * @LastEditTime: 2021-03-02 13:27:47
+ * @LastEditTime: 2021-03-02 14:03:31
  * @FilePath: \Leetcode\406.Queue Reconstruction by Height.cpp
  */
 /*
@@ -29,36 +29,20 @@ using namespace std;
 RESULT: Accept
 TIME:   ms    BEAT: %    O(n) = 
 MEMORY: MB    BEAT: %    O(n) = 
-USED TIME: 
 LAST EDIT TIME: 
-Description: 
+Description: 贪心。重要！！！
 */
 
 class Solution {
 public:
-
-    
     vector<vector<int>> reconstructQueue(vector<vector<int>>& people) {
         vector<vector<int>> ans;
-
         // ------------------IMPORTANT----------------------
-        // sort(people.begin(), people.end(), [](const vector<int>& u, const vector<int>& v) {
-        //     return u[0] > v[0] || (u[0] == v[0] && u[1] < v[1]);    // 第一维降序，第二维升序。
-        // });
+        sort(people.begin(), people.end(), [](const vector<int>& x, const vector<int>& y) {
+            return x[0] > y[0] || (x[0] == y[0] && x[1] < y[1]);    // 第一项降序，第二项升序。
+        });
         // ------------------IMPORTANT----------------------
-
-        sort(people.begin(), people.end(), cmp);
-        
-        int Z = 1;
-        // for (const vector<int>& person: people) {
-        //     ans.insert(ans.begin() + person[1], person);
-        // }
-
         return ans;
-    }
-
-    bool cmp(const vector<int>& x, const vector<int>& y) {
-        return x[0] > y[0];
     }
 };
 
@@ -76,5 +60,6 @@ int main() {
     system("pause");
     return 0;
 }
+
 // @lc code=end
 
