@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2021-03-02 19:03:02
- * @LastEditTime: 2021-03-02 19:25:08
+ * @LastEditTime: 2021-03-02 19:30:58
  * @FilePath: \Leetcode\395.Longest Substring with At Least K Repeating Characters.cpp
  */
 /*
@@ -61,7 +61,18 @@ public:
 
         if (!needSplit) return end - start + 1;
 
+        int ret = 0;
+        int left = start, right = start;
+        while (right <= end) {
+            while (left <= end) {
+                if (count[str[left] - 'a'] >= k) break;
+                left ++;
+            }
+            right = left + 1;
+            
+        }
     }
 };
+
 // @lc code=end
 
