@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2021-03-02 10:03:42
- * @LastEditTime: 2021-03-02 14:03:31
+ * @LastEditTime: 2021-03-02 14:06:21
  * @FilePath: \Leetcode\406.Queue Reconstruction by Height.cpp
  */
 /*
@@ -27,9 +27,9 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME:   ms    BEAT: %    O(n) = 
-MEMORY: MB    BEAT: %    O(n) = 
-LAST EDIT TIME: 
+TIME:    152ms    BEAT: 74.66%    O(n) = 
+MEMORY: 12.1MB    BEAT: 65.28%    O(n) = 
+LAST EDIT TIME: 2021年3月2日14:6:25
 Description: 贪心。重要！！！
 */
 
@@ -42,6 +42,11 @@ public:
             return x[0] > y[0] || (x[0] == y[0] && x[1] < y[1]);    // 第一项降序，第二项升序。
         });
         // ------------------IMPORTANT----------------------
+
+        for (auto person: people) {
+            ans.insert(ans.begin() + person[1], person);
+        }
+        
         return ans;
     }
 };
