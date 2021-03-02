@@ -3,8 +3,8 @@ Description:
 Version: 1.0
 Autor: Vicro
 Date: 2021-01-19 10:13:27
-LastEditTime: 2021-01-22 14:27:41
-FilePath: \Leetcode\demo01.py
+LastEditTime: 2021-03-02 10:22:28
+FilePath: \Leetcode\change.py
 '''
 
 class Solution:
@@ -22,5 +22,5 @@ class Solution:
 
 
 sol = Solution()
-x = sol.changeKuohao("[  ["1","1","1","1","0"],  ["1","1","0","1","0"],  ["1","1","0","0","0"],  ["0","0","0","0","0"]]")
+x = sol.changeKuohao("[[7,0],[4,4],[7,1],[5,0],[6,1],[5,2]]")
 print(x)
