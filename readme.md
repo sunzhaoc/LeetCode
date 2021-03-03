@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2020-11-30 21:56:56
- * @LastEditTime: 2021-03-02 21:10:11
+ * @LastEditTime: 2021-03-03 15:02:05
  * @FilePath: \Leetcode\readme.md
 -->
 
@@ -92,7 +92,15 @@ vector<vecotr<int>>
 Python
 
 
-\
+"""
+RESULT: Accept
+TIME:   ms    BEAT: %    O(n) = 
+MEMORY: MB    BEAT: %    O(n) = 
+USED TIME: 
+LAST EDIT TIME: 
+Description: 
+"""
+
 
 
 """

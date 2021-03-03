@@ -13,7 +13,8 @@
         "unordered_set": "cpp",
         "set": "cpp",
         "unordered_map": "cpp",
-        "map": "cpp"
+        "map": "cpp",
+        "algorithm": "cpp"
     },
     "files.exclude": {
         "**/.classpath": true,
