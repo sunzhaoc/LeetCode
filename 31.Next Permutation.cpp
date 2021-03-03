@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2021-03-03 09:06:04
- * @LastEditTime: 2021-03-03 10:26:50
+ * @LastEditTime: 2021-03-03 10:30:14
  * @FilePath: \Leetcode\31.Next Permutation.cpp
  */
 /*
@@ -64,6 +64,7 @@ public:
                 break;
             }
         }
+
         swap(nums[tmp], nums[tmp2]);
         reverse(nums.begin() + tmp + 1, nums.end());
     }
@@ -73,7 +74,8 @@ public:
 int main() {
     Solution sol;
     // vector<int> nums = {1, 2, 3};
-    vector<int> nums = {3,2,1};
+    // vector<int> nums = {3,2,1};
+    vector<int> nums = {1,2,4,5};
     sol.nextPermutation(nums);
     system("pause");
     return 0;
