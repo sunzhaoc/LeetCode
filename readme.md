@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2020-11-30 21:56:56
- * @LastEditTime: 2021-03-02 20:46:50
+ * @LastEditTime: 2021-03-02 21:10:11
  * @FilePath: \Leetcode\readme.md
 -->
 
@@ -71,6 +71,20 @@ int main() {
 }
 
 
+int main() {
+    Solution sol;
+    vector<vector<int>> nums = {};
+    vector<vector<int>> ans = sol.(nums);
+    for (int i = 0; i < ans.size(); i ++) {
+        for (int j = 0; j < ans[0].size(); j ++) {
+            cout << ans[i][j] << " ";
+        }
+        cout << endl;
+    }
+    system("pause");
+    return 0;
+}
+
 
 vector<vecotr<int>>
 
@@ -78,15 +92,7 @@ vector<vecotr<int>>
 Python
 
 
-"""
-RESULT: Accept
-TIME:   ms    BEAT: %    O(n) = 
-MEMORY: MB    BEAT: %    O(n) = 
-USED TIME: 
-LAST EDIT TIME: 
-Description: 
-"""
-
+\
 
 
 """
