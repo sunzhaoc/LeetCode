@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2020-11-30 21:56:56
- * @LastEditTime: 2021-03-03 15:02:05
+ * @LastEditTime: 2021-03-03 17:15:23
  * @FilePath: \Leetcode\readme.md
 -->
 
@@ -112,4 +112,5 @@ Description:
 """
 
 
-
+sol = Solution()
+ans = sol.
