@@ -3,8 +3,8 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2021-03-07 10:18:55
- * @LastEditTime: 2021-03-07 10:57:55
- * @FilePath: \Leetcode\demo02.cpp
+ * @LastEditTime: 2021-03-07 22:07:57
+ * @FilePath: \Leetcode\5698.Minimum Elements to Add to Form a Given Sum.cpp
  */
 
 #include <iostream>
@@ -34,7 +34,6 @@ public:
         
     }
 };
-
 
 
 int main() {
