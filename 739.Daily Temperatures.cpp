@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2021-03-05 10:21:22
- * @LastEditTime: 2021-03-05 11:11:01
+ * @LastEditTime: 2021-03-05 13:14:43
  * @FilePath: \Leetcode\739.Daily Temperatures.cpp
  */
 /*
@@ -24,6 +24,32 @@
 #include <queue>
 #include <stack>
 using namespace std;
+
+
+/*
+RESULT: Accept
+TIME:     64ms    BEAT: 89.85%    O(n) = 
+MEMORY: 38.7MB    BEAT: 71.62%    O(n) = 
+LAST EDIT TIME: 2021年3月5日13:13:48
+Description: 下面的优化版本，复杂度一样的。
+*/
+
+class Solution {
+public:
+    vector<int> dailyTemperatures(vector<int>& T) {
+        vector<int> ans(T.size(), 0);
+        stack<int> st;
+        for (int i = 0; i < T.size(); i ++) {
+            while (!st.empty() && T[i] > T[st.top()]) {
+                int temp = st.top();
+                st.pop();
+                ans[temp] = i - temp;
+            }
+            st.push(i);
+        }
+        return ans;
+    }
+};
 
 
 /*
