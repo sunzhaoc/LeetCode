@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2021-03-07 10:18:55
- * @LastEditTime: 2021-03-07 22:40:08
+ * @LastEditTime: 2021-03-07 22:55:20
  * @FilePath: \Leetcode\5698.Minimum Elements to Add to Form a Given Sum.cpp
  */
 
@@ -23,16 +23,17 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME:   ms    BEAT: %    O(n) = 
-MEMORY: MB    BEAT: %    O(n) = 
-LAST EDIT TIME: Y总。
-Description: 
+TIME:    136ms    BEAT: 100.00%    O(n) = 
+MEMORY: 71.6MB    BEAT: 100.00%    O(n) = 
+LAST EDIT TIME: 2021年3月7日22:55:22
+Description: Y总
 */
 
 class Solution {
 public:
     int minElements(vector<int>& nums, int limit, int goal) {
-
+        long long sum = accumulate(nums.begin(), nums.end(), 0ll);
+        return (abs(sum - goal) + limit - 1) / limit;
     }
 };
 
