@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2021-03-08 15:31:56
- * @LastEditTime: 2021-03-08 15:56:37
+ * @LastEditTime: 2021-03-08 15:59:28
  * @FilePath: \Leetcode\986.Interval List Intersections.cpp
  */
 /*
@@ -34,7 +34,7 @@ TIME:     36ms    BEAT: 89.14%    O(n) = m + n
 MEMORY: 18.1MB    BEAT: 92.05%    O(n) = m + n
 USED TIME: 23:08
 LAST EDIT TIME: 2021年3月8日15:55:53
-Description: 
+Description: 交替。
 */
 
 class Solution {
