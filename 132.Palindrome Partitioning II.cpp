@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2021-03-07 17:01:04
- * @LastEditTime: 2021-03-08 13:56:25
+ * @LastEditTime: 2021-03-08 14:38:33
  * @FilePath: \Leetcode\132.Palindrome Partitioning II.cpp
  */
 /*
@@ -55,10 +55,12 @@ public:
             if (dp[0][j]) f[j] = 0;    // 如果这一段直接构成回文，则无须分隔。
             // 如果无法构成回文。
             else {
-                // 独立使用一次分隔次数。
+                // 1、独立使用一次分隔次数。
                 f[j] = f[j - 1] + 1;
+                // 2、第 j 个字符本身不独立使用分割次数
+                // 代表要与前面的某个位置 i 形成区间 [i,j]，使得 [i, j] 形成回文，[i, j] 整体消耗一次分割次数
                 for (int i = 1; i < j; i ++) {
-                    if (dp[i][j]) f[j] = min(f[j], f[i - 1] + 1);
+                    if (dp[i][j]) f[j] = min(f[j], f[i - 1] + 1);    // 这一行有点绕
                 }
             }
         }
@@ -68,7 +70,7 @@ public:
 
 
 /*
-RESULT: Time OUt
+RESULT: Time Out
 LAST EDIT TIME: 2021年3月7日20:19:28
 */
 
