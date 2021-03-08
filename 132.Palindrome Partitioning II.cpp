@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2021-03-07 17:01:04
- * @LastEditTime: 2021-03-07 20:19:31
+ * @LastEditTime: 2021-03-08 13:56:25
  * @FilePath: \Leetcode\132.Palindrome Partitioning II.cpp
  */
 /*
@@ -25,6 +25,46 @@
 #include <stack>
 #include <unordered_set>
 using namespace std;
+
+
+/*
+RESULT: Accept
+TIME:     52ms    BEAT: 51.55%    O(n) = n^2
+MEMORY: 19.2MB    BEAT: 24.69%    O(n) = n^2
+LAST EDIT TIME: 2021年3月8日13:48:46
+Description: 
+*/
+
+class Solution {
+public:
+    int minCut(string s) {
+        int n = s.length();
+        vector<vector<int>> dp(n, vector<int> (n, true));
+        for (int j = 1; j < n; j ++) {
+            for (int i = 0; i < j; i ++) {
+                if (s[i] != s[j]) dp[i][j] = false;
+                else {
+                    if (j - i < 3) dp[i][j] = true;
+                    else dp[i][j] = dp[i + 1][j - 1];
+                }
+            }
+        }
+
+        vector<int> f(n);    // f(n) 代表考虑下标为 i 的字符为结尾的最小分割次数
+        for (int j = 1; j < n; j ++) {
+            if (dp[0][j]) f[j] = 0;    // 如果这一段直接构成回文，则无须分隔。
+            // 如果无法构成回文。
+            else {
+                // 独立使用一次分隔次数。
+                f[j] = f[j - 1] + 1;
+                for (int i = 1; i < j; i ++) {
+                    if (dp[i][j]) f[j] = min(f[j], f[i - 1] + 1);
+                }
+            }
+        }
+        return f[n - 1];
+    }
+};
 
 
 /*
