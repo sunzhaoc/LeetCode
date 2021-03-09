@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2021-03-09 20:11:35
- * @LastEditTime: 2021-03-09 20:42:11
+ * @LastEditTime: 2021-03-09 20:53:15
  * @FilePath: \Leetcode\201.Bitwise AND of Numbers Range.cpp
  */
 /*
@@ -28,29 +28,6 @@
 using namespace std;
 
 
-
-/*
-RESULT: Accept
-TIME:   ms    BEAT: %    O(n) = 
-MEMORY: MB    BEAT: %    O(n) = 
-LAST EDIT TIME: 
-Description: 
-*/
-
-class Solution {
-public:
-    int rangeBitwiseAnd(int left, int right) {
-        int res = 0;
-        for (int i = 0; (1ll << i) <= left; i ++) {
-            if (left >> i & 1) {
-                if () res += i << 1;
-            }
-        }
-        return res;
-    }
-};
-
-
 /*
 RESULT: Accept
 TIME:    20ms    BEAT: 17.80%    O(n) = 
@@ -71,5 +48,6 @@ public:
         return ans;
     }
 };
+
 // @lc code=end
 
