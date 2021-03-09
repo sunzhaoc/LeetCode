@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2021-03-09 14:18:33
- * @LastEditTime: 2021-03-09 14:33:00
+ * @LastEditTime: 2021-03-09 14:44:36
  * @FilePath: \Leetcode\75.Sort Colors.cpp
  */
 /*
@@ -41,11 +41,15 @@ Description:
 class Solution {
 public:
     void sortColors(vector<int>& nums) {
-        int p1 = 0, p2 = nums.size() - 1;
-        for (int i = 0; i < p2; i ++) {
+        int p0 = 0, p2 = nums.size() - 1;
+        for (int i = 0; i <= p2; i ++) {
             while (i <= p2 && nums[i] == 2) {
                 swap(nums[i], nums[p2]);
                 p2 --;
+            }
+            if (nums[i] == 0) {
+                swap(nums[i], nums[p0]);
+                p0 ++;
             }
         }
     }
