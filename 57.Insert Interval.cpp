@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2021-03-08 17:01:35
- * @LastEditTime: 2021-03-08 17:26:15
+ * @LastEditTime: 2021-03-08 18:44:05
  * @FilePath: \Leetcode\57.Insert Interval.cpp
  */
 /*
@@ -48,12 +48,14 @@ public:
         sort(intervals.begin(), intervals.end(), [](const vector<int>& x, const vector<int>& y) {
             return x[0] < y[0] || (x[0] == y[0] && x[1] < y[1]);
         });
+
         for (int i = 1; i < intervals.size(); i ++) {
             if (intervals[i][0] > intervals[i - 1][1]) ans.emplace_back(intervals[i - 1]);
             else {
                 intervals[i][0] = intervals[i - 1][0];
             }
         }
+
         ans.emplace_back(intervals[intervals.size()-1]);
         return ans;
     }
