@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2021-03-09 16:48:41
- * @LastEditTime: 2021-03-09 18:32:37
+ * @LastEditTime: 2021-03-09 18:35:31
  * @FilePath: \Leetcode\79.Word Search.cpp
  */
 /*
@@ -30,8 +30,8 @@ using namespace std;
 
 /*
 RESULT: Accept
-TIME:    160ms    BEAT: 35.68%    O(n) = 
-MEMORY: 10.7MB    BEAT: 90.98%    O(n) = 
+TIME:    148ms    BEAT: 37.46%    O(n) = 
+MEMORY: 10.4MB    BEAT: 99.49%    O(n) = 
 LAST EDIT TIME: 2021年3月9日18:32:19
 Description: 
 */
@@ -64,6 +64,5 @@ public:
         return false;
     }
 };
-
 // @lc code=end
 
