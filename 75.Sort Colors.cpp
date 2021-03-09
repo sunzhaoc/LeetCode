@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Autor: Vicro
  * @Date: 2021-03-09 14:18:33
- * @LastEditTime: 2021-03-09 14:44:36
+ * @LastEditTime: 2021-03-09 14:47:42
  * @FilePath: \Leetcode\75.Sort Colors.cpp
  */
 /*
@@ -28,14 +28,12 @@
 using namespace std;
 
 
-
 /*
 RESULT: Accept
-TIME:   ms    BEAT: %    O(n) = 
-MEMORY: MB    BEAT: %    O(n) = 
-USED TIME: 
-LAST EDIT TIME: 
-Description: 
+TIME:     4ms    BEAT: 52.86%    O(n) = 
+MEMORY: 8.1MB    BEAT: 53.02%    O(n) = 
+LAST EDIT TIME: 2021年3月9日14:47:19
+Description: 双指针。
 */
 
 class Solution {
@@ -54,6 +52,7 @@ public:
         }
     }
 };
+
 
 
 /*
